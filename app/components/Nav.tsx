@@ -27,7 +27,7 @@ const NavBar = () => {
           </Link>
         </li>
         <li className="mr-6">
-          <Link href="/contact" className='text-lg font-bold'>
+          <Link href="/contact" className='text-edoFont font-bold'>
             About Us
           </Link>
         </li>
