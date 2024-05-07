@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { League_Gothic } from "next/font/google";
 import "./globals.css";
 
 import localFont from 'next/font/local'
@@ -8,6 +9,7 @@ import localFont from 'next/font/local'
 import NavBar from "./components/Nav";
 
 const inter = Inter({ subsets: ["latin"] });
+const league_gothic = League_Gothic({ subsets: ["latin"] })
 
 const edo = localFont({
   src: [
@@ -31,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${edo.variable} ${inter.className}`}>
+      <body className={`${edo.variable} ${inter.className} ${league_gothic.className}`}>
         <NavBar />
         {children}
       </body>
