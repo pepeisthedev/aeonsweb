@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const NavBar = () => {
   return (
-    <nav className="sticky top-0 left-0 w-full bg-white-100 text-gray-300 flex justify-between items-center p-4 z-10">
+    <nav className="sticky top-0 left-0 w-full text-gray-300 flex justify-between items-center p-4 z-10 bg-opacity-50">
       <div>
         <Image 
           className=''
