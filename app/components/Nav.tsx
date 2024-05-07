@@ -17,22 +17,22 @@ const NavBar = () => {
       </div>
       <ul className="flex justify-between w-full max-w-md mx-auto p-0 list-none">
         <li className="mr-6">
-          <Link href="/" className="text-lg font-bold">
+          <Link href="/" className="text-2xl font-bold font-edo">
             Gallery
           </Link>
         </li>
         <li className="mr-6">
-          <Link href="/about" className='text-lg font-bold'>
+          <Link href="/about" className='text-2xl font-bold font-edo'>
             WL Checker
           </Link>
         </li>
         <li className="mr-6">
-          <Link href="/contact" className='text-edoFont font-bold'>
-            About Us
+          <Link href="/contact" className='text-2xl font-edo'>
+            About
           </Link>
         </li>
         <li className="mr-6">
-          <Link href="/contact" className='text-lg font-bold'>
+          <Link href="/contact" className='text-2xl font-bold font-edo'>
             Contact
           </Link>
         </li>

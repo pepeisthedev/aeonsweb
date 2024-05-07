@@ -9,7 +9,7 @@ import NavBar from "./components/Nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const edoFont = localFont({
+const edo = localFont({
   src: [
     {
       path: '../public/fonts/edo.ttf',
@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${edoFont.variable} ${inter.className}`}>
+      <body className={`${edo.variable} ${inter.className}`}>
         <NavBar />
         {children}
       </body>
