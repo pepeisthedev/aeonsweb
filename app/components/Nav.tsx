@@ -50,7 +50,7 @@ const NavBar = () => {
         src='/discordlogo.png'
         alt='Aeons logo'
         width={60}
-        height={50}
+        height={60}
       />
       </div>
     </nav>
