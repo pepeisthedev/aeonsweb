@@ -7,27 +7,29 @@ const NavBar = () => {
   return (
     <nav className="sticky mx-auto w-full text-gray-300 flex justify-between items-center p-4 z-10 bg-opacity-50">
       <div>
-        <Image 
-          className=''
-          src='/Aeonsmainlogo.png'
-          alt='Aeons logo'
-          width={130}
-          height={100}
-        />
+        <Link href="/">
+          <Image 
+            className=''
+            src='/Aeonsmainlogo.png'
+            alt='Aeons logo'
+            width={130}
+            height={100}
+          />
+        </Link>
       </div>
       <ul className="flex items-center justify-between w-full max-w-md mx-auto p-0 list-none text-center">
         <li className="mr-4">
-          <Link href="/" className="text-2xl font-bold font-edo text-center">
+          <Link href="/gallery" className="text-2xl font-bold font-edo text-center">
             Gallery
           </Link>
         </li>
         <li className="mr-4">
-          <Link href="/about" className='text-2xl font-bold font-edo text-center text-nowrap'>
+          <Link href="/wlchecker" className='text-2xl font-bold font-edo text-center text-nowrap'>
             WL Checker
           </Link>
         </li>
         <li className="ml-4">
-          <Link href="/contact" className='text-2xl font-edo text-center'>
+          <Link href="/about" className='text-2xl font-edo text-center'>
             About
           </Link>
         </li>
