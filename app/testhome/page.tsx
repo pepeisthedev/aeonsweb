@@ -1,19 +1,15 @@
-'use client'
-
 import React from 'react'
 
 import ComingSoon from '../components/ComingSoon'
-import Tooltip from '../components/Tooltip'
 
+import TestHero from '../components/TestHero'
 
-const Gallery = () => {
+const TestHome = () => {
     return(
         <main className="flex h-screen flex-col items-center justify-center bg-cover bg-[url('/backgroundaeonsbtc.png')] -my-24">
-            <Tooltip content='Will this work?'>
-                <ComingSoon />
-            </Tooltip>
+           <TestHero />
         </main>
     )
 }
 
-export default Gallery;
+export default TestHome
