@@ -32,12 +32,12 @@ const NavBar = () => {
       <div className='flex flex-row justify-between'>
       <ul className="flex items-center justify-center w-full max-w-md mx-auto p-0 list-none text-center">
         <li className="mr-4">
-          <Link href="/gallery" className="text-2xl font-bold font-edo text-center">
+          <Link href="/gallery" className="text-4xl font-bold text-center uppercase">
             Gallery
           </Link>
         </li>
         <li className="mr-4">
-          <Link href="/wlchecker" className='text-2xl font-bold font-edo text-center text-nowrap'>
+          <Link href="/wlchecker" className='text-4xl font-bold text-center text-nowrap uppercase'>
             WL Checker
           </Link>
         </li>
