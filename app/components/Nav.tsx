@@ -17,7 +17,7 @@ const NavBar = () => {
           />
         </Link>
       </div>
-      <ul className="flex items-center justify-between w-full max-w-md mx-auto p-0 list-none text-center">
+      {/* <ul className="flex items-center justify-center w-full max-w-md mx-auto p-0 list-none text-center">
         <li className="mr-4">
           <Link href="/gallery" className="text-2xl font-bold font-edo text-center">
             Gallery
@@ -28,18 +28,20 @@ const NavBar = () => {
             WL Checker
           </Link>
         </li>
-        <li className="ml-4">
-          <Link href="/about" className='text-2xl font-edo text-center'>
-            About
+      </ul> */}
+      <div className='flex flex-row justify-between'>
+      <ul className="flex items-center justify-center w-full max-w-md mx-auto p-0 list-none text-center">
+        <li className="mr-4">
+          <Link href="/gallery" className="text-2xl font-bold font-edo text-center">
+            Gallery
           </Link>
         </li>
-        <li className="ml-4">
-          <Link href="/contact" className='text-2xl font-bold font-edo text-center'>
-            Contact
+        <li className="mr-4">
+          <Link href="/wlchecker" className='text-2xl font-bold font-edo text-center text-nowrap'>
+            WL Checker
           </Link>
         </li>
       </ul>
-      <div className='flex flex-row justify-between'>
       <Image 
           className=''
           src='/TwitterMenuLogo.png'
