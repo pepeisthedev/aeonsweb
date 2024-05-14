@@ -8,7 +8,7 @@ import Tooltip from './Tooltip'
 const TestHero = () => {
     return(
         <div className='flex flex-col items-center justify-center'>
-            <Tooltip content='Will This Work Again?' position='bottom'>
+            <Tooltip content='Aeons - Aeons are the eternal guardians of art, capturing the timeless essence of creativity.' position='bottom'>
                 <div className='z-20'>
                     <p className='text-9xl text-black uppercase opacity-25'>Explore</p>
                 </div>
