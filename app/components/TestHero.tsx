@@ -8,10 +8,11 @@ import Tooltip from './Tooltip'
 const TestHero = () => {
     return(
         <div className='flex flex-col items-center justify-center'>
-            <Tooltip content='Aeons - Aeons are the eternal guardians of art, capturing the timeless essence of creativity.' position='bottom'>
                 <div className='z-20'>
                     <p className='text-9xl text-black uppercase opacity-25'>Explore</p>
                 </div>
+            <Tooltip content='Aeons - Aeons are the eternal guardians of art, capturing the timeless essence of creativity.' position='right' className='w-full text-left align-center'>
+                <span className='text-sm text-black uppercase opacity-0'>test</span>    
             </Tooltip>
             <Tooltip content='hello world' position='bottom'>
                 <div className=''>
@@ -25,10 +26,8 @@ const TestHero = () => {
                     />
                 </div>
             </Tooltip>
-            <Tooltip content='We will see'>
-                <div className='z-20'>
-                    <span className='text-xl opacity-0'>check</span>
-                </div>
+            <Tooltip content='Aeons - Aeons are the eternal guardians of art, capturing the timeless essence of creativity.' position='left' className='w-96'>
+                <span className='text-sm text-black uppercase opacity-0'>test</span>    
             </Tooltip>
             <div className='z-20'>
                 <p className='text-9xl text-black uppercase opacity-25'>Art</p>
