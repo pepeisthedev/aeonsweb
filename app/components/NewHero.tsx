@@ -9,11 +9,11 @@ const NewHero = () => {
             </div>
             <div className=''>
                 <Image 
-                    src='/3linescopy.png'
+                    src='/RealMovingLogo.gif'
                     alt='3 lines'
                     className=''
-                   width={600}
-                   height={650}
+                   width={500}
+                   height={550}
                       priority
                 />
             </div>
