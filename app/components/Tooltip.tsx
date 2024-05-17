@@ -30,7 +30,7 @@ const Tooltip: React.FC<TooltipProps> = ({
       {showTooltip && (
         <div 
           className={`
-            tooltip absolute z-10 p-2 rounded-md shadow-md bg-gray-800 text-white text-sm
+            tooltip absolute z-10 p-2 rounded-md shadow-md bg-gray-800 text-white text-2xl
             ${position === 'top' && 'bottom-full -translate-y-1'}
             ${position === 'bottom' && 'top-full translate-y-1'}
             ${position === 'left' && 'right-full -translate-x-1'}
