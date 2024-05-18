@@ -5,20 +5,20 @@ const NewHero = () => {
     return(
         <div className='flex flex-col items-center justify-center'>
             <div className='z-20'>
-                <p className='text-9xl text-black uppercase opacity-25'>Explore</p>
+                <p className='text-9xl text-white uppercase'>Explore</p>
             </div>
             <div className=''>
                 <Image 
-                    src='/3linescopy.png'
+                    src='/RealMovingLogo.gif'
                     alt='3 lines'
                     className=''
-                   width={600}
-                   height={650}
+                   width={500}
+                   height={550}
                       priority
                 />
             </div>
             <div className='z-20'>
-                <p className='text-9xl text-black uppercase opacity-25'>Art</p>
+                <p className='text-9xl text-white uppercase'>Art</p>
             </div>
         </div>
     )
