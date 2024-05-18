@@ -42,7 +42,7 @@ const NavBar = () => {
           </Link>
         </li>
         <li className='opacity-80'>
-            <Link href='/' >
+            <Link href='https://twitter.com/AeonsBTC' >
             <Image 
                 className=''
                 src='/TwitterMenuLogo.png'
@@ -53,7 +53,7 @@ const NavBar = () => {
             </Link>
         </li>
         <li className="opacity-80">
-            <Link href='/'>
+            <Link href='https://discord.gg/6KucTavSDh'>
               <Image 
                 className=''
                 src='/newdiscordlogo.png'
