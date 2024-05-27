@@ -58,8 +58,8 @@ const NavBar = () => {
                 className=''
                 src='/newdiscordlogo.png'
                 alt='Aeons logo'
-                width={90}
-                height={90}
+                width={60}
+                height={60}
               />
           </Link>
         </li>
