@@ -45,9 +45,9 @@ const NavBar = () => {
             <Link href='https://twitter.com/AeonsBTC' >
             <Image 
                 className=''
-                src='/TwitterMenuLogo.png'
+                src='/AeonsTwitter60x60.png'
                 alt='Aeons logo'
-                width={50}
+                width={60}
                 height={60}
               />
             </Link>
@@ -56,7 +56,7 @@ const NavBar = () => {
             <Link href='https://discord.gg/6KucTavSDh'>
               <Image 
                 className=''
-                src='/newdiscordlogo.png'
+                src='/AeonsDiscord60x60.png'
                 alt='Aeons logo'
                 width={60}
                 height={60}
