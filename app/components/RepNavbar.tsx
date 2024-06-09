@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const RepNavBar = () => {
   return(
-    <nav className="p-4 sm:p-6 md:flex md:justify-between md:items-center">
+    <nav className="p-2 sm:p-6 md:flex md:justify-between md:items-center">
       <div className="container mx-auto flex justify-between items-center">
       <div>
         <Link href="/">
@@ -16,7 +16,7 @@ const RepNavBar = () => {
           />
         </Link>
       </div>
-      <div className="hidden md:flex">
+      <div className="hidden md:flex md:items-center">
         <Link href="/gallery" className="text-4xl font-bold text-center uppercase mx-2">
             <span>Galle<span className='text-[#e6a40e]'>ry</span></span>
         </Link>
@@ -25,7 +25,7 @@ const RepNavBar = () => {
         </Link>
         <Link href='https://twitter.com/AeonsBTC' >
             <Image 
-                className=''
+                className='mx-2'
                 src='/AeonsTwitter60x60.png'
                 alt='Aeons logo'
                 width={60}
@@ -34,7 +34,7 @@ const RepNavBar = () => {
         </Link>
         <Link href='https://discord.gg/6KucTavSDh'>
               <Image 
-                className=''
+                className='mx-2'
                 src='/AeonsDiscord60x60.png'
                 alt='Aeons logo'
                 width={60}

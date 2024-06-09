@@ -9,6 +9,7 @@ import localFont from 'next/font/local'
 import NavBar from "./components/Nav";
 import MobileNav from "./components/MobileNav";
 import NewNav from "./components/NewNav";
+import RepNavBar from "./components/RepNavbar";
 
 const inter = Inter({ subsets: ["latin"] });
 const league_gothic = League_Gothic({ subsets: ["latin"] })
@@ -36,8 +37,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${edo.variable} ${inter.className} ${league_gothic.className}`}>
-        <NavBar />
-        <NewNav />
+      
+        <RepNavBar />
         {children}
       </body>
     </html>
