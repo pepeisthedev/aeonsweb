@@ -5,7 +5,7 @@ const NewHero = () => {
     return(
         <div className='flex flex-col items-center justify-center'>
             <div className='z-20 -mb-10'>
-                <p className='text-9xl sm:text-2xl text-white uppercase'>Explore</p>
+                <p className='text-9xl text-white uppercase'>Explore</p>
             </div>
             <div className=''>
                 <Image 
@@ -19,7 +19,7 @@ const NewHero = () => {
                 />
             </div>
             <div className='z-20 -mt-10'>
-                <p className='text-9xl sm:text-2xl text-white uppercase'>Art</p>
+                <p className='text-9xl text-white uppercase'>Art</p>
             </div>
         </div>
     )
