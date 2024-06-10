@@ -1,0 +1,48 @@
+{
+  "name": "100",
+  "description": "",
+  "external_url": "",
+  "image": "100.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blue Canvas"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Apache"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Skull"
+    },
+    {
+      "trait_type": "Mouths",
+      "value": "Bony Grin"
+    },
+    {
+      "trait_type": "Skins",
+      "value": "Squiggles"
+    },
+    {
+      "trait_type": "Specialties",
+      "value": "American wings"
+    },
+    {
+      "trait_type": "Top Layer / Miscellaneous",
+      "value": "Infinity Hoodie"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "100.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons",
+  "rarity": 288,
+  "inscriptionid": "618ffb4e23e19566c7567841187a1c424dfd775e4f8cb633a7a3d4836784835fi0"
+}

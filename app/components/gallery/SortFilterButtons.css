@@ -1,0 +1,18 @@
+.options-text {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #e6a40e;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .options-text {
+        font-size: 24px;
+    }
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}

@@ -1,19 +1,18 @@
 'use client'
 
 import React from 'react'
-
-import ComingSoon from '../components/ComingSoon'
-import Tooltip from '../components/Tooltip'
+import "./page.css"
+import ImageGallery from "@/app/components/gallery/ImageGallery";
 
 
 const Gallery = () => {
     return(
-        <main className="flex h-screen flex-col items-center justify-center bg-cover bg-[url('/blackaeonsbg.png')] -my-24">
-            <Tooltip content='Will this work?'>
-                <ComingSoon />
-            </Tooltip>
-        </main>
-    )
-}
+        <main className="main-content flex-col flex h-screen flex-grow bg-[url('/blackaeonsbg.png')] bg-cover -my-24">
 
-export default Gallery;
+                <ImageGallery/>
+
+            </main>
+            )
+            }
+
+            export default Gallery;

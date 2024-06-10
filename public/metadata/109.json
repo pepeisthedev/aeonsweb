@@ -1,0 +1,48 @@
+{
+  "name": "109",
+  "description": "",
+  "external_url": "",
+  "image": "109.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Celestial Night"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Lightning"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Crown"
+    },
+    {
+      "trait_type": "Mouths",
+      "value": "Sinister cackle"
+    },
+    {
+      "trait_type": "Skins",
+      "value": "Halving Block"
+    },
+    {
+      "trait_type": "Specialties",
+      "value": "American wings"
+    },
+    {
+      "trait_type": "Top Layer / Miscellaneous",
+      "value": "Play buttons"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "109.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons",
+  "rarity": 21,
+  "inscriptionid": "618ffb4e23e19566c7567841187a1c424dfd775e4f8cb633a7a3d4836784835fi0"
+}

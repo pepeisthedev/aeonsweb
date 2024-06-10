@@ -1,0 +1,67 @@
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 150px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-color: #e6a40e transparent;
+    scrollbar-width: thin;
+
+}
+
+
+.filter-dropdown {
+    flex: 1 0 auto;
+    margin: 0 10px 10px 0;
+    text-align: center;
+}
+
+.filter-option {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0; /* Reduces button size when smaller screen */
+    margin-right: 8px;
+    padding: 8px;
+    border: 1px solid #723f3f;
+    background-color: rgba(86, 81, 81, 0.8);
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+}
+
+.filter-dropdown div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.filter-header {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif, bold;
+    margin-bottom: 6px;
+    color: #e6a40e;
+    text-align: center;
+    background-color: rgba(95, 87, 87, 0.6);
+}
+
+.filter-label {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 6px;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #e6a40e
+}
+
+.button-text-pop {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: #e6a40e;
+}
+
+.filter-option.active {
+    background-color: #868383;
+    color: #fff;
+    border-color: #240101;
+}

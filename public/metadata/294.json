@@ -1,0 +1,48 @@
+{
+  "name": "294",
+  "description": "",
+  "external_url": "",
+  "image": "294.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Ember Night"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Skittles Eyes"
+    },
+    {
+      "trait_type": "Head",
+      "value": "To the moon"
+    },
+    {
+      "trait_type": "Mouths",
+      "value": "Sweet tooth"
+    },
+    {
+      "trait_type": "Skins",
+      "value": "Halving Block"
+    },
+    {
+      "trait_type": "Specialties",
+      "value": "Lie detector"
+    },
+    {
+      "trait_type": "Top Layer / Miscellaneous",
+      "value": "Spinal FX"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "294.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons",
+  "rarity": 196,
+  "inscriptionid": "618ffb4e23e19566c7567841187a1c424dfd775e4f8cb633a7a3d4836784835fi0"
+}
