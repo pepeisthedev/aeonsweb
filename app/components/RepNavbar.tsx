@@ -123,7 +123,7 @@ const RepNavBar = () => {
         top: 0;
         left: 0;
         background: black;
-        z-index: 20;
+        z-index: 50;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
