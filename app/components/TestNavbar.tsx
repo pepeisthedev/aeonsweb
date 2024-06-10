@@ -7,7 +7,7 @@ import { useState } from "react";
 
 // width={180} height={150}
 
-const RepNavBar = () => {
+const TestNavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -16,7 +16,7 @@ const RepNavBar = () => {
   }
 
   return(
-    <nav className="p-2 sm:p-2 md:flex md:justify-between md:items-center">
+    <nav className=" sm:px-2 sm:py-4 md:flex md:justify-between md:items-center">
       <div className="container mx-auto flex justify-between items-center">
       <div className="relative h-14 w-44">
         <Link href="/" >
@@ -84,7 +84,7 @@ const RepNavBar = () => {
             
         </div>
       </section>
-      <div className="hidden md:flex md:items-center">
+      <div className="hidden md:flex md:items-center ">
         <Link href="/gallery" className="text-4xl font-bold text-center uppercase mx-2">
             <span>Galle<span className='text-[#e6a40e]'>ry</span></span>
         </Link>
@@ -134,4 +134,4 @@ const RepNavBar = () => {
   )
 }
 
-export default RepNavBar
+export default TestNavBar

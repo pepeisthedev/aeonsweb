@@ -10,6 +10,8 @@ import NavBar from "./components/Nav";
 import MobileNav from "./components/MobileNav";
 import NewNav from "./components/NewNav";
 import RepNavBar from "./components/RepNavbar";
+import background from '../public/blackaeonsbg.png'
+import TestNavBar from "./components/TestNavbar";
 
 const inter = Inter({ subsets: ["latin"] });
 const league_gothic = League_Gothic({ subsets: ["latin"] })
@@ -39,6 +41,7 @@ export default function RootLayout({
       <body className={`${edo.variable} ${inter.className} ${league_gothic.className}`}>
       
         <RepNavBar />
+        
         {children}
       </body>
     </html>
