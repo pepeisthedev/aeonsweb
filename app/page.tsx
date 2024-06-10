@@ -5,7 +5,7 @@ import NewHero from "./components/NewHero";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-cover bg-[url('/blackaeonsbg.png')] -my-24">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-cover bg-[url('/blackaeonsbg.png')] -my-12">
    
         {/* <HeroImage /> */}
         <NewHero />
