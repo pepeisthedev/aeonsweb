@@ -32,11 +32,11 @@ const RepNavBar = () => {
       <div>
             <button onClick={handleClick} className="flex flex-col justify-center items-center">
                 <span className={`bg-[#e6a40e] block transition-all duration-300 ease-out 
-                    h-0.5 w-6 rounded-sm`}></span>
+                    h-2 w-10 rounded-sm`}></span>
                 <span className={`bg-[#e6a40e] block transition-all duration-300 ease-out 
-                    h-0.5 w-6 rounded-sm my-0.5`}></span>
+                    h-2 w-10 rounded-sm my-0.5`}></span>
                 <span className={`bg-[#e6a40e] block transition-all duration-300 ease-out 
-                    h-0.5 w-6 rounded-sm`}></span>  
+                    h-2 w-10 rounded-sm`}></span>  
             </button>
 
             <div className={isOpen ? "showMenuNav" : "hideMenuNav"}>
