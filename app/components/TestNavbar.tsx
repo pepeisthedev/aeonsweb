@@ -16,8 +16,8 @@ const TestNavBar = () => {
   }
 
   return(
-    <nav className=" sm:px-2 sm:py-4 md:flex md:justify-between md:items-center">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className=" sm:px-2 sm:py-4 md:flex md:justify-between ">
+      <div className="container mx-auto flex justify-between ">
       <div className="relative h-14 w-44">
         <Link href="/" >
           <Image 
