@@ -5,7 +5,7 @@ import "./globals.css";
 
 import localFont from 'next/font/local'
 
-// import Nav from './components/Nav'
+import Nav from './components/Nav'
 import NavBar from "./components/Nav";
 import MobileNav from "./components/MobileNav";
 import NewNav from "./components/NewNav";
@@ -40,8 +40,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${edo.variable} ${inter.className} ${league_gothic.className}`}>
       
-        <RepNavBar />
-        
+       
+        <Nav />
         {children}
       </body>
     </html>
