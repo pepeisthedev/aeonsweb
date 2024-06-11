@@ -38,7 +38,7 @@ const Tooltip: React.FC<TooltipProps> = ({
             group-hover:opacity-100 transition-opacity duration-300 opacity-0
           `}
           ref={tooltipRef}
-          role="tooltip" // Added for accessibility
+          role="tooltip" // Added for accessibility and look
         >
           {content}
         </div>
