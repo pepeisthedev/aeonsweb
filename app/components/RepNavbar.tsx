@@ -59,22 +59,22 @@ const RepNavBar = () => {
                 </div>
                 <ul className="flex flex-col items-center justify-between min-h-[250px]">
                     <li className="border-b border-gray-400 my-8 uppercase">
-                        <Link href="/gallery" className="text-4xl font-bold text-center uppercase mx-2">
+                        <Link href="/gallery" className="text-4xl font-bold text-center uppercase mx-2" onClick={handleClick}>
                           <span>Galle<span className='text-[#e6a40e]'>ry</span></span>
                         </Link>
                     </li>
                     <li className="border-b border-gray-400 my-8 uppercase">
-                        <Link href="/wlchecker" className='text-4xl font-bold text-center text-nowrap uppercase mx-2'>
+                        <Link href="/wlchecker" className='text-4xl font-bold text-center text-nowrap uppercase mx-2' onClick={handleClick}>
                           WL Check<span className='text-[#e6a40e]'>er</span>
                         </Link>
                     </li>
                     <li className="border-b border-gray-400 my-8 uppercase">
-                        <Link href="https://twitter.com/AeonsBTC" className="text-4xl font-bold text-center uppercase mx-2">
+                        <Link href="https://twitter.com/AeonsBTC" className="text-4xl font-bold text-center uppercase mx-2" onClick={handleClick}>
                           <span>Twitt<span className='text-[#e6a40e]'>er</span></span>
                         </Link>
                     </li>
                     <li className="border-b border-gray-400 my-8 uppercase">
-                        <Link href="https://discord.gg/6KucTavSDh" className="text-4xl font-bold text-center uppercase mx-2">
+                        <Link href="https://discord.gg/6KucTavSDh" className="text-4xl font-bold text-center uppercase mx-2" onClick={handleClick}>
                           <span>Disco<span className='text-[#e6a40e]'>rd</span></span>
                         </Link>
                     </li>
