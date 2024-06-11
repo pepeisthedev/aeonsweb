@@ -60,7 +60,7 @@ const TestNavBar = () => {
                 <ul className="flex flex-col items-center justify-between min-h-[250px]">
                     <li className="border-b border-gray-400 my-8 uppercase">
                         <Link href="/gallery" className="text-4xl font-bold text-center uppercase mx-2">
-                          <span>Galle<span className='text-[#e6a40e]'>ry</span></span>
+                          <span>Gallelio<span className='text-[#e6a40e]'>ry</span></span>
                         </Link>
                     </li>
                     <li className="border-b border-gray-400 my-8 uppercase">
