@@ -17,19 +17,19 @@
       "value": "Crown"
     },
     {
-      "trait_type": "Mouths",
+      "trait_type": "Mouth",
       "value": "Bitcoin Bandana"
     },
     {
-      "trait_type": "Skins",
+      "trait_type": "Skin",
       "value": "Squiggles"
     },
     {
-      "trait_type": "Specialties",
+      "trait_type": "Specialty",
       "value": "Boom"
     },
     {
-      "trait_type": "Top Layer / Miscellaneous",
+      "trait_type": "Miscellaneous",
       "value": "Spinal FX"
     }
   ],

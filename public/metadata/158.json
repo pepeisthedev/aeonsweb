@@ -17,19 +17,19 @@
       "value": "Golden Leafs"
     },
     {
-      "trait_type": "Mouths",
+      "trait_type": "Mouth",
       "value": "Crocodile teeth"
     },
     {
-      "trait_type": "Skins",
+      "trait_type": "Skin",
       "value": "Fire Bones"
     },
     {
-      "trait_type": "Specialties",
+      "trait_type": "Specialty",
       "value": "American wings"
     },
     {
-      "trait_type": "Top Layer / Miscellaneous",
+      "trait_type": "Miscellaneous",
       "value": "Infinity Hoodie"
     }
   ],

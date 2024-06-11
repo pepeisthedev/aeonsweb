@@ -1,6 +1,7 @@
 // components/Filter.tsx
 import React, {useState} from 'react';
 import './Filter.css';
+import Image from "next/image";
 
 interface FilterProps {
     traits: Record<string, string[]>;
@@ -26,17 +27,28 @@ const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, 
 
     return (
         <div className="filter-container">
-            <h2 className="filter-header">Attributes</h2>
+            <h2 className="filter-header">
+                <span className="aeons-white">ATTRIBUT</span><span className="aeons-yellow">ES</span>
+            </h2>
             {Object.entries(traits).map(([traitType, options]) => (
-                <div key={traitType} className="filter-dropdown">
-                    <label className="filter-label "
-                           onClick={() => toggleCategory(traitType)}>{traitType}</label>
+                <div key={traitType} className="label-area">
+                    <div className="filter-label" onClick={() => toggleCategory(traitType)}>
+                        <div className="label-content">
+                            <Image src='/AeonsDiscord60x60.png'
+                                   className={`rotate-icon ${expandedCategories[traitType] ? 'expanded' : ''}`}
+                                   alt="expand-icon"
+                                   width={30}
+                                   height={30}
+                            />
+                            {traitType}
+                        </div>
+                    </div>
                     {expandedCategories[traitType] && (
-                        <div className="ml-3 mt-2">
+                        <div className="expanded-area ml-3 mt-2">
                             {options.map(option => (
                                 <button
                                     key={option}
-                                    className={`button-text-pop filter-option bg-btcOrange ${activeFilters[traitType]?.includes(option) ? 'active' : ''}`}
+                                    className={`filter-option bg-btcOrange ${activeFilters[traitType]?.includes(option) ? 'active' : ''}`}
                                     onClick={() => handleChange(traitType, option)}
                                 >
                                     {option}
@@ -48,7 +60,7 @@ const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, 
                 </div>
             ))}
             <button
-                className="button-text-pop mt-4"
+                className="clear-filter mt-4 aeons-white"
                 onClick={() => setFilters({})}
             >
                 Clear Filters ({totalActiveFilters})

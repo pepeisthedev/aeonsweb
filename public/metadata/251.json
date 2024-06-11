@@ -17,19 +17,19 @@
       "value": "To the moon"
     },
     {
-      "trait_type": "Mouths",
+      "trait_type": "Mouth",
       "value": "Sinister cackle"
     },
     {
-      "trait_type": "Skins",
+      "trait_type": "Skin",
       "value": "Red Corals"
     },
     {
-      "trait_type": "Specialties",
+      "trait_type": "Specialty",
       "value": "Lie detector"
     },
     {
-      "trait_type": "Top Layer / Miscellaneous",
+      "trait_type": "Miscellaneous",
       "value": "Spinal FX"
     }
   ],

@@ -12,7 +12,7 @@
       "Marble",
       "Coral"
     ],
-    "Skins": [
+    "Skin": [
       "Squiggles",
       "Cosmos Suit",
       "Brainpower",
@@ -28,7 +28,7 @@
       "Graffiti",
       "Rust"
     ],
-    "Mouths": [
+    "Mouth": [
       "Joker",
       "Murmur mouth",
       "razor sharp",
@@ -75,7 +75,7 @@
       "Pizza Slice",
       "Spirit Orbs"
     ],
-    "Top Layer / Miscellaneous": [
+    "Miscellaneous": [
       "Murica Squiggle",
       "Infinity Hoodie",
       "Fragmentation",
@@ -84,7 +84,7 @@
       "Play buttons",
       "Roman Numerals"
     ],
-    "Specialties": [
+    "Specialty": [
       "Boom",
       "Patterned Glow",
       "Spirit of Basquiat",
@@ -96,7 +96,7 @@
       "Compass",
       "White presence"
     ],
-    "1/1": [
+    "1/1s": [
     "Rocket Saint",
     "Hell Demon",
     "Melting eyes",
