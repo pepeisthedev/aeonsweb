@@ -31,6 +31,9 @@ const edo = localFont({
 export const metadata: Metadata = {
   title: "Aeons Project",
   description: "Website for Aeons Project",
+  icons: {
+    icon: '/images/favicon.ico'
+  }
 };
 
 export default function RootLayout({
@@ -40,9 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </Head>
+      
       <body className={`${edo.variable} ${inter.className} ${league_gothic.className}`}>
       
        
