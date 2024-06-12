@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import { League_Gothic } from "next/font/google";
 import "./globals.css";
 
+import Head from "next/head";
+
 import localFont from 'next/font/local'
 
 import Nav from './components/Nav'
@@ -38,6 +40,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </Head>
       <body className={`${edo.variable} ${inter.className} ${league_gothic.className}`}>
       
        
