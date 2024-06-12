@@ -39,27 +39,12 @@ const SortFilterButtons: React.FC<SortFilterButtonsProps> = ({
             </div>
         )}
         <div className="flex">
+
             <div>
                 <div className="flex mr-4 md:mr-7">
-                    <span className="options-text">Rarity</span>
+                    <span className="options-text">ID#</span>
                     <button className="options-text"
-                        onClick={() => setSort({criterion: 'rarity', order: 'asc'})}
-                    >
-                        ▲
-                    </button>
-                    <button
-                        className="options-text rotate-180 -translate-y-[2px]"
-                        onClick={() => setSort({criterion: 'rarity', order: 'desc'})}
-                    >
-                        ▲
-                    </button>
-                </div>
-            </div>
-            <div>
-                <div className="flex mr-4 md:mr-7">
-                    <span className="options-text">Number</span>
-                    <button className="options-text"
-                        onClick={() => setSort({criterion: 'number', order: 'asc'})}
+                            onClick={() => setSort({criterion: 'number', order: 'asc'})}
                     >
                         ▲
                     </button>
@@ -71,8 +56,24 @@ const SortFilterButtons: React.FC<SortFilterButtonsProps> = ({
                     </button>
                 </div>
             </div>
+            <div>
+                <div className="flex mr-4 md:mr-7">
+                    <span className="options-text">RARITY</span>
+                    <button className="options-text"
+                            onClick={() => setSort({criterion: 'rarity', order: 'asc'})}
+                    >
+                        ▲
+                    </button>
+                    <button
+                        className="options-text rotate-180 -translate-y-[2px]"
+                        onClick={() => setSort({criterion: 'rarity', order: 'desc'})}
+                    >
+                        ▲
+                    </button>
+                </div>
+            </div>
             <div className="flex md:mr-7">
-                <span className="options-text">Zoom</span>
+                <span className="options-text">DISPLAY</span>
                 <button className="options-text" onClick={increaseColumnCount}>▲</button>
                 <button className="options-text rotate-180 -translate-y-[2px]" onClick={decreaseColumnCount}>▲</button>
             </div>

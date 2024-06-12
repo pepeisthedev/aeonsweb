@@ -7,7 +7,11 @@
     overflow-x: hidden;
     scrollbar-color: #e6a40e transparent;
     scrollbar-width: thin;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.9);
+
+}
+
+.grid-container-shadow {
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.9), 0 -5px 10px -5px rgba(0, 0, 0, 0.9);
 }
 
 @media (max-width: 768px) {
@@ -44,7 +48,11 @@
 
 .attributes-container {
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.9);
-    background-color: rgba(27, 25, 25, 0.7);
+    background: linear-gradient(to right, rgba(27, 25, 25, 0.7), rgba(128, 128, 128, 0.7));
+}
+
+.gallery-container {
+    margin-bottom: 350px;
 }
 
 

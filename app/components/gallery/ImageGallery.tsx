@@ -220,13 +220,13 @@ const ImageGallery: React.FC = () => {
     };
 
     return (
-        <div>
+        <div className="attributes-container">
 
             <SortFilterButtons showFilter={width <= MOBILE_THRESH_HOLD} isFilterVisible={isFilterVisible} setIsFilterVisible={setIsFilterVisible} setSort={setSort} decreaseColumnCount={decreaseColumnCount} increaseColumnCount={increaseColumnCount}  />
 
             <div className="mt-1 md:mt-2 flex justify-between">
                 {isFilterVisible || width >= MOBILE_THRESH_HOLD ? (
-                    <div className={`${width < MOBILE_THRESH_HOLD ? 'w-full' : 'w-1/4'} pl-0 attributes-container`}>
+                    <div className={`${width < MOBILE_THRESH_HOLD ? 'w-full' : 'w-1/4'} pl-0`}>
                         <Filter
                             traits={traits}
                             activeFilters={filters}
@@ -236,7 +236,7 @@ const ImageGallery: React.FC = () => {
                     </div>
                 ) : null}
                 <div
-                    className={`${isFilterVisible && width < MOBILE_THRESH_HOLD ? 'hidden' : (width < MOBILE_THRESH_HOLD ? 'w-full' : 'w-3/4')} flex justify-center`}>
+                    className={`${isFilterVisible && width < MOBILE_THRESH_HOLD ? 'hidden' : (width < MOBILE_THRESH_HOLD ? 'w-full' : 'w-3/4')} flex justify-center grid-container-shadow`}>
                     {isLoaded && width > 0 && height > 0 && (
                         <Grid
                             columnCount={columnCount}
