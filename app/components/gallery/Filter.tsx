@@ -48,7 +48,7 @@ const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, 
                             {options.map(option => (
                                 <button
                                     key={option}
-                                    className={`filter-option bg-btcOrange ${activeFilters[traitType]?.includes(option) ? 'active' : ''}`}
+                                    className={`filter-option ${activeFilters[traitType]?.includes(option) ? 'active' : ''}`}
                                     onClick={() => handleChange(traitType, option)}
                                 >
                                     {option}
@@ -60,7 +60,7 @@ const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, 
                 </div>
             ))}
             <button
-                className="clear-filter mt-4 aeons-white"
+                className="ml-3 clear-filter mt-4 aeons-white"
                 onClick={() => setFilters({})}
             >
                 Clear Filters ({totalActiveFilters})

@@ -203,8 +203,8 @@ const ImageGallery: React.FC = () => {
 
         const image = filteredImages[imageIndex];
         return (
-            <div style={style} className="md:p-1">
-                <div className="relative w-full h-full border-4 border-white bg-transparent rounded-sm">
+            <div style={style} className="p-1">
+                <div className="relative w-full h-full border-3 md:border-4 border-white bg-transparent rounded-sm">
                     <Image
                         className="object-cover w-full h-full pixelated"
                         src={image}
