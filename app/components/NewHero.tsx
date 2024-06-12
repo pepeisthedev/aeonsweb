@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 const NewHero = () => {
     return(
-        <div className='flex flex-col items-center justify-center'>
-            <div className='z-20 -mb-10'>
+        <div className='relative flex flex-col items-center justify-center'>
+            <div className=' -mb-10'>
                 <p className='text-7xl sm:text-9xl text-white uppercase'>Explore</p>
             </div>
             <div className=''>
@@ -17,7 +17,7 @@ const NewHero = () => {
                     priority
                 />
             </div>
-            <div className='z-20 -mt-10'>
+            <div className=' -mt-10'>
                 <p className='text-7xl sm:text-9xl text-white uppercase'>Art</p>
             </div>
         </div>

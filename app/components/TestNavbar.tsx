@@ -16,8 +16,8 @@ const TestNavBar = () => {
   }
 
   return(
-    <nav className=" sm:px-2 sm:py-4 md:flex md:justify-between md:items-center">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className=" sm:px-2 sm:py-4 md:flex md:justify-between ">
+      <div className="container mx-auto flex justify-between ">
       <div className="relative h-14 w-44">
         <Link href="/" >
           <Image 
@@ -60,7 +60,7 @@ const TestNavBar = () => {
                 <ul className="flex flex-col items-center justify-between min-h-[250px]">
                     <li className="border-b border-gray-400 my-8 uppercase">
                         <Link href="/gallery" className="text-4xl font-bold text-center uppercase mx-2">
-                          <span>Galle<span className='text-[#e6a40e]'>ry</span></span>
+                          <span>Gallelio<span className='text-[#e6a40e]'>ry</span></span>
                         </Link>
                     </li>
                     <li className="border-b border-gray-400 my-8 uppercase">
