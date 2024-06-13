@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   title: "Aeons Project",
   description: "Website for Aeons Project",
   icons: {
-    icon: '/images/favicon.ico'
+    icon: '/favicon.ico'
   }
 };
 
