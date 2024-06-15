@@ -220,7 +220,7 @@ const ImageGallery: React.FC = () => {
     };
 
     return (
-        <div className="attributes-container">
+        <div className="attributes-container gallery-content">
 
             <SortFilterButtons showFilter={width <= MOBILE_THRESH_HOLD} isFilterVisible={isFilterVisible} setIsFilterVisible={setIsFilterVisible} setSort={setSort} decreaseColumnCount={decreaseColumnCount} increaseColumnCount={increaseColumnCount}  />
 
