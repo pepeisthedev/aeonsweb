@@ -20,6 +20,7 @@ const DetailsModal: React.FC<ModalProps> = ({ children, onClose, onNext, onPrevi
         }
     };
 
+
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
             switch (e.key) {
@@ -43,10 +44,16 @@ const DetailsModal: React.FC<ModalProps> = ({ children, onClose, onNext, onPrevi
     }, [onNext, onPrevious]);
 
     const handlers = useSwipeable({
-        delta: 40, // Increase this value to make the swipe gesture less sensitive
-        onSwiping: ({ deltaX }) => {
-            setDeltaX(deltaX);
-            setAnimate(false);
+        delta: 100, // Increase this value to make the swipe gesture less sensitive
+        onSwiping: ({ deltaX, deltaY }) => {
+            // Calculate the angle of the swipe in degrees
+            const angle = Math.abs(Math.atan2(deltaY, deltaX) * 180 / Math.PI);
+
+            // Only trigger the swipe if the angle is within the desired range
+            if (angle <= 10 || angle >= 170) {
+                setDeltaX(deltaX);
+                setAnimate(false);
+            }
         },
         onSwipedLeft: () => {
             setAnimate(true);
