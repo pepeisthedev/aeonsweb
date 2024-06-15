@@ -3,7 +3,21 @@
 }
 
 .modal-transparent {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    width: 55%; /* Adjust as needed */
+    height: 55%; /* Adjust as needed */
+    display: flex; /* Add this line */
+    align-items: center; /* Add this line */
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-transparent {
+        width: 75%; /* Adjust as needed */
+        height: 75%; /* Adjust as needed */
+
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -22,3 +36,20 @@
     margin-right: 10px;
 }
 
+.modal-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    cursor: pointer;
+}
+
+.modal-button.left {
+    left: 0; /* Adjust as needed */
+    transform: translateY(-50%) scaleX(-1);
+}
+
+.modal-button.right {
+    right: 0; /* Adjust as needed */
+}

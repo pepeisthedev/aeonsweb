@@ -18,17 +18,8 @@ const DetailsModal: React.FC<ModalProps> = ({ children, onClose , onNext, onPrev
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 modal-container" onClick={handleOverlayClick}>
             <div className="relative modal-transparent p-6 rounded shadow-lg"> {/* Set position to relative */}
-                <button
-                    className="absolute top-2 right-2 rounded-full p-1"
-                    onClick={(e) => onClose(e)}
-                    style={{width: '10px', height: '10px'}} // Set a specific width and height
-                >
-                    &times;
-                </button>
-                <div className="button-container pr-2 pb-2">
-                    <button className="text-red-700 underline" onClick={onPrevious}>Previous</button>
-                    <button className="text-red-700 underline" onClick={onNext}>Next</button>
-                </div>
+                <img src="/arrow-right.png" alt="Previous" className="modal-button left" onClick={onPrevious} />
+                <img src="/arrow-right.png" alt="Next" className="modal-button right" onClick={onNext} />
                 {children}
             </div>
         </div>
