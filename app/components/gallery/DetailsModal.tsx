@@ -51,7 +51,7 @@ const DetailsModal: React.FC<ModalProps> = ({ children, onClose, onNext, onPrevi
             setAnimate(true);
             setFinalX(-window.innerWidth); // Set the final position off-screen to the left
             setTimeout(() => {
-                onPrevious();
+                onNext();
                 setDeltaX(0);
                 setFinalX(0);
                 setAnimate(false);
@@ -61,7 +61,7 @@ const DetailsModal: React.FC<ModalProps> = ({ children, onClose, onNext, onPrevi
             setAnimate(true);
             setFinalX(window.innerWidth); // Set the final position off-screen to the right
             setTimeout(() => {
-                onNext();
+                onPrevious();
                 setDeltaX(0);
                 setFinalX(0);
                 setAnimate(false);

@@ -1,6 +1,4 @@
-.modal-container {
-    padding: 0;
-}
+
 
 .modal-transparent {
     background-color: rgba(255, 255, 255, 1);
@@ -10,6 +8,7 @@
     display: flex; /* Add this line */
     align-items: center; /* Add this line */
     justify-content: center;
+    overflow-x: hidden;
 }
 
 @media screen and (max-width: 768px) {
@@ -33,11 +32,6 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    .modal-container {
-        padding: 20px;
-    }
-}
 
 .button-container {
     position: absolute;
@@ -59,12 +53,12 @@
 }
 
 .modal-button.left {
-    left: 0; /* Adjust as needed */
+    left: -15px;
     transform: translateY(-50%) scaleX(-1);
 }
 
 .modal-button.right {
-    right: 0; /* Adjust as needed */
+    right: -15px;
 }
 
 .animate {
