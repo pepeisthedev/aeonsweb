@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import { League_Gothic } from "next/font/google";
 import "./globals.css";
 
+import Head from "next/head";
+
 import localFont from 'next/font/local'
 
 import Nav from './components/Nav'
@@ -29,6 +31,9 @@ const edo = localFont({
 export const metadata: Metadata = {
   title: "Aeons Project",
   description: "Website for Aeons Project",
+  icons: {
+    icon: '/favicon.ico'
+  }
 };
 
 export default function RootLayout({
@@ -38,6 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      
       <body className={`${edo.variable} ${inter.className} ${league_gothic.className}`}>
       
        
