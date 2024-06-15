@@ -44,7 +44,7 @@ const DetailsModal: React.FC<ModalProps> = ({ children, onClose, onNext, onPrevi
     }, [onNext, onPrevious]);
 
     const handlers = useSwipeable({
-        delta: 100, // Increase this value to make the swipe gesture less sensitive
+        delta: 40, // Increase this value to make the swipe gesture less sensitive
         onSwiping: ({ deltaX, deltaY }) => {
             // Calculate the angle of the swipe in degrees
             const angle = Math.abs(Math.atan2(deltaY, deltaX) * 180 / Math.PI);

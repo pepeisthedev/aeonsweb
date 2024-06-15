@@ -27,7 +27,7 @@
 @media screen and (max-width: 768px) {
     .modal-transparent {
         width: 75%; /* Adjust as needed */
-        height: 100%; /* Adjust as needed */
+        height: 80%; /* Adjust as needed */
     }
 }
 
