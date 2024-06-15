@@ -66,13 +66,13 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                                 ))}
                             </div>
                         </div>
-                        <div className="image-details-button-container">
+                        <div className="image-details-button-container pt-4 sm:pt-0">
                             <a href={`https://www.ord.io/${selectedMeta.inscriptionid}`} target="_blank"
                                rel="noopener noreferrer">
-                                <button className="mt-2 p-2 text-2xl text-black detail-buttons">Open on Ord.io</button>
+                                <button className="mt-2 p-2 text-lg lg:text-xl text-black detail-buttons">Open on Ord.io</button>
                             </a>
                             <a href={selectedMeta.external_url} download>
-                                <button className="mt-4 p-2 text-2xl text-black detail-buttons">Download High Resolution Image
+                                <button className="mt-4 p-2 text-lg lg:text-xl text-black detail-buttons">Download High Resolution Image
                                     Image
                                 </button>
                             </a>

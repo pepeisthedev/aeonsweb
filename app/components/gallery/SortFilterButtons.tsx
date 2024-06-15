@@ -46,13 +46,13 @@ const SortFilterButtons: React.FC<SortFilterButtonsProps> = ({
                     <button className="options-text"
                             onClick={() => setSort({criterion: 'number', order: 'asc'})}
                     >
-                        ▲
+                        △
                     </button>
                     <button
                         className="options-text rotate-180 -translate-y-[2px]"
                         onClick={() => setSort({criterion: 'number', order: 'desc'})}
                     >
-                        ▲
+                        △
                     </button>
                 </div>
             </div>
@@ -62,20 +62,20 @@ const SortFilterButtons: React.FC<SortFilterButtonsProps> = ({
                     <button className="options-text"
                             onClick={() => setSort({criterion: 'rarity', order: 'asc'})}
                     >
-                        ▲
+                        △
                     </button>
                     <button
                         className="options-text rotate-180 -translate-y-[2px]"
                         onClick={() => setSort({criterion: 'rarity', order: 'desc'})}
                     >
-                        ▲
+                        △
                     </button>
                 </div>
             </div>
             <div className="flex md:mr-7">
                 <span className="options-text">DISPLAY</span>
-                <button className="options-text" onClick={increaseColumnCount}>▲</button>
-                <button className="options-text rotate-180 -translate-y-[2px]" onClick={decreaseColumnCount}>▲</button>
+                <button className="options-text" onClick={increaseColumnCount}>△</button>
+                <button className="options-text rotate-180 -translate-y-[2px]" onClick={decreaseColumnCount}>△</button>
             </div>
         </div>
     </div>
