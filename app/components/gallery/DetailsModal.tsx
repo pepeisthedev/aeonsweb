@@ -43,6 +43,7 @@ const DetailsModal: React.FC<ModalProps> = ({ children, onClose, onNext, onPrevi
     }, [onNext, onPrevious]);
 
     const handlers = useSwipeable({
+        delta: 40, // Increase this value to make the swipe gesture less sensitive
         onSwiping: ({ deltaX }) => {
             setDeltaX(deltaX);
             setAnimate(false);
