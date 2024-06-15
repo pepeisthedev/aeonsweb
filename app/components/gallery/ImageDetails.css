@@ -19,14 +19,23 @@
     justify-content: space-between;
     align-items: stretch;
     width: 100%;
+    color: black;
+    padding-top: 8px;
+    font-size: 18px;
 }
 
+@media screen and (min-width: 1024px) {
+    .details-modal-header {
+        font-size: 25px;
+    }
+}
 
 .metadata-content {
-    display: flex;
-
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Adjust as needed */
+    gap: 20px; /* Adjust as needed */
     width: 100%;
+    color: black;
 }
 
 .trait-column {
@@ -37,6 +46,16 @@
 
 .attributes-header {
     grid-column: 1;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .attributes-header {
+        font-size: 47px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -83,6 +102,33 @@
     }
 }
 
+.trait-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {
+    .trait-name {
+        font-size: 25px;
+    }
+}
+
+.trait-value {
+    font-size: 18px;
+}
+
+@media screen and (min-width: 1024px) {
+    .trait-value {
+        font-size: 23px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .trait-value {
+        white-space: nowrap;
+    }
+}
+
 .center-container2 {
     display: flex;
     align-items: center;
@@ -92,6 +138,15 @@
 .detail-buttons {
     background-color: #e6a40e;
     border-radius: 7px;
+    padding: 0.5rem;
+    color: black;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+    .detail-buttons {
+        font-size: 25px;
+    }
 }
 
 .image-details-button-container {

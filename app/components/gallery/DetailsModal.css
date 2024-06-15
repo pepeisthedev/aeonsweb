@@ -16,7 +16,20 @@
     .modal-transparent {
         width: 75%; /* Adjust as needed */
         height: 75%; /* Adjust as needed */
+    }
+}
 
+@media screen and (min-width: 1024px) {
+    .modal-transparent {
+        width: 55%; /* Adjust as needed */
+        height: 55%; /* Adjust as needed */
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-height: 800px) {
+    .modal-transparent {
+        height: 95%;
+        width: 75%;
     }
 }
 
@@ -52,4 +65,8 @@
 
 .modal-button.right {
     right: 0; /* Adjust as needed */
+}
+
+.animate {
+    transition: transform 0.2s ease-out !important;
 }

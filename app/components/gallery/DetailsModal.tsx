@@ -1,7 +1,6 @@
-import React, { ReactNode, MouseEventHandler, useState } from 'react';
+import React, {ReactNode, MouseEventHandler, useState, useEffect} from 'react';
 import { useSwipeable } from 'react-swipeable';
 import './DetailsModal.css';
-import './FlipDetailsModal.css';
 
 interface ModalProps {
     children: ReactNode;
@@ -20,6 +19,28 @@ const DetailsModal: React.FC<ModalProps> = ({ children, onClose, onNext, onPrevi
             onClose(e);
         }
     };
+
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            switch (e.key) {
+                case 'ArrowRight':
+                    onNext();
+                    break;
+                case 'ArrowLeft':
+                    onPrevious();
+                    break;
+                default:
+                    break;
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+
+        // Remove event listeners on cleanup
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [onNext, onPrevious]);
 
     const handlers = useSwipeable({
         onSwiping: ({ deltaX }) => {

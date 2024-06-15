@@ -25,16 +25,16 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                             className="border-8 border-black rounded "
                         />
                         <div className="details-modal-header">
-                            <h2 className="text-black text-2xl pl-1 pt-2">PIECE {selectedMeta.name}/3333</h2>
-                            <h2 className="text-black text-2xl pr-1 pt-2">RARITY {selectedMeta.rarity}</h2>
+                            <h2 className="pl-1">PIECE {selectedMeta.name}/3333</h2>
+                            <h2 className="pr-1">RARITY {selectedMeta.rarity}</h2>
                         </div>
                     </div>
                 </div>
 
                 <div className="">
                     <div className="metadata-grid-column">
-                        <h2 className="text-black text-4xl font-bold mb-4 attributes-header">ATTRIBUTES</h2>
-                        <div className="metadata-content text-xl text-black">
+                        <h2 className="attributes-header">ATTRIBUTES</h2>
+                        <div className="metadata-content">
                             <div className="trait-column">
                                 {selectedMeta.attributes.slice(0, 4).map(attr => (
                                     <li key={attr.trait_type} className="trait-item">
@@ -44,7 +44,7 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                                                 <strong>{attr.trait_type}</strong>
                                             </div>
                                         </div>
-                                        <div className="trait-value ml-2">
+                                        <div className="trait-value ml-7">
                                             {attr.value}
                                         </div>
                                     </li>
@@ -59,7 +59,7 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                                                 <strong>{attr.trait_type}</strong>
                                             </div>
                                         </div>
-                                        <div className="trait-value ml-2">
+                                        <div className="trait-value ml-7">
                                             {attr.value}
                                         </div>
                                     </li>
@@ -69,10 +69,10 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                         <div className="image-details-button-container pt-4 sm:pt-0">
                             <a href={`https://www.ord.io/${selectedMeta.inscriptionid}`} target="_blank"
                                rel="noopener noreferrer">
-                                <button className="mt-2 p-2 text-lg lg:text-xl text-black detail-buttons">Open on Ord.io</button>
+                                <button className="mt-2 detail-buttons">Open on Ord.io</button>
                             </a>
                             <a href={selectedMeta.external_url} download>
-                                <button className="mt-4 p-2 text-lg lg:text-xl text-black detail-buttons">Download High Resolution Image
+                                <button className="mt-4 detail-buttons">Download High Resolution Image
                                     Image
                                 </button>
                             </a>
