@@ -8,6 +8,16 @@ interface ImageDetailsProps {
     selectedImage: string | undefined;
 }
 
+const getRankingImage = (rarity: number) => {
+    if (rarity === 1) return "/ranking_5.png";
+    if (rarity >= 2 && rarity <= 50) return "/ranking_4.5.png";
+    if (rarity >= 51 && rarity <= 100) return "/ranking_4.png";
+    if (rarity >= 101 && rarity <= 150) return "/ranking_3.png";
+    if (rarity >= 151 && rarity <= 200) return "/ranking_2.png";
+    if (rarity >= 201 && rarity <= 250) return "/ranking_1.png";
+    else return "/ranking_0.png";
+}
+
 const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage }) => {
     const imageUrl = selectedImage || '';
 
@@ -28,7 +38,7 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                             <div className="rarity">
                                 <h2 className="pr-1">RARITY {selectedMeta.rarity}</h2>
                                 <Image
-                                    src="/ranking_4.5.png"
+                                    src={getRankingImage(selectedMeta.rarity)}
                                     alt="ranking"
                                     width={150}
                                     height={150}
