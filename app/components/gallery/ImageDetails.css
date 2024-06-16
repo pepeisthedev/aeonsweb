@@ -41,7 +41,13 @@
 .trait-column {
     display: flex;
     flex-direction: column;
+    width: 105px; /* Fixed width on mobile */
+}
 
+@media screen and (min-width: 768px) {
+    .trait-column {
+        width: 200px; /* Fixed width on desktop */
+    }
 }
 
 .attributes-header {
