@@ -32,38 +32,42 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                 </div>
 
                 <div className="">
+
+
                     <div className="metadata-grid-column">
-                        <h2 className="attributes-header">ATTRIBUTES</h2>
-                        <div className="metadata-content">
-                            <div className="trait-column">
-                                {selectedMeta.attributes.slice(0, 4).map(attr => (
-                                    <li key={attr.trait_type} className="trait-item">
-                                        <div className="trait-icon-name">
-                                            <img src="/1_triangle_aeons.png" alt="icon" className="trait-icon"/>
-                                            <div className="trait-name">
-                                                <strong>{attr.trait_type}</strong>
+                        <div>
+                            <h2 className="attributes-header">ATTRIBUTES</h2>
+                            <div className="metadata-content">
+                                <div className="trait-column">
+                                    {selectedMeta.attributes.slice(0, 4).map(attr => (
+                                        <li key={attr.trait_type} className="trait-item">
+                                            <div className="trait-icon-name">
+                                                <img src="/1_triangle_aeons.png" alt="icon" className="trait-icon"/>
+                                                <div className="trait-name">
+                                                    <strong>{attr.trait_type}</strong>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="trait-value ml-10">
-                                            {attr.value}
-                                        </div>
-                                    </li>
-                                ))}
-                            </div>
-                            <div className="trait-column">
-                                {selectedMeta.attributes.slice(4).map(attr => (
-                                    <li key={attr.trait_type} className="trait-item">
-                                        <div className="trait-icon-name">
-                                            <img src="/1_triangle_aeons.png" alt="icon" className="trait-icon"/>
-                                            <div className="trait-name">
-                                                <strong>{attr.trait_type}</strong>
+                                            <div className="trait-value ml-10">
+                                                {attr.value}
                                             </div>
-                                        </div>
-                                        <div className="trait-value ml-10">
-                                            {attr.value}
-                                        </div>
-                                    </li>
-                                ))}
+                                        </li>
+                                    ))}
+                                </div>
+                                <div className="trait-column">
+                                    {selectedMeta.attributes.slice(4).map(attr => (
+                                        <li key={attr.trait_type} className="trait-item">
+                                            <div className="trait-icon-name">
+                                                <img src="/1_triangle_aeons.png" alt="icon" className="trait-icon"/>
+                                                <div className="trait-name">
+                                                    <strong>{attr.trait_type}</strong>
+                                                </div>
+                                            </div>
+                                            <div className="trait-value ml-10">
+                                                {attr.value}
+                                            </div>
+                                        </li>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                         <div className="image-details-button-container pt-4 sm:pt-0">

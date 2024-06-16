@@ -50,11 +50,17 @@
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-align: left;
 }
 
 @media screen and (min-width: 1024px) {
     .attributes-header {
         font-size: 47px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .attributes-header {
+        padding-left: 20px; /*Same as trait-column padding-left*/
     }
 }
 
