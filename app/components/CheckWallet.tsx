@@ -3,7 +3,7 @@ import "./CheckWallet.css"
 
 const CheckWallet = () => {
     const [address, setAddress] = useState('');
-    const [response, setResponse] = useState({ VIP: '', FCFS: '' });
+    const [response, setResponse] = useState(null); // Initialize response to null
 
     const handleClick = async () => {
         try {
