@@ -1,0 +1,46 @@
+.button-style {
+    font-size: 25px; /* Increase the font size */
+    padding: 4px 24px; /* Add padding to increase the size of the button */
+    position: relative;
+    background-color: rgba(86, 81, 81, 0.95);
+    border-radius: 6px;
+}
+
+.input-div {
+    display: flex;
+
+}
+
+.font-style {
+    font-family: 'Helvetica', sans-serif; /* Change the font to Roboto */
+}
+
+.input-style {
+    border-radius: 6px;
+}
+
+
+.aeons-yellow {
+    color: #e6a40e;
+}
+
+.congrats {
+    font-size: 25px;
+    background-color: rgba(128, 128, 128, 0.4); /* Add a slightly grey transparent background */
+    font-family: 'Helvetica', sans-serif; /* Change the font to Helvetica */
+}
+
+.to-bad {
+    font-size: 20px;
+    background-color: rgba(128, 128, 128, 0.6); /* Add a slightly grey transparent background */
+    font-family: 'Helvetica', sans-serif; /* Change the font to Helvetica */
+    text-align: center; /* Center the text */
+}
+
+.aeons-orange {
+    color: #ff6633;
+}
+
+.aeons-white {
+    color: #fff;
+}
