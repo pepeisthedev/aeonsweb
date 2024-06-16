@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import "./CheckWallet.css"
 
+type ResponseType = {
+    VIP?: string;
+    FCFS?: string;
+    error?: string;
+};
+
 const CheckWallet = () => {
     const [address, setAddress] = useState('');
-    const [response, setResponse] = useState(null); // Initialize response to null
+    const [response, setResponse] = useState<ResponseType | null>(null); // Declare the type of response here
 
     const handleClick = async () => {
         try {
