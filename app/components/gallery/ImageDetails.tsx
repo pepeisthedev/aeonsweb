@@ -21,12 +21,20 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                             alt={selectedMeta.name}
                             width={400}
                             height={400}
-
                             className="border-8 border-black rounded "
                         />
                         <div className="details-modal-header">
                             <h2 className="pl-1">PIECE {selectedMeta.name}/3333</h2>
-                            <h2 className="pr-1">RARITY {selectedMeta.rarity}</h2>
+                            <div className="rarity">
+                                <h2 className="pr-1">RARITY {selectedMeta.rarity}</h2>
+                                <Image
+                                    src="/ranking_4.5.png"
+                                    alt="ranking"
+                                    width={150}
+                                    height={150}
+                                    className="pr-1 rarity-image"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -47,7 +55,7 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                                                     <strong>{attr.trait_type}</strong>
                                                 </div>
                                             </div>
-                                            <div className="trait-value ml-10">
+                                            <div className="trait-value ml-6">
                                                 {attr.value}
                                             </div>
                                         </li>
@@ -62,7 +70,7 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                                                     <strong>{attr.trait_type}</strong>
                                                 </div>
                                             </div>
-                                            <div className="trait-value ml-10">
+                                            <div className="trait-value ml-6">
                                                 {attr.value}
                                             </div>
                                         </li>
