@@ -34,12 +34,13 @@ const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, 
                 <div key={traitType} className="label-area">
                     <div className="filter-label" onClick={() => toggleCategory(traitType)}>
                         <div className="label-content">
-                            <Image src='/AeonsDiscord60x60.png'
-                                   className={`rotate-icon ${expandedCategories[traitType] ? 'expanded' : ''}`}
-                                   alt="expand-icon"
-                                   width={30}
-                                   height={30}
-                            />
+                            <div className={`rotate-icon ${expandedCategories[traitType] ? 'expanded' : ''}`}>
+                                <Image src='/1_triangle_aeons.png'
+                                       alt="expand-icon"
+                                       width={20}
+                                       height={20}
+                                />
+                            </div>
                             {traitType}
                         </div>
                     </div>
