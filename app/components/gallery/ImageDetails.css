@@ -36,13 +36,15 @@
     width: 100%;
     color: black;
     padding-top: 8px;
-    font-size: 18px;
+    font-size: 12px;
     white-space: nowrap;
+    font-weight: bold;
+    font-family: 'Helvetica', sans-serif;
 }
 
 @media screen and (min-width: 1024px) {
     .details-modal-header {
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 
@@ -69,15 +71,16 @@
 .attributes-header {
     grid-column: 1;
     color: black;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 1rem;
     text-align: left;
+    font-family: 'Helvetica', sans-serif;
 }
 
 @media screen and (min-width: 1024px) {
     .attributes-header {
-        font-size: 47px;
+        font-size: 35px;
     }
 }
 @media screen and (min-width: 768px) {
@@ -116,6 +119,13 @@
     margin-right: 10px;
 }
 
+@media screen and (max-width: 768px) {
+    .trait-icon {
+        width: 12px;
+        height: 12px;
+    }
+}
+
 .image-metadata-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);/* Adjust as needed */
@@ -136,24 +146,26 @@
 }
 
 .trait-name {
-    font-size: 20px;
+    font-size: 12px;
     font-weight: bold;
+    font-family: 'Helvetica', sans-serif;
 }
 
 @media screen and (min-width: 1024px) {
     .trait-name {
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 
 .trait-value {
-    font-size: 18px;
+    font-size: 12px;
+    font-family: 'Helvetica', sans-serif;
     white-space: nowrap;
 }
 
 @media screen and (min-width: 1024px) {
     .trait-value {
-        font-size: 23px;
+        font-size: 18px;
     }
 }
 
@@ -174,12 +186,13 @@
     border-radius: 7px;
     padding: 0.5rem;
     color: black;
-    font-size: 16px;
+    font-size: 11px;
+    font-family: 'Helvetica', sans-serif;
 }
 
 @media screen and (min-width: 1024px) {
     .detail-buttons {
-        font-size: 25px;
+        font-size: 18px;
     }
 }
 
