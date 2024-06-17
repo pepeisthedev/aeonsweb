@@ -14,8 +14,7 @@ const getRankingImage = (rarity: number) => {
     if (rarity >= 51 && rarity <= 100) return "/ranking_4.png";
     if (rarity >= 101 && rarity <= 150) return "/ranking_3.png";
     if (rarity >= 151 && rarity <= 200) return "/ranking_2.png";
-    if (rarity >= 201 && rarity <= 250) return "/ranking_1.png";
-    else return "/ranking_0.png";
+    else return "/ranking_1.png";
 }
 
 const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage }) => {

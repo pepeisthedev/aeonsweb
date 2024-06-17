@@ -23,7 +23,7 @@ const SortFilterButtons: React.FC<SortFilterButtonsProps> = ({
                                                              }) => (
     <div className="options">
         {showFilter ? (
-            <div className="top-0 left-0 ml-2">
+            <div className="top-0 left-0 ml-3">
                 <button
                     className="options-text underline"
                     onClick={() => setIsFilterVisible(!isFilterVisible)}

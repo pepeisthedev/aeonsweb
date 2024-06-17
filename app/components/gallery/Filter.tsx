@@ -37,8 +37,8 @@ const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, 
                             <div className={`rotate-icon ${expandedCategories[traitType] ? 'expanded' : ''}`}>
                                 <Image src='/1_triangle_aeons.png'
                                        alt="expand-icon"
-                                       width={20}
-                                       height={20}
+                                       width={13}
+                                       height={13}
                                 />
                             </div>
                             {traitType}
@@ -60,6 +60,7 @@ const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, 
 
                 </div>
             ))}
+
             <button
                 className="ml-3 clear-filter mt-4 aeons-white"
                 onClick={() => setFilters({})}
