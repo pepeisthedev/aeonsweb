@@ -6,7 +6,7 @@
     border-radius: 6px;
     font-family: 'Helvetica', sans-serif;
     height: 45px;
-    border: 4px solid #ff6633;
+    border: 3px solid #ff6633;
     animation: border-color-change 2s linear infinite;
 }
 
@@ -64,13 +64,15 @@
 
 .congrats {
     font-size: 25px;
-    background-color: rgba(128, 128, 128, 0.4); /* Add a slightly grey transparent background */
-    font-family: 'Helvetica', sans-serif; /* Change the font to Helvetica */
+    background-color: rgba(128, 128, 128, 0.9); /* Add a slightly grey transparent background */
+    font-family: 'Helvetica', sans-serif;
+    text-align: center;
 }
+
 
 .to-bad {
     font-size: 20px;
-    background-color: rgba(128, 128, 128, 0.6); /* Add a slightly grey transparent background */
+    background-color: rgba(128, 128, 128, 0.9); /* Add a slightly grey transparent background */
     font-family: 'Helvetica', sans-serif; /* Change the font to Helvetica */
     text-align: center; /* Center the text */
 }
