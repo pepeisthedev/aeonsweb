@@ -49,11 +49,11 @@ const CheckWallet = () => {
 
     return (
         <div className="flex flex-col items-center justify-center h-screen">
-            <h1 className="text-9xl mb-8">
+            <h1 className="text-9xl mb-8 align-center">
                 <span className="aeons-white">CHE</span><span className="aeons-yellow">CK </span><span
                 className="aeons-white">WALL</span><span className="aeons-yellow">ET</span>
             </h1>
-            <div>
+            <div className="input-wrapper">
                 <input
                     type="text"
                     value={address}
@@ -80,7 +80,7 @@ const CheckWallet = () => {
                 </div>
             )}
             {response && (
-                <div>
+                <div className="align-center">
                     {response.VIP === '1' && <p className="congrats">Congratulations, your wallet qualifies for 1 <span
                         className="aeons-yellow">VIP mint</span> and
                         1 <span className="aeons-orange">FCFS mint</span>.</p>}
