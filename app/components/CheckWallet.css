@@ -6,6 +6,16 @@
     border-radius: 6px;
 }
 
+.input-wallet {
+    background-color: #fff;
+    color: black;
+    width: 60vw;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Helvetica', sans-serif;
+}
+
 .input-div {
     display: flex;
 

@@ -10,8 +10,28 @@ type ResponseType = {
 const CheckWallet = () => {
     const [address, setAddress] = useState('');
     const [response, setResponse] = useState<ResponseType | null>(null); // Declare the type of response here
+    const [error, setError] = useState<string | null>(null);
+
+    const validateAddress = (address: string) => {
+        if (!address) {
+            return 'Wallet address is required';
+        }
+        if (!address.startsWith('bc1')) {
+            return 'Wallet address must start with "bc1"';
+        }
+        if (address.length < 40 || address.length > 70) {
+            return 'Not a valid BTC address';
+        }
+        return null;
+    };
 
     const handleClick = async () => {
+        setResponse(null);
+        const validationError = validateAddress(address);
+        if (validationError) {
+            setError(validationError);
+            return;
+        }
         try {
             const res = await fetch('/api/checkwallet', {
                 method: 'POST',
@@ -37,28 +57,28 @@ const CheckWallet = () => {
                 <input
                     type="text"
                     value={address}
-                    onChange={(e) => setAddress(e.target.value)}
+                    onChange={(e) => {
+                        setAddress(e.target.value);
+                        setError(null); // Reset the error state when the input value changes
+                    }}
                     onKeyPress={(e) => {
                         if (e.key === 'Enter') {
                             handleClick();
                         }
                     }}
                     placeholder="Enter your wallet address"
-                    style={{
-                        backgroundColor: 'rgba(211, 211, 211, 0.5)',
-                        width: '60vw',
-                        borderRadius: '10px',
-                        textAlign: 'center',
-                        fontSize: '20px',
-                        fontFamily: 'Helvetica',
 
-                    }}
-                    className="mb-4 p-2"
+                    className="mb-4 p-2 input-wallet "
                 />
                 <button onClick={handleClick} className="ml-3 button-style">
                     Submit
                 </button>
             </div>
+            {error && (
+                <div className="congrats">
+                    {error}
+                </div>
+            )}
             {response && (
                 <div>
                     {response.VIP === '1' && <p className="congrats">Congratulations, your wallet qualifies for 1 <span
