@@ -49,7 +49,7 @@ const CheckWallet = () => {
 
     return (
         <div className="flex flex-col items-center justify-center h-screen">
-            <h1 className="text-9xl mb-8 align-center">
+            <h1 className="text-7xl lg:text-9xl mb-8 align-center">
                 <span className="aeons-white">CHE</span><span className="aeons-yellow">CK </span><span
                 className="aeons-white">WALL</span><span className="aeons-yellow">ET</span>
             </h1>

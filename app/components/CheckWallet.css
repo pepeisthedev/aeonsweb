@@ -67,6 +67,8 @@
     background-color: rgba(128, 128, 128, 0.9); /* Add a slightly grey transparent background */
     font-family: 'Helvetica', sans-serif;
     text-align: center;
+    border-radius: 4px;
+    padding: 4px;
 }
 
 

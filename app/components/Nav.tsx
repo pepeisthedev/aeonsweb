@@ -3,15 +3,17 @@
 import React, { useState } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
+import "./Nav.css"
 
 const NavBar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClick = () => {
-      setIsOpen(!isOpen);
-      console.log(isOpen)
-  }
+    const handleClick = () => {
+        setTimeout(() => {
+            setIsOpen(!isOpen);
+        }, 100);
+    }
 
   return (
     <nav className="sticky mx-auto w-full text-gray-300 flex flex-row justify-between items-center p-4 z-10 bg-opacity-50">
@@ -52,7 +54,7 @@ const NavBar = () => {
 
             <div className={isOpen ? "showMenuNav" : "hideMenuNav"}>
                 <div
-                  className="absolute top-0 right-0 px-8 py-8"
+                  className="absolute top-0 right-0 px-8 py-8 menu-z-index"
                   onClick={() => setIsOpen(false)}
                 >
                   <svg
@@ -68,23 +70,23 @@ const NavBar = () => {
                     <line x1="6" y1="6" x2="18" y2="18" />
                   </svg>
                 </div>
-                <ul className="flex flex-col items-center justify-between min-h-[250px]">
-                    <li className="border-b border-gray-400 my-8 uppercase">
-                        <Link href="/gallery" className="text-4xl font-bold text-center uppercase mx-2" onClick={handleClick}>
+                <ul className="flex flex-col items-center justify-between min-h-[250px] link-z-index">
+                    <li className="border-b border-gray-400 my-8 uppercase link-z-index">
+                        <Link href="/gallery" className="text-4xl font-bold text-center uppercase mx-2 " onClick={handleClick}>
                           <span>Galle<span className='text-[#e6a40e]'>ry</span></span>
                         </Link>
                     </li>
-                    <li className="border-b border-gray-400 my-8 uppercase">
+                    <li className="border-b border-gray-400 my-8 uppercase link-z-index">
                         <Link href="/wlchecker" className='text-4xl font-bold text-center text-nowrap uppercase mx-2' onClick={handleClick}>
                           WL Check<span className='text-[#e6a40e]'>er</span>
                         </Link>
                     </li>
-                    <li className="border-b border-gray-400 my-8 uppercase">
+                    <li className="border-b border-gray-400 my-8 uppercase link-z-index">
                         <Link href="https://twitter.com/AeonsBTC" className="text-4xl font-bold text-center uppercase mx-2" onClick={handleClick}>
                           <span>Twitt<span className='text-[#e6a40e]'>er</span></span>
                         </Link>
                     </li>
-                    <li className="border-b border-gray-400 my-8 uppercase">
+                    <li className="border-b border-gray-400 my-8 uppercase link-z-index">
                         <Link href="https://discord.gg/6KucTavSDh" className="text-4xl font-bold text-center uppercase mx-2" onClick={handleClick}>
                           <span>Disco<span className='text-[#e6a40e]'>rd</span></span>
                         </Link>
