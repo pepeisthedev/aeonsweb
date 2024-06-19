@@ -26,6 +26,11 @@ const CheckWallet = () => {
     };
 
     const handleClick = async () => {
+        if (response) {
+            setResponse(null);
+            setAddress('');
+            return;
+        }
         setResponse(null);
         const validationError = validateAddress(address);
         if (validationError) {
@@ -71,7 +76,7 @@ const CheckWallet = () => {
                     className="mb-4 p-2 input-wallet "
                 />
                 <button onClick={handleClick} className="ml-3 button-style">
-                    Submit
+                    {response ? 'Check another' : 'Submit'}
                 </button>
             </div>
             {error && (
