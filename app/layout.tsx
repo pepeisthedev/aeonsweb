@@ -37,7 +37,7 @@ export const metadata = {
     url: 'https://bro-check-this-gallery.vercel.app',
     images: [
       {
-        url: '/Aeons_Preview.png',
+        url: 'https://bro-check-this-gallery.vercel.app/Aeons_Preview.png',
         width: 1200,
         height: 630,
         alt: 'Aeons Preview Image',
