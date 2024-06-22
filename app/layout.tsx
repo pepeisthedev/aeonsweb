@@ -29,7 +29,7 @@ const edo = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Aeons Project",
+  title: "Aeons YEAH",
   description: "Hello mfers",
   icons: {
     icon: '/favicon.ico'
