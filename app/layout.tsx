@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   description: "Website for Aeons Project",
   icons: {
     icon: '/favicon.ico'
+  },
+  openGraph: {
+    images: ['/Aeons_Preview.png'],
   }
 };
 
