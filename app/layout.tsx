@@ -29,10 +29,13 @@ const edo = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Aeons Project",
-  description: "Website for Aeons Project",
+  title: "Aeons YEAH",
+  description: "Testing",
   icons: {
     icon: '/favicon.ico'
+  },
+  openGraph: {
+    images: ['/Aeons_Preview.png'],
   }
 };
 
