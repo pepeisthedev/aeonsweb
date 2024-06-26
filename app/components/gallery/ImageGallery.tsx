@@ -220,42 +220,44 @@ const ImageGallery: React.FC = () => {
     };
 
     return (
-        <div className="attributes-container gallery-content">
+        <div className="expand-flex">
+            <div className="attributes-container gallery-content ">
 
-            <SortFilterButtons showFilter={width <= MOBILE_THRESH_HOLD} isFilterVisible={isFilterVisible} setIsFilterVisible={setIsFilterVisible} setSort={setSort} decreaseColumnCount={decreaseColumnCount} increaseColumnCount={increaseColumnCount}  />
+                <SortFilterButtons showFilter={width <= MOBILE_THRESH_HOLD} isFilterVisible={isFilterVisible} setIsFilterVisible={setIsFilterVisible} setSort={setSort} decreaseColumnCount={decreaseColumnCount} increaseColumnCount={increaseColumnCount}  />
 
-            <div className="mt-1 md:mt-2 flex justify-between">
-                {isFilterVisible || width >= MOBILE_THRESH_HOLD ? (
-                    <div className={`${width < MOBILE_THRESH_HOLD ? 'w-full' : 'w-1/4'} pl-0`}>
-                        <Filter
-                            traits={traits}
-                            activeFilters={filters}
-                            onFilterChange={handleFilterChange}
-                            setFilters={setFilters}
-                        />
+                <div className="mt-1 md:mt-2 flex justify-between">
+                    {isFilterVisible || width >= MOBILE_THRESH_HOLD ? (
+                        <div className={`${width < MOBILE_THRESH_HOLD ? 'w-full' : 'w-1/4'} pl-0`}>
+                            <Filter
+                                traits={traits}
+                                activeFilters={filters}
+                                onFilterChange={handleFilterChange}
+                                setFilters={setFilters}
+                            />
+                        </div>
+                    ) : null}
+                    <div
+                        className={`${isFilterVisible && width < MOBILE_THRESH_HOLD ? 'hidden' : (width < MOBILE_THRESH_HOLD ? 'w-full' : 'w-3/4')} flex justify-center grid-container-shadow`}>
+                        {isLoaded && width > 0 && height > 0 && (
+                            <Grid
+                                columnCount={columnCount}
+                                columnWidth={(isFilterVisible || width < MOBILE_THRESH_HOLD) ? columnWidth : columnWidth - 3}
+                                height={height - 40}
+                                rowCount={Math.ceil(filteredImages.length / columnCount)}
+                                rowHeight={columnWidth}
+                                width={(isFilterVisible || width < MOBILE_THRESH_HOLD) ? (width) : (0.75 * width)}
+                                className="grid"
+                            >
+                                {Cell}
+                            </Grid>
+                        )}
+                        {selectedMeta && (
+                            <DetailsModal onClose={() => setSelectedMeta(null)} onNext={handleNext}
+                                          onPrevious={handlePrevious}>
+                                <ImageDetails selectedMeta={selectedMeta} selectedImage={selectedImage} />
+                            </DetailsModal>
+                        )}
                     </div>
-                ) : null}
-                <div
-                    className={`${isFilterVisible && width < MOBILE_THRESH_HOLD ? 'hidden' : (width < MOBILE_THRESH_HOLD ? 'w-full' : 'w-3/4')} flex justify-center grid-container-shadow`}>
-                    {isLoaded && width > 0 && height > 0 && (
-                        <Grid
-                            columnCount={columnCount}
-                            columnWidth={(isFilterVisible || width < MOBILE_THRESH_HOLD) ? columnWidth : columnWidth - 3}
-                            height={height - 40}
-                            rowCount={Math.ceil(filteredImages.length / columnCount)}
-                            rowHeight={columnWidth}
-                            width={(isFilterVisible || width < MOBILE_THRESH_HOLD) ? (width) : (0.75 * width)}
-                            className="grid"
-                        >
-                            {Cell}
-                        </Grid>
-                    )}
-                    {selectedMeta && (
-                        <DetailsModal onClose={() => setSelectedMeta(null)} onNext={handleNext}
-                                      onPrevious={handlePrevious}>
-                            <ImageDetails selectedMeta={selectedMeta} selectedImage={selectedImage} />
-                        </DetailsModal>
-                    )}
                 </div>
             </div>
         </div>

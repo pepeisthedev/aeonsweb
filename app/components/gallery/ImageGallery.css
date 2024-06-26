@@ -3,6 +3,18 @@
     transform-origin: center;
 }
 
+@media (max-width: 768px) {
+    .attributes-container.gallery-content {
+        height: calc(100vh - 150px);
+        overflow: hidden;
+    }
+}
+
+.expand-flex {
+    height: 75%;
+    width: 100%;
+}
+
 .grid {
     display: flex;
     justify-content: center;

@@ -1,3 +1,9 @@
+.nav {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+
 .link-z-index {
   z-index: 10;
 }

@@ -1,8 +1,10 @@
 .options-text {
     font-size: 13px;
     font-family: 'Helvetica', sans-serif;
-    color: #e6a40e;
+    color: #fff;
     position: relative;
+    display: flex;
+    align-items: center; /* Aligns text and image vertically */
 }
 
 @media (min-width: 768px) {
@@ -14,5 +16,19 @@
 .options {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center; /* Ensures the items are aligned centrally */
+}
+
+
+
+
+.sorting-options {
+    display: flex;
+    /* other styles */
+}
+
+@media (max-width: 768px) {
+    .sorting-options.hide-on-mobile {
+        display: none;
+    }
 }

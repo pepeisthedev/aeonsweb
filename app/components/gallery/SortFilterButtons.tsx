@@ -23,59 +23,54 @@ const SortFilterButtons: React.FC<SortFilterButtonsProps> = ({
                                                              }) => (
     <div className="options">
         {showFilter ? (
-            <div className="top-0 left-0 ml-3">
-                <button
-                    className="options-text underline"
-                    onClick={() => setIsFilterVisible(!isFilterVisible)}
-                >
-                    {isFilterVisible ? 'Hide' : 'Show'} Filter
-                </button>
-            </div>
+            isFilterVisible ?
+                <div className="ml-1 mt-1">
+                    <button
+                        className="options-text underline visible-button"
+                        onClick={() => setIsFilterVisible(!isFilterVisible)}
+                    >
+                        <img src="/icons/x.svg" alt="Filter" className="filter-icon" width="26px"/>
+                    </button>
+                </div>
+                :
+                <div className="ml-4 mt-1">
+                    <button
+                        className="options-text underline hidden-button"
+                        onClick={() => setIsFilterVisible(!isFilterVisible)}
+                    >
+                        <img src="/icons/filter.svg" alt="Filter" className="filter-icon" width="26px"/>
+                    </button>
+                </div>
         ) : (
+
             <div className="mr-4" style={{visibility: 'hidden'}}>
                 <button className="options-text underline">
                     Placeholder
                 </button>
             </div>
         )}
-        <div className="flex">
+        <div className={`sorting-options ${isFilterVisible ? 'hide-on-mobile' : ''}`}>
 
             <div>
-                <div className="flex mr-3 md:mr-7">
+                <div className="flex mr-3 md:mr-7 mt-1">
                     <span className="options-text">ID#</span>
-                    <button className="options-text"
-                            onClick={() => setSort({criterion: 'number', order: 'asc'})}
-                    >
-                        △
-                    </button>
-                    <button
-                        className="options-text rotate-180 -translate-y-[2px]"
-                        onClick={() => setSort({criterion: 'number', order: 'desc'})}
-                    >
-                        △
-                    </button>
+                    <button className="options-text" onClick={() => setSort({criterion: 'number', order: 'asc'})}>△</button>
+                    <button className="options-text" onClick={() => setSort({criterion: 'number', order: 'desc'})}>▽</button>
                 </div>
             </div>
             <div>
-                <div className="flex mr-3 md:mr-7">
+                <div className="flex mr-3 md:mr-7 mt-1">
                     <span className="options-text">RARITY</span>
-                    <button className="options-text"
-                            onClick={() => setSort({criterion: 'rarity', order: 'asc'})}
-                    >
-                        △
-                    </button>
-                    <button
-                        className="options-text rotate-180 -translate-y-[2px]"
-                        onClick={() => setSort({criterion: 'rarity', order: 'desc'})}
-                    >
-                        △
-                    </button>
+                    <button className="options-text" onClick={() => setSort({criterion: 'rarity', order: 'asc'})}>△</button>
+                    <button className="options-text" onClick={() => setSort({criterion: 'rarity', order: 'desc'})}>▽</button>
                 </div>
             </div>
-            <div className="flex mr-2 md:mr-7">
-                <span className="options-text">DISPLAY</span>
-                <button className="options-text" onClick={increaseColumnCount}>△</button>
-                <button className="options-text rotate-180 -translate-y-[2px]" onClick={decreaseColumnCount}>△</button>
+            <div>
+                <div className="flex mr-2 md:mr-7 mt-1">
+                    <span className="options-text">DISPLAY</span>
+                    <button className="options-text" onClick={increaseColumnCount}>△</button>
+                    <button className="options-text" onClick={decreaseColumnCount}>▽</button>
+                </div>
             </div>
         </div>
     </div>

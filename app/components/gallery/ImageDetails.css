@@ -50,8 +50,8 @@
 
 .metadata-content {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Adjust as needed */
-    gap: 20px; /* Adjust as needed */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     width: 100%;
     color: black;
 }
@@ -128,8 +128,8 @@
 
 .image-metadata-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);/* Adjust as needed */
-    gap: 20px; /* Adjust as needed */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     max-width: 100%;
     max-height: 100%;
     overflow: auto;

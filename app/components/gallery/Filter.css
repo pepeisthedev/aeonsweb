@@ -8,6 +8,12 @@
     scrollbar-width: thin;
 }
 
+@media (max-width: 768px) {
+    .filter-container {
+        padding-bottom: 30px;
+    }
+}
+
 .filter-option {
     overflow: hidden;
     text-overflow: ellipsis;

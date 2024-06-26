@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import "./CheckWallet.css"
 
 type ResponseType = {
@@ -12,14 +12,20 @@ const CheckWallet = () => {
     const [response, setResponse] = useState<ResponseType | null>(null); // Declare the type of response here
     const [error, setError] = useState<string | null>(null);
 
+    useEffect(() => {
+        if (address === '') {
+            setResponse(null);
+        }
+    }, [address]);
+
     const validateAddress = (address: string) => {
         if (!address) {
             return 'Wallet address is required';
         }
-        if (!address.startsWith('bc1')) {
-            return 'Wallet address must start with "bc1"';
+        if (!address.startsWith('bc1') && !address.startsWith('3') && !address.startsWith('1') ) {
+            return 'Wallet address must start with "bc1", "1" or "3"';
         }
-        if (address.length < 40 || address.length > 70) {
+        if (address.length < 34 || address.length > 70) {
             return 'Not a valid BTC address';
         }
         return null;
@@ -53,7 +59,7 @@ const CheckWallet = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center h-screen">
+        <div className="flex flex-col items-center justify-center h-screen mt-28">
             <h1 className="text-7xl lg:text-9xl mb-8 align-center">
                 <span className="aeons-white">CHE</span><span className="aeons-yellow">CK </span><span
                 className="aeons-white">WALL</span><span className="aeons-yellow">ET</span>
@@ -91,7 +97,7 @@ const CheckWallet = () => {
                         1 <span className="aeons-orange">FCFS mint</span>.</p>}
                     {response.VIP !== '1' && response.FCFS === '1' && <p className="congrats">Congratulations, your wallet qualifies for 1 <span className="aeons-orange">FCFS mint</span>.
                     </p>}
-                    {response.VIP !== '1' && response.FCFS !== '1' && <p className="to-bad">Your wallet doesn´t qualify for the mint. It may take up to 72 hours for the team to update your wallet if you have won it through a giveaway. If you think theres a mistake, get in touch with us through a ticket on the discord.</p>}
+                    {response.VIP !== '1' && response.FCFS !== '1' && <p className="to-bad">Your wallet doesn´t qualify for the mint. It may take up to 72 hours for the team to update your wallet if you have won it through a giveaway.</p>}
                 </div>
             )}
         </div>

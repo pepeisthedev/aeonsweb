@@ -3,10 +3,10 @@
 .modal-transparent {
     background-color: rgba(255, 255, 255, 1);
     border-radius: 20px;
-    width: 65%; /* Adjust as needed */
-    height: 75%; /* Adjust as needed */
-    display: flex; /* Add this line */
-    align-items: center; /* Add this line */
+    width: 65%;
+    height: 75%;
+    display: flex;
+    align-items: center;
     justify-content: center;
     overflow-x: hidden;
     position: relative;
@@ -19,7 +19,7 @@
         bottom: -1px;
         left: 0;
         width: 100%;
-        height: 30px; /* Adjust as needed */
+        height: 30px;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
         pointer-events: none; /* Ignore mouse events so the user can still scroll */
     }
@@ -28,15 +28,15 @@
 
 @media screen and (max-width: 768px) {
     .modal-transparent {
-        width: 75%; /* Adjust as needed */
-        height: 80%; /* Adjust as needed */
+        width: 75%;
+        height: 80%;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .modal-transparent {
-        width: 55%; /* Adjust as needed */
-        height: 55%; /* Adjust as needed */
+        width: 55%;
+        height: 55%;
     }
 }
 
@@ -62,8 +62,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 50px; /* Adjust as needed */
-    height: 50px; /* Adjust as needed */
+    width: 50px;
+    height: 50px;
     cursor: pointer;
 }
 

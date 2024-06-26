@@ -16,7 +16,7 @@ const NavBar = () => {
     }
 
   return (
-    <nav className="sticky mx-auto w-full text-gray-300 flex flex-row justify-between items-center p-4 z-10 bg-opacity-50">
+    <nav className="nav p-4 w-full text-gray-300 flex flex-row justify-between items-center bg-opacity-50">
       <div>
         <Link href="/">
           <Image 
@@ -28,18 +28,6 @@ const NavBar = () => {
           />
         </Link>
       </div>
-      {/* <ul className="flex items-center justify-center w-full max-w-md mx-auto p-0 list-none text-center">
-        <li className="mr-4">
-          <Link href="/gallery" className="text-2xl font-bold font-edo text-center">
-            Gallery
-          </Link>
-        </li>
-        <li className="mr-4">
-          <Link href="/wlchecker" className='text-2xl font-bold font-edo text-center text-nowrap'>
-            WL Checker
-          </Link>
-        </li>
-      </ul> */}
 
 <section className="lg:hidden md:hidden flex">
       <div>
@@ -87,7 +75,7 @@ const NavBar = () => {
                         </Link>
                     </li>
                     <li className="border-b border-gray-400 my-8 uppercase link-z-index">
-                        <Link href="https://discord.gg/6KucTavSDh" className="text-4xl font-bold text-center uppercase mx-2" onClick={handleClick}>
+                        <Link href="https://discord.gg/aeons" className="text-4xl font-bold text-center uppercase mx-2" onClick={handleClick}>
                           <span>Disco<span className='text-[#e6a40e]'>rd</span></span>
                         </Link>
                     </li>
@@ -122,7 +110,7 @@ const NavBar = () => {
             </Link>
         </li>
         <li className="">
-            <Link href='https://discord.gg/6KucTavSDh'>
+            <Link href='https://discord.gg/aeons'>
               <Image 
                 className=''
                 src='/AeonsDiscord60x60.png'
@@ -133,25 +121,6 @@ const NavBar = () => {
           </Link>
         </li>
       </ul>
-     
-      {/* <Link href='/' className='h-fit w-fit'>
-        <Image 
-            className=''
-            src='/TwitterMenuLogo.png'
-            alt='Aeons logo'
-            width={50}
-            height={60}
-          />
-        </Link> */}
-        {/* <Link href='/'>
-          <Image 
-            className=''
-            src='/newdiscordlogo.png'
-            alt='Aeons logo'
-            width={150}
-            height={150}
-          />
-      </Link> */}
       
       </div>
       <style>{`

@@ -4,7 +4,6 @@ import csv from 'csv-parser';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface CsvRow {
-    'Discord ID': string;
     VIP: string;
     FCFS: string;
 }
