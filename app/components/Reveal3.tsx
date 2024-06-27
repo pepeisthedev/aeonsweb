@@ -18,7 +18,6 @@ const Reveal3 = () => {
     const [images, setImages] = useState<string[]>([]);
     const [timeUntilNextReveal, setTimeUntilNextReveal] = useState(0);
     const [isTimeUp, setIsTimeUp] = useState(false);
-    const [thumbsSwiper, setThumbsSwiper] = useState<typeof Swiper | null>(null);
 
     const fetchImages = async () => {
         try {
@@ -59,7 +58,6 @@ const Reveal3 = () => {
                 loop={true}
                 spaceBetween={10}
                 navigation={true}
-                thumbs={{ swiper: thumbsSwiper }}
                 modules={[FreeMode, Navigation, Thumbs, Keyboard]}
                 className="mySwiper2"
                 effect={'coverflow'}
