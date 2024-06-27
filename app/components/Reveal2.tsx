@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import "./Reveal.css"
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Countdown from "@/app/components/CountDown";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-const Reveal = () => {
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import './Reveal2.css';
+
+// import required modules
+import { EffectCoverflow, Pagination, Navigation, Keyboard } from 'swiper/modules';
+
+const Reveal2 = () => {
     const [images, setImages] = useState<string[]>([]);
     const [timeUntilNextReveal, setTimeUntilNextReveal] = useState(0);
     const [isTimeUp, setIsTimeUp] = useState(false);
@@ -39,21 +47,40 @@ const Reveal = () => {
         }
     }, [isTimeUp]);
 
-
     return (
         <div className="mt-28 center-content">
             <Countdown key={timeUntilNextReveal} initialSeconds={timeUntilNextReveal} setIsTimeUp={setIsTimeUp} />
-            <div className="carousel-container">
-                    <Carousel className="text-center" showStatus={false} showThumbs={true} infiniteLoop={true} swipeable={true} useKeyboardArrows={true} showIndicators={false}>
-                        {images.map((image, index) => (
-                            <div key={index}>
-                                <img src={image} alt={`Image ${index + 1}`} />
-                            </div>
-                        ))}
-                    </Carousel>
-            </div>
+
+            <Swiper
+                effect={'coverflow'}
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={'auto'}
+                loop={true}
+                keyboard={{ onlyInViewport: false }}
+                coverflowEffect={{
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                }}
+                navigation={true}
+                modules={[EffectCoverflow, Pagination, Navigation, Keyboard]}
+                className="mySwiper"
+            >
+                {images.map((image, index) => (
+                    <div key={index}>
+                    <SwiperSlide>
+                        <img src={image} alt={`Image ${index + 1}`}/>
+                    </SwiperSlide>
+                    </div>
+
+                ))}
+
+            </Swiper>
         </div>
     );
 };
 
-export default Reveal;
+export default Reveal2;
