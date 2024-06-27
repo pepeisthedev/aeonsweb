@@ -3,7 +3,9 @@ import path from 'path';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 // Define the start date and time
-const startTime = new Date('2024-06-27T14:23:00Z');
+const startTime = new Date('2024-06-27T17:03:50Z');
+// Configurable reveal interval in minutes
+const revealIntervalMinutes = 1; // Change this value to 1, 8, or any other interval
 
 // Function to get the time until the next reveal
 function getTimeUntilNextReveal() {
@@ -13,7 +15,7 @@ function getTimeUntilNextReveal() {
         return (startTime.getTime() - now.getTime()) / 1000;
     } else {
         const diffInMinutes = (now.getTime() - startTime.getTime()) / 60000;
-        const timeUntilNextReveal = 2 - (diffInMinutes % 2);
+        const timeUntilNextReveal = revealIntervalMinutes - (diffInMinutes % revealIntervalMinutes);
         return timeUntilNextReveal * 60; // Return time in seconds
     }
 }
@@ -32,7 +34,7 @@ function calculateImagesToReveal(images: string[]) {
     }
 
     const diffInMinutes = (now.getTime() - startTime.getTime()) / 60000;
-    const imagesToRevealCount = Math.floor(diffInMinutes / 2) + 1;
+    const imagesToRevealCount = Math.min(Math.floor(diffInMinutes / revealIntervalMinutes) + 1, images.length);
     const startIndex = Math.max(0, imagesToRevealCount - 5); // Start index to ensure only last 5 images are shown
 
     return images.slice(startIndex, imagesToRevealCount);
