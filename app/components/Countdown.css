@@ -1,0 +1,27 @@
+.countdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    font-family: 'Helvetica', sans-serif;
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+.timer {
+    font-size: 3rem;
+    background: #333;
+    padding: 0.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.next-reveal {
+    font-size: 1.5rem; /* Adjust as needed */
+    text-align: center;
+    /* Add any other styles as needed */
+}
+
+
