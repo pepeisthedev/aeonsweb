@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Countdown from "@/app/components/CountDown";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { FaXTwitter } from "react-icons/fa6";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -71,9 +72,17 @@ const Reveal2 = () => {
             >
                 {images.map((image, index) => (
                     <div key={index}>
-                    <SwiperSlide>
-                        <img src={image} alt={`Image ${index + 1}`}/>
-                    </SwiperSlide>
+                        <SwiperSlide>
+
+                            <img src={image} alt={`Image ${index + 1}`}/>
+                            <a href="https://twitter.com/intent/tweet?text=Aeons%20explore%20art%0A%0A%40AeonsBTC%0A%0A&url=https%3A%2F%2Faeonsbtc.com%2F"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               style={{position: 'absolute', top: '10px', right: '10px', color: 'white'}}>
+                                <FaXTwitter size={24}/>
+                            </a>
+
+                        </SwiperSlide>
                     </div>
 
                 ))}

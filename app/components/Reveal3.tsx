@@ -13,6 +13,7 @@ import './Reveal2.css';
 
 // import required modules
 import {EffectCoverflow, Pagination, Navigation, Keyboard, FreeMode, Thumbs} from 'swiper/modules';
+import {FaXTwitter} from "react-icons/fa6";
 
 const Reveal3 = () => {
     const [images, setImages] = useState<string[]>([]);
@@ -75,9 +76,15 @@ const Reveal3 = () => {
             >
                 {images.map((image, index) => (
                     <div key={index}>
-                    <SwiperSlide>
-                        <img src={image} alt={`Image ${index + 1}`}/>
-                    </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={image} alt={`Image ${index + 1}`}/>
+                            <a href="https://twitter.com/intent/tweet?text=Aeons%20explore%20art%0A%0A%40AeonsBTC%0A%0A&url=https%3A%2F%2Faeonsbtc.com%2F"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               style={{position: 'absolute', top: '10px', right: '10px', color: 'white'}}>
+                                <FaXTwitter size={24}/>
+                            </a>
+                        </SwiperSlide>
                     </div>
 
                 ))}

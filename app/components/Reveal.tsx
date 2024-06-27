@@ -3,6 +3,7 @@ import "./Reveal.css"
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Countdown from "@/app/components/CountDown";
+import {FaXTwitter} from "react-icons/fa6";
 
 const Reveal = () => {
     const [images, setImages] = useState<string[]>([]);
@@ -46,8 +47,15 @@ const Reveal = () => {
             <div className="carousel-container">
                     <Carousel className="text-center" showStatus={false} showThumbs={true} infiniteLoop={true} swipeable={true} useKeyboardArrows={true} showIndicators={false}>
                         {images.map((image, index) => (
-                            <div key={index}>
-                                <img src={image} alt={`Image ${index + 1}`} />
+                            <div key={index} style={{ position: 'relative' }}>
+
+                                <img src={image} alt={`Image ${index + 1}`}/>
+                                <a href="https://twitter.com/intent/tweet?text=Aeons%20explore%20art%0A%0A%40AeonsBTC%0A%0A&url=https%3A%2F%2Faeonsbtc.com%2F"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   style={{position: 'absolute', top: '10px', right: '10px', color: 'white'}}>
+                                    <FaXTwitter size={24}/>
+                                </a>
                             </div>
                         ))}
                     </Carousel>
