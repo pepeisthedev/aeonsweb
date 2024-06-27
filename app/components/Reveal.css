@@ -1,0 +1,49 @@
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* Adjust this value as needed */
+}
+
+.carousel .slide img {
+    object-fit: contain;
+    max-width: 35vw;
+    max-height: 100%;
+
+}
+.carousel-container {
+    width: 53%; /* Adjust this value as needed */
+    margin: 0 auto;
+}
+.carousel .slide.selected img {
+    border: 8px solid black;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.thumbnails img {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+}
+
+.carousel .control-dots {
+    position: absolute;
+    bottom: 60%; /* Adjust this value as needed */
+}
+
+.carousel .control-arrow {
+    top: 40%; /* Adjust this value as needed */
+}
+
