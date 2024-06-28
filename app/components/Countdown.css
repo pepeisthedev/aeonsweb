@@ -3,25 +3,36 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 7vh;
-    font-family: 'Helvetica', sans-serif;
-    background: #1e1e1e;
-    color: #ffffff;
 }
 
 .timer {
-    font-size: 3rem;
+    font-size: 2rem;
+    text-align: center;
     background: #333;
-    padding: 0.5rem 2rem;
-    border-radius: 8px;
+    padding: 0.3rem 6rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Helvetica', sans-serif;
+    color: #ffffff;
+    border-radius: 7px;
+}
 
+@media (max-width: 768px) {
+    .timer {
+        font-size: 2rem;
+    }
 }
 
 .next-reveal {
     font-size: 1.5rem; /* Adjust as needed */
     text-align: center;
+    font-family: 'Helvetica', sans-serif;
     /* Add any other styles as needed */
+}
+
+@media (max-width: 768px) {
+    .next-reveal {
+        font-size: 1rem;
+    }
 }
 
 

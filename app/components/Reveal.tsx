@@ -55,7 +55,8 @@ export default function App() {
 
     return (
         <>
-
+            <div className="container mt-32">
+            <Countdown key={timeUntilNextReveal} initialSeconds={timeUntilNextReveal} setIsTimeUp={setIsTimeUp} />
             <Swiper
                 style={{
                     '--swiper-navigation-color': '#fff',
@@ -94,6 +95,7 @@ export default function App() {
                     </div>
                 ))}
             </Swiper>
+           </div>
         </>
     );
 }
