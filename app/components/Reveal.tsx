@@ -2,7 +2,8 @@ import React, {useEffect, useRef, useState} from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper';
-
+import {FaXTwitter} from "react-icons/fa6";
+import { FaDownload } from "react-icons/fa";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -72,22 +73,37 @@ export default function App() {
                 {images.map((image, index) => (
                     <div key={index}>
                         <SwiperSlide>
-                            <img src={image} alt={`Image ${index + 1}`}/>
+                            <div style={{position: 'relative'}}>
+                                <img src={image} alt={`Image ${index + 1}`}/>
+                                <a href="https://twitter.com/intent/tweet?text=%E2%98%B0xplore%20Art&url="
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   style={{position: 'absolute', top: '10px', left: '10px', color: 'white'}}>
+                                    <FaXTwitter size={24}/>
+                                </a>
+                                <a href={image} // URL of the image
+                                   download // instructs the browser to download the image
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   style={{position: 'absolute', top: '10px', right: '10px', color: 'white'}}>
+                                    <FaDownload size={24}/>
+                                </a>
+                            </div>
                         </SwiperSlide>
                     </div>
                 ))}
             </Swiper>
-            <Swiper
-                onSwiper={setThumbsSwiper}
-                loop={true}
-                spaceBetween={10}
-                slidesPerView={5}
-                freeMode={true}
-                watchSlidesProgress={true}
-                modules={[FreeMode, Navigation, Thumbs]}
-                className="myThumbnails"
-            >
-                {images.map((image, index) => (
+                <Swiper
+                    onSwiper={setThumbsSwiper}
+                    loop={true}
+                    spaceBetween={10}
+                    slidesPerView={5}
+                    freeMode={true}
+                    watchSlidesProgress={true}
+                    modules={[FreeMode, Navigation, Thumbs]}
+                    className="myThumbnails"
+                >
+                    {images.map((image, index) => (
                     <div key={index}>
                         <SwiperSlide>
                             <img src={image} alt={`Image ${index + 1}`}/>
