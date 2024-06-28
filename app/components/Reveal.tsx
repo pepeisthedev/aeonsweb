@@ -57,7 +57,7 @@ export default function App() {
                 style={{
                     '--swiper-navigation-color': '#fff',
                     '--swiper-pagination-color': '#fff',
-                }}
+                } as React.CSSProperties}
                 loop={true}
                 spaceBetween={10}
                 navigation={true}
