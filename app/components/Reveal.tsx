@@ -1,6 +1,8 @@
 import React, {useEffect, useRef, useState} from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper as SwiperType } from 'swiper';
+
 
 // Import Swiper styles
 import 'swiper/css';
@@ -15,7 +17,8 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import Countdown from "@/app/components/CountDown";
 
 export default function App() {
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+
     const [images, setImages] = useState<string[]>([]);
     const [timeUntilNextReveal, setTimeUntilNextReveal] = useState(0);
     const [isTimeUp, setIsTimeUp] = useState(false);
