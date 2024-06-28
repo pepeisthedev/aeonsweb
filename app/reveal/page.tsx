@@ -1,11 +1,11 @@
 'use client'
 import React from 'react'
 
-import Reveal2 from "@/app/components/Reveal2";
+import Reveal from "@/app/components/Reveal";
 
 const RevealPage = () => {
     return (
-        <Reveal2/>
+        <Reveal/>
     )
 }
 

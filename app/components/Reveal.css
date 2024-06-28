@@ -1,58 +1,114 @@
-.center-content {
+#app {
+    height: 100%;
+}
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+
+    /* Center slide text vertically */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel .slide {
-    display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh; /* Adjust this value as needed */
-
 }
 
-.carousel .slide img {
-    object-fit: contain;
-    max-width: 35vw;
-    max-height: 100%;
-
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-@media (max-width: 600px) {
-    .carousel .slide img {
-        object-fit: contain;
-        max-width: 55vw;
-        max-height: 100%;
+body {
+    background: #000;
+    color: #000;
+}
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.mySwiper2 {
+    height: 80%;
+    width: 100%;
+}
+
+.myThumbnails {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .myThumbnails {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    .myThumbnails {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .myThumbnails {
+        width: 40%;
     }
 }
 
 
-
-.carousel-container {
-    width: 53%; /* Adjust this value as needed */
-    margin: 0 auto;
-}
-.carousel .slide.selected img {
-    border: 8px solid black;
+.myThumbnails .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
 }
 
-.thumbnails {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.myThumbnails .swiper-slide-thumb-active {
+    opacity: 1;
 }
 
-
-.carousel .control-dots {
-    position: absolute;
-    bottom: 60%; /* Adjust this value as needed */
+.swiper-slide img {
+    display: block;
+    width: 500px; /* Set the width to 200px */
+    height: 500px;
+    object-fit: cover;
+    margin: auto;
+    border: 6px solid black;
 }
 
-.carousel .control-arrow {
-    top: 40%; /* Adjust this value as needed */
+.myThumbnails .swiper-slide img {
+    width: 100px; /* Set the width to 100px */
+    height: 100px; /* Set the height to 100px */
+    object-fit: cover;
+    margin: auto;
+    border: 2px solid black;
 }
-
-
-

@@ -1,11 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import "./Reveal.css"
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Countdown from "@/app/components/CountDown";
-import {FaXTwitter} from "react-icons/fa6";
+import React, {useEffect, useRef, useState} from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-const Reveal = () => {
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+
+import './Reveal.css';
+
+// import required modules
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import Countdown from "@/app/components/CountDown";
+
+export default function App() {
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const [images, setImages] = useState<string[]>([]);
     const [timeUntilNextReveal, setTimeUntilNextReveal] = useState(0);
     const [isTimeUp, setIsTimeUp] = useState(false);
@@ -40,28 +50,47 @@ const Reveal = () => {
         }
     }, [isTimeUp]);
 
-
     return (
-        <div className="mt-28 center-content">
-            <Countdown key={timeUntilNextReveal} initialSeconds={timeUntilNextReveal} setIsTimeUp={setIsTimeUp} />
-            <div className="carousel-container">
-                    <Carousel className="text-center" showStatus={false} showThumbs={true} infiniteLoop={true} swipeable={true} useKeyboardArrows={true} showIndicators={false}>
-                        {images.map((image, index) => (
-                            <div key={index} style={{ position: 'relative' }}>
+        <>
 
-                                <img src={image} alt={`Image ${index + 1}`}/>
-                                <a href="https://twitter.com/intent/tweet?text=Aeons%20explore%20art%0A%0A%40AeonsBTC%0A%0A&url=https%3A%2F%2Faeonsbtc.com%2F"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   style={{position: 'absolute', top: '10px', right: '10px', color: 'white'}}>
-                                    <FaXTwitter size={24}/>
-                                </a>
-                            </div>
-                        ))}
-                    </Carousel>
-            </div>
-        </div>
+            <Swiper
+                style={{
+                    '--swiper-navigation-color': '#fff',
+                    '--swiper-pagination-color': '#fff',
+                }}
+                loop={true}
+                spaceBetween={10}
+                navigation={true}
+                thumbs={{ swiper: thumbsSwiper }}
+                modules={[FreeMode, Navigation, Thumbs]}
+                className="mySwiper2"
+            >
+                {images.map((image, index) => (
+                    <div key={index}>
+                        <SwiperSlide>
+                            <img src={image} alt={`Image ${index + 1}`}/>
+                        </SwiperSlide>
+                    </div>
+                ))}
+            </Swiper>
+            <Swiper
+                onSwiper={setThumbsSwiper}
+                loop={true}
+                spaceBetween={10}
+                slidesPerView={5}
+                freeMode={true}
+                watchSlidesProgress={true}
+                modules={[FreeMode, Navigation, Thumbs]}
+                className="myThumbnails"
+            >
+                {images.map((image, index) => (
+                    <div key={index}>
+                        <SwiperSlide>
+                            <img src={image} alt={`Image ${index + 1}`}/>
+                        </SwiperSlide>
+                    </div>
+                ))}
+            </Swiper>
+        </>
     );
-};
-
-export default Reveal;
+}
