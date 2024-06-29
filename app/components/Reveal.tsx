@@ -14,7 +14,7 @@ import 'swiper/css/thumbs';
 import './Reveal.css';
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { FreeMode, Keyboard, Thumbs } from 'swiper/modules';
 import Countdown from "@/app/components/CountDown";
 
 export default function App() {
@@ -65,9 +65,9 @@ export default function App() {
                 } as React.CSSProperties}
                 loop={true}
                 spaceBetween={10}
-                navigation={true}
+                keyboard={true}
                 thumbs={{ swiper: thumbsSwiper }}
-                modules={[FreeMode, Navigation, Thumbs]}
+                modules={[FreeMode, Keyboard, Thumbs]}
                 className="mySwiper2"
             >
                 {images.map((image, index) => (
@@ -100,7 +100,7 @@ export default function App() {
                     slidesPerView={5}
                     freeMode={true}
                     watchSlidesProgress={true}
-                    modules={[FreeMode, Navigation, Thumbs]}
+                    modules={[FreeMode, Thumbs]}
                     className="myThumbnails"
                 >
                     {images.map((image, index) => (
