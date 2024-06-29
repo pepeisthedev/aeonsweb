@@ -56,7 +56,7 @@ export default function App() {
 
     return (
         <>
-            <div className="container mt-32">
+            <div className="container">
             <Countdown key={timeUntilNextReveal} initialSeconds={timeUntilNextReveal} setIsTimeUp={setIsTimeUp} />
             <Swiper
                 style={{

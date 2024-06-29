@@ -57,7 +57,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 100px); /* Remove some space for the Nav*/
+    height: calc(100vh - 170px); /* Remove some space for the Nav*/
 }
 
 .mySwiper2 {
