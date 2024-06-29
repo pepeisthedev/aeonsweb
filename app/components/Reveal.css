@@ -25,8 +25,6 @@ body {
     text-align: center;
     font-size: 18px;
     background: transparent;
-
-    /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +57,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: calc(100vh - 100px); /* Remove some space for the Nav*/
 }
 
 .mySwiper2 {
@@ -104,7 +102,7 @@ body {
 
 .swiper-slide img {
     display: block;
-    width: 300px; /* Set the width to 200px */
+    width: 300px;
     height: 300px;
     object-fit: cover;
     margin: auto;
@@ -112,8 +110,8 @@ body {
 }
 
 .myThumbnails .swiper-slide img {
-    width: 100px; /* Set the width to 100px */
-    height: 100px; /* Set the height to 100px */
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     margin: auto;
     border: 2px solid black;

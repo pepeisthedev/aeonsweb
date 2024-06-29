@@ -82,7 +82,7 @@ export default function App() {
                                     <FaXTwitter size={24}/>
                                 </a>
                                 <a href={image} // URL of the image
-                                   download // instructs the browser to download the image
+                                   download="aeons.jpg" // instructs the browser to download the image
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    style={{position: 'absolute', top: '10px', right: '10px', color: 'white'}}>
