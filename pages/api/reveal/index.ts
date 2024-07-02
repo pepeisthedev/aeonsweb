@@ -1,11 +1,38 @@
 import fs from 'fs';
 import path from 'path';
 import type { NextApiRequest, NextApiResponse } from 'next';
+import csv from 'csv-parser';
 
-// Define the start date and time
-const startTime = new Date('2024-06-27T17:03:50Z');
-// Configurable reveal interval in minutes
-const revealIntervalMinutes = 1; // Change this value to 1, 8, or any other interval
+const startTime = new Date('2024-07-02T17:35:50Z');
+const revealIntervalMinutes = 15; // Change this value to 1, 8, or any other interval
+let ids: Map<string, string>;
+let imagesList: string[];
+
+
+(async function() {
+    try {
+        await getIdsFromCsv();
+        getImagesList();
+    } catch (error) {
+        console.error('Error during initialization:', error);
+    }
+})();
+
+async function getIdsFromCsv() {
+    ids = new Map();
+
+    return new Promise((resolve, reject) => {
+        fs.createReadStream('aeons/highRezImageMapping.csv')
+            .pipe(csv())
+            .on('data', (row) => {
+                ids.set(row['File Name'], row['ID']);
+            })
+            .on('end', () => {
+                resolve(ids);
+            })
+            .on('error', reject);
+    });
+}
 
 // Function to get the time until the next reveal
 function getTimeUntilNextReveal() {
@@ -20,10 +47,9 @@ function getTimeUntilNextReveal() {
     }
 }
 
-// Function to get the list of images in the aeons folder
 function getImagesList() {
     const imagesDir = path.join(process.cwd(), 'aeons');
-    return fs.readdirSync(imagesDir).sort();
+    imagesList = fs.readdirSync(imagesDir).filter(file => path.extname(file) === '.png').sort();
 }
 
 // Function to calculate the images to reveal based on elapsed time
@@ -50,13 +76,15 @@ function getBase64Images(images: string[]) {
     });
 }
 
-// API handler
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    const imagesList = getImagesList();
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const revealedImages = calculateImagesToReveal(imagesList);
     const base64Images = getBase64Images(revealedImages);
+    const imagesData = revealedImages.map((imageName, index) => {
+        const id = ids.get(`${imageName}`);
+        return { imageName, id, base64Image: base64Images[index] };
+    });
 
     const timeUntilNextReveal = getTimeUntilNextReveal();
 
-    res.status(200).json({ timeUntilNextReveal, images: base64Images });
+    res.status(200).json({ timeUntilNextReveal, images: imagesData });
 }

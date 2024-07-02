@@ -20,19 +20,25 @@ import Countdown from "@/app/components/CountDown";
 export default function App() {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
-    const [images, setImages] = useState<string[]>([]);
+    const [images, setImages] = useState<ImageData[]>([]);
     const [timeUntilNextReveal, setTimeUntilNextReveal] = useState(0);
     const [isTimeUp, setIsTimeUp] = useState(false);
+
+    interface ImageData {
+        url: string;
+        id: string;
+        base64Image: string;
+    }
 
     const fetchImages = async () => {
         try {
             const response = await fetch('/api/reveal');
             const data = await response.json();
-            const imageUrls = await Promise.all(data.images.map(async (base64Image: string) => {
-                const response = await fetch(`data:image/jpeg;base64,${base64Image}`);
+            const imageUrls = await Promise.all(data.images.map(async (imageData: ImageData) => {
+                const response = await fetch(`data:image/jpeg;base64,${imageData.base64Image}`);
                 const blob = await response.blob();
                 const url = URL.createObjectURL(blob);
-                return url;
+                return { url, id: imageData.id };
             }));
 
             setImages(imageUrls);
@@ -70,19 +76,19 @@ export default function App() {
                 modules={[FreeMode, Keyboard, Thumbs]}
                 className="mySwiper2"
             >
-                {images.map((image, index) => (
+                {images.map((imageData, index) => (
                     <div key={index}>
                         <SwiperSlide>
                             <div style={{position: 'relative'}}>
-                                <img src={image} alt={`Image ${index + 1}`}/>
+                                <img src={imageData.url} alt={`Image ${index + 1}`}/>
                                 <a href="https://twitter.com/intent/tweet?text=%E2%98%B0xplore%20Art&url="
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    style={{position: 'absolute', top: '10px', left: '10px', color: 'white'}}>
                                     <FaXTwitter size={24}/>
                                 </a>
-                                <a href={image} // URL of the image
-                                   download="aeons.jpg" // instructs the browser to download the image
+                                <a href={`https://drive.google.com/uc?export=download&id=${imageData.id}`} // URL of the downloadable image
+                                   download// instructs the browser to download the image
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    style={{position: 'absolute', top: '10px', right: '10px', color: 'white'}}>
@@ -106,7 +112,7 @@ export default function App() {
                     {images.map((image, index) => (
                     <div key={index}>
                         <SwiperSlide>
-                            <img src={image} alt={`Image ${index + 1}`}/>
+                            <img src={image.url} alt={`Image ${index + 1}`}/>
                         </SwiperSlide>
                     </div>
                 ))}
