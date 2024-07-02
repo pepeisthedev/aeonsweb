@@ -21,7 +21,7 @@ export default function App() {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
     const [images, setImages] = useState<ImageData[]>([]);
-    const [timeUntilNextReveal, setTimeUntilNextReveal] = useState(0);
+    const [timeUntilNextReveal, setTimeUntilNextReveal] = useState(1000);
     const [isTimeUp, setIsTimeUp] = useState(false);
 
     interface ImageData {
@@ -56,6 +56,7 @@ export default function App() {
 
     useEffect(() => {
         if (isTimeUp) {
+            console.log('Time is up!')
             fetchImages();
         }
     }, [isTimeUp]);
@@ -77,8 +78,7 @@ export default function App() {
                 className="mySwiper2"
             >
                 {images.map((imageData, index) => (
-                    <div key={index}>
-                        <SwiperSlide>
+                        <SwiperSlide key={imageData.id}>
                             <div style={{position: 'relative'}}>
                                 <img src={imageData.url} alt={`Image ${index + 1}`}/>
                                 <a href="https://twitter.com/intent/tweet?text=%E2%98%B0xplore%20Art&url="
@@ -96,7 +96,6 @@ export default function App() {
                                 </a>
                             </div>
                         </SwiperSlide>
-                    </div>
                 ))}
             </Swiper>
                 <Swiper
@@ -110,14 +109,12 @@ export default function App() {
                     className="myThumbnails"
                 >
                     {images.map((image, index) => (
-                    <div key={index}>
-                        <SwiperSlide>
-                            <img src={image.url} alt={`Image ${index + 1}`}/>
-                        </SwiperSlide>
-                    </div>
-                ))}
-            </Swiper>
-           </div>
+                            <SwiperSlide key={`thumb-${index}`}>
+                                <img src={image.url} alt={`Image ${index + 1}`}/>
+                            </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
         </>
     );
 }

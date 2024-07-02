@@ -9,14 +9,16 @@ let ids: Map<string, string>;
 let imagesList: string[];
 
 
-(async function() {
+const initializeData = new Promise<void>((resolve, reject) => {
     try {
-        await getIdsFromCsv();
-        getImagesList();
+        getIdsFromCsv().then(() => {
+            getImagesList();
+            resolve();
+        });
     } catch (error) {
-        console.error('Error during initialization:', error);
+        reject(error);
     }
-})();
+});
 
 async function getIdsFromCsv() {
     ids = new Map();
@@ -77,6 +79,14 @@ function getBase64Images(images: string[]) {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    try {
+        await initializeData;
+    } catch (error) {
+        console.error('Error during initialization:', error);
+        res.status(500).json({ error: 'Server is not ready yet' });
+        return;
+    }
+
     const revealedImages = calculateImagesToReveal(imagesList);
     const base64Images = getBase64Images(revealedImages);
     const imagesData = revealedImages.map((imageName, index) => {
