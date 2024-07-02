@@ -11,3 +11,35 @@
 .menu-z-index {
     z-index: 1;
 }
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.7);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(0.7);
+    }
+}
+
+.pulse {
+    animation: pulse 3s infinite;
+}
+
+.glowing {
+    animation: glowing 1s infinite;
+}
+
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 5px #e6a40e, 0 0 10px #e6a40e, 0 0 15px #e6a40e, 0 0 20px #e6a40e;
+    }
+    50% {
+        text-shadow: 0 0 10px #e6a40e, 0 0 20px #e6a40e, 0 0 30px #e6a40e, 0 0 40px #e6a40e;
+    }
+    100% {
+        text-shadow: 0 0 5px #e6a40e, 0 0 10px #e6a40e, 0 0 15px #e6a40e, 0 0 20px #e6a40e;
+    }
+}

@@ -18,6 +18,8 @@ import { FreeMode, Keyboard, Thumbs } from 'swiper/modules';
 import Countdown from "@/app/components/CountDown";
 
 export default function App() {
+    const [hasRun, setHasRun] = useState(false);
+
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
     const [images, setImages] = useState<ImageData[]>([]);
@@ -51,12 +53,15 @@ export default function App() {
     };
 
     useEffect(() => {
-        fetchImages();
-    }, []);
+        if (!hasRun) {
+            fetchImages();
+            setHasRun(true);
+        }
+    }, [hasRun]);
 
     useEffect(() => {
         if (isTimeUp) {
-            console.log('Time is up!')
+
             fetchImages();
         }
     }, [isTimeUp]);
@@ -77,7 +82,7 @@ export default function App() {
                 modules={[FreeMode, Keyboard, Thumbs]}
                 className="mySwiper2"
             >
-                {images.map((imageData, index) => (
+                {images.slice().reverse().map((imageData, index) => (
                         <SwiperSlide key={imageData.id}>
                             <div style={{position: 'relative'}}>
                                 <img src={imageData.url} alt={`Image ${index + 1}`}/>
@@ -108,7 +113,7 @@ export default function App() {
                     modules={[FreeMode, Thumbs]}
                     className="myThumbnails"
                 >
-                    {images.map((image, index) => (
+                    {images.slice().reverse().map((image, index) => (
                             <SwiperSlide key={`thumb-${index}`}>
                                 <img src={image.url} alt={`Image ${index + 1}`}/>
                             </SwiperSlide>
