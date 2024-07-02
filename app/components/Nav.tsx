@@ -77,7 +77,7 @@ const NavBar = () => {
                                     WL Check<span className='text-[#e6a40e]'>er</span>
                                 </Link>
                             </li>
-                            <li className="border-b border-gray-400 my-8 uppercase link-z-index">
+                            <li className="border-b border-gray-400 my-8 uppercase link-z-index glowing">
                                 <Link href="/reveal" className="text-4xl font-bold text-center uppercase mx-2 "
                                       onClick={handleClick}>
                                     <span>Reve<span className='text-[#e6a40e]'>al</span></span>
