@@ -16,11 +16,13 @@
     border-radius: 7px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1024px) {
     .timer {
-        font-size: 2rem;
+        padding: 0.3rem 12rem;
     }
 }
+
+
 
 .next-reveal {
     font-size: 1.5rem; /* Adjust as needed */

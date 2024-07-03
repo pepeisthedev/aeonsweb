@@ -109,6 +109,13 @@ body {
     border: 6px solid black;
 }
 
+@media (min-width: 1024px) {
+    .swiper-slide img  {
+        height: 500px;
+        width: 500px;
+    }
+}
+
 .myThumbnails .swiper-slide img {
     width: 100px;
     height: 100px;
