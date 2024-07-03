@@ -3,8 +3,9 @@ import path from 'path';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import csv from 'csv-parser';
 
-const startTime = new Date('2024-07-02T17:35:50Z');
+const startTime = new Date('2024-07-03T12:00:50Z');
 const revealIntervalMinutes = 15; // Change this value to 1, 8, or any other interval
+const imagesToReturn = 3;
 let ids: Map<string, string>;
 let imagesList: string[];
 
@@ -63,7 +64,7 @@ function calculateImagesToReveal(images: string[]) {
 
     const diffInMinutes = (now.getTime() - startTime.getTime()) / 60000;
     const imagesToRevealCount = Math.min(Math.floor(diffInMinutes / revealIntervalMinutes) + 1, images.length);
-    const startIndex = Math.max(0, imagesToRevealCount - 5); // Start index to ensure only last 5 images are shown
+    const startIndex = Math.max(0, imagesToRevealCount - imagesToReturn);
 
     return images.slice(startIndex, imagesToRevealCount);
 }

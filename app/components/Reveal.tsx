@@ -107,7 +107,7 @@ export default function App() {
                     onSwiper={setThumbsSwiper}
                     loop={true}
                     spaceBetween={10}
-                    slidesPerView={5}
+                    slidesPerView={3}
                     freeMode={true}
                     watchSlidesProgress={true}
                     modules={[FreeMode, Thumbs]}

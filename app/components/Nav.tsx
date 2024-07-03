@@ -114,12 +114,6 @@ const NavBar = () => {
                             WL Check<span className='text-[#e6a40e]'>er</span>
                         </Link>
                     </li>
-                    <li className={`mr-2 ${isAnimating ? 'pulse' : ''}`}>
-                        <Link onClick={handleRevealClick} href="/reveal"
-                              className="text-4xl font-bold text-center uppercase mx-2">
-                            <span>Reve<span className='text-[#e6a40e]'>al</span></span>
-                        </Link>
-                    </li>
                     <li className={`mr-2  ${isAnimating ? 'glowing' : ''}`}>
                         <Link onClick={handleRevealClick} href="/reveal"
                               className="text-4xl font-bold text-center uppercase mx-2">

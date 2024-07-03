@@ -123,11 +123,3 @@ body {
         width: 75px;
     }
 }
-
-.myThumbnails .swiper-slide:not(.swiper-slide-thumb-active) {
-    opacity: 0.7; /* Opacity for non-active slides */
-}
-
-.myThumbnails .swiper-slide-thumb-active {
-    opacity: 1; /* Opacity for active slide */
-}
