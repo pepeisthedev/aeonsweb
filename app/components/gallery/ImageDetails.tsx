@@ -17,92 +17,110 @@ const getRankingImage = (rarity: number) => {
     else return "/ranking_1.png";
 }
 
+const PlaceholderMetadataItem: React.FC = () => (
+    <li className="trait-item" style={{ visibility: 'hidden' }}>
+        <div className="trait-icon-name">
+            <img src="/1_triangle_aeons.png" alt="icon" className="trait-icon"/>
+            <div className="trait-name">
+                <strong>Placeholder</strong>
+            </div>
+        </div>
+        <div className="trait-value ml-6">
+            Placeholder
+        </div>
+    </li>
+);
+
 const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage }) => {
     const imageUrl = selectedImage || '';
 
+    const isDesktop = typeof window !== 'undefined' && window.innerWidth > 768;
+
+    const placeholdersNeeded = isDesktop ? 4 - Math.min(selectedMeta.attributes.length, 4) : 0;
+
     return (
 
-            <div className="image-metadata-container">
-                <div className="metadata-grid-column">
-                    <div>
-                        <Image
-                            src={imageUrl}
-                            alt={selectedMeta.name}
-                            width={400}
-                            height={400}
-                            className="border-8 border-black rounded "
-                        />
-                        <div className="details-modal-header">
-                            <h2 className="pl-1">PIECE {selectedMeta.name}/3333</h2>
-                            <div className="rarity">
-                                <h2 className="pr-1">RARITY {selectedMeta.rarity}</h2>
-                                <Image
-                                    src={getRankingImage(selectedMeta.rarity)}
-                                    alt="ranking"
-                                    width={150}
-                                    height={150}
-                                    className="pr-1 rarity-image"
-                                />
-                            </div>
+        <div className="image-metadata-container">
+            <div className="metadata-grid-column">
+                <div>
+                    <Image
+                        src={imageUrl}
+                        alt={selectedMeta.name}
+                        width={400}
+                        height={400}
+                        className="border-8 border-black rounded "
+                    />
+                    <div className="details-modal-header">
+                        <h2 className="pl-1">PIECE {selectedMeta.name}/3333</h2>
+                        <div className="rarity">
+                            <h2 className="pr-1">RARITY {selectedMeta.rarity}</h2>
+                            <Image
+                                src={getRankingImage(selectedMeta.rarity)}
+                                alt="ranking"
+                                width={150}
+                                height={150}
+                                className="pr-1 rarity-image"
+                            />
                         </div>
                     </div>
-                </div>
-
-                <div className="">
-
-
-                    <div className="metadata-grid-column">
-                        <div>
-                            <h2 className="attributes-header">ATTRIBUTES</h2>
-                            <div className="metadata-content">
-                                <div className="trait-column">
-                                    {selectedMeta.attributes.slice(0, 4).map(attr => (
-                                        <li key={attr.trait_type} className="trait-item">
-                                            <div className="trait-icon-name">
-                                                <img src="/1_triangle_aeons.png" alt="icon" className="trait-icon"/>
-                                                <div className="trait-name">
-                                                    <strong>{attr.trait_type}</strong>
-                                                </div>
-                                            </div>
-                                            <div className="trait-value ml-6">
-                                                {attr.value}
-                                            </div>
-                                        </li>
-                                    ))}
-                                </div>
-                                <div className="trait-column">
-                                    {selectedMeta.attributes.slice(4).map(attr => (
-                                        <li key={attr.trait_type} className="trait-item">
-                                            <div className="trait-icon-name">
-                                                <img src="/1_triangle_aeons.png" alt="icon" className="trait-icon"/>
-                                                <div className="trait-name">
-                                                    <strong>{attr.trait_type}</strong>
-                                                </div>
-                                            </div>
-                                            <div className="trait-value ml-6">
-                                                {attr.value}
-                                            </div>
-                                        </li>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                        <div className="image-details-button-container pt-4 sm:pt-0">
-                            <a href={`https://www.ord.io/${selectedMeta.inscriptionid}`} target="_blank"
-                               rel="noopener noreferrer">
-                                <button className="mt-2 detail-buttons">Open on Ord.io</button>
-                            </a>
-                            <a href={selectedMeta.external_url} download>
-                                <button className="mt-4 detail-buttons">Download High Resolution Image
-                                    Image
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-
-
                 </div>
             </div>
+
+            <div className="">
+                <div className="metadata-grid-column">
+                    <div>
+                        <h2 className="attributes-header">ATTRIBUTES</h2>
+                        <div className="metadata-content">
+                            <div className="trait-column">
+                                {selectedMeta.attributes.slice(0, 4).map(attr => (
+                                    <li key={attr.trait_type} className="trait-item">
+                                        <div className="trait-icon-name">
+                                            <img src="/1_triangle_aeons.png" alt="icon" className="trait-icon"/>
+                                            <div className="trait-name">
+                                                <strong>{attr.trait_type}</strong>
+                                            </div>
+                                        </div>
+                                        <div className="trait-value ml-6">
+                                            {attr.value}
+                                        </div>
+                                    </li>
+                                ))}
+                                {Array(placeholdersNeeded).fill(<PlaceholderMetadataItem />)}
+                            </div>
+                            <div className="trait-column">
+                                {selectedMeta.attributes.slice(4).map(attr => (
+                                    <li key={attr.trait_type} className="trait-item">
+                                        <div className="trait-icon-name">
+                                            <img src="/1_triangle_aeons.png" alt="icon" className="trait-icon"/>
+                                            <div className="trait-name">
+                                                <strong>{attr.trait_type}</strong>
+                                            </div>
+                                        </div>
+                                        <div className="trait-value ml-6">
+                                            {attr.value}
+                                        </div>
+                                    </li>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="image-details-button-container">
+                        <a href={`https://www.ord.io/${selectedMeta.inscriptionid}`} target="_blank"
+                           rel="noopener noreferrer">
+                            <button className="mt-2 detail-buttons">Open on Ord.io</button>
+                        </a>
+                        <a href={`https://drive.google.com/uc?export=download&id=${selectedMeta.external_url}`}
+                           download>
+                            <button className="mt-4 detail-buttons">Download High Resolution Image
+                                Image
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
 
 
     );
