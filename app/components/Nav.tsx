@@ -20,6 +20,11 @@ const NavBar = () => {
         setIsAnimating(false); // Stop the animation
     }
 
+    const handleBothClicks = () => {
+        handleRevealClick();
+        handleClick();
+    }
+
     return (
         <nav className="nav p-4 w-full text-gray-300 flex flex-row justify-between items-center bg-opacity-50">
             <div>
@@ -77,25 +82,27 @@ const NavBar = () => {
                                     WL Check<span className='text-[#e6a40e]'>er</span>
                                 </Link>
                             </li>
-                            <li className="border-b border-gray-400 my-8 uppercase link-z-index glowing">
-                                <Link href="/reveal" className="text-4xl font-bold text-center uppercase mx-2 "
-                                      onClick={handleClick}>
-                                    <span>Reve<span className='text-[#e6a40e]'>al</span></span>
-                                </Link>
-                            </li>
-                            <li className="border-b border-gray-400 my-8 uppercase link-z-index">
-                                <Link href="https://twitter.com/AeonsBTC"
-                                      className="text-4xl font-bold text-center uppercase mx-2" onClick={handleClick}>
-                                    <span>Twitt<span className='text-[#e6a40e]'>er</span></span>
-                                </Link>
-                            </li>
-                            <li className="border-b border-gray-400 my-8 uppercase link-z-index">
-                                <Link href="https://discord.gg/aeons"
-                                      className="text-4xl font-bold text-center uppercase mx-2"
-                                      onClick={handleClick}>
-                                    <span>Disco<span className='text-[#e6a40e]'>rd</span></span>
-                                </Link>
-                            </li>
+
+                                <li className={`border-b border-gray-400 my-8 uppercase link-z-index  ${isAnimating ? 'glowing' : ''}`}>
+                                    <Link href="/reveal" className="text-4xl font-bold text-center uppercase mx-2 "
+                                          onClick={handleBothClicks}>
+                                        <span>Reve<span className='text-[#e6a40e]'>al</span></span>
+                                    </Link>
+                                </li>
+                                <li className="border-b border-gray-400 my-8 uppercase link-z-index">
+                                    <Link href="https://twitter.com/AeonsBTC"
+                                          className="text-4xl font-bold text-center uppercase mx-2"
+                                          onClick={handleClick}>
+                                        <span>Twitt<span className='text-[#e6a40e]'>er</span></span>
+                                    </Link>
+                                </li>
+                                <li className="border-b border-gray-400 my-8 uppercase link-z-index">
+                                    <Link href="https://discord.gg/aeons"
+                                          className="text-4xl font-bold text-center uppercase mx-2"
+                                          onClick={handleClick}>
+                                        <span>Disco<span className='text-[#e6a40e]'>rd</span></span>
+                                    </Link>
+                                </li>
                         </ul>
                     </div>
                 </div>
