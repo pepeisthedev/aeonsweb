@@ -18,12 +18,12 @@
 
 @keyframes glowing {
     0% {
-        text-shadow: 0 0 1px #e6a40e, 0 0 3px #e6a40e, 0 0 6px #e6a40e, 0 0 9px #e6a40e;
+        text-shadow: 0 0 1px #ff6633, 0 0 3px #ff6633, 0 0 6px #ff6633, 0 0 9px #ff6633;
     }
     50% {
-        text-shadow: 0 0 3px #e6a40e, 0 0 9px #e6a40e, 0 0 12px #e6a40e, 0 0 26px #e6a40e;
+        text-shadow: 0 0 3px #ff6633, 0 0 9px #ff6633, 0 0 12px #ff6633, 0 0 26px #ff6633;
     }
     100% {
-        text-shadow: 0 0 1px #e6a40e, 0 0 3px #e6a40e, 0 0 6px #e6a40e, 0 0 9px #e6a40e;
+        text-shadow: 0 0 1px #ff6633, 0 0 3px #ff6633, 0 0 6px #ff6633, 0 0 9px #ff6633;
     }
 }
