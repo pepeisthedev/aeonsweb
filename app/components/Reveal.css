@@ -5,6 +5,8 @@ html,
 body {
     position: relative;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -12,13 +14,11 @@ body {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000;
-    margin: 0;
-    padding: 0;
 }
 
 .swiper {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .swiper-slide {
@@ -30,34 +30,17 @@ body {
     align-items: center;
 }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-body {
-    background: #000;
-    color: #000;
-}
-
-.swiper {
-    width: 100%;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.swiper-slide {
-    background-size: cover;
-    background-position: center;
-}
-
 .container {
+    padding-top: 60px;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 170px); /* Remove some space for the Nav*/
+    justify-content: space-between;
+    height: calc(100vh - 70px); /* Adjusted height to remove some space for the Nav */
+
+}
+
+.swiper-wrapper {
+    padding-top: 1px;
 }
 
 .mySwiper2 {
@@ -68,30 +51,16 @@ body {
 .myThumbnails {
     height: 20%;
     box-sizing: border-box;
-    padding: 10px 0;
-}
 
-@media (max-width: 768px) {
-    .myThumbnails {
-        width: 90%;
-    }
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 300px; /* Default width */
 }
-
-@media (min-width: 769px) {
-    .myThumbnails {
-        width: 70%;
-    }
-}
-
-@media (min-width: 1400px) {
-    .myThumbnails {
-        width: 40%;
-    }
-}
-
 
 .myThumbnails .swiper-slide {
-    width: 25%;
+    width: auto;
     height: 100%;
     opacity: 0.4;
 }
@@ -109,7 +78,21 @@ body {
     border: 6px solid black;
 }
 
+body {
+    background: #000;
+    color: #000;
+}
 
+.swiper {
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
 
 .myThumbnails .swiper-slide img {
     width: 98px;
@@ -120,20 +103,66 @@ body {
 }
 
 @media (max-width: 768px) {
+    .swiper-slide img {
+        width: 300px; /* Mobile size */
+        height: 300px;
+    }
+
+    .myThumbnails {
+        width: 300px; /* Match this to the width of .swiper-slide img */
+    }
+
     .myThumbnails .swiper-slide img {
         height: 75px;
         width: 75px;
     }
 }
 
-@media (min-height: 1200px) {
-    .swiper-slide img  {
-        height: 500px;
-        width: 500px;
+@media (min-width: 769px) and (max-width: 1199px) {
+    .swiper-slide img {
+        width: 350px; /* Intermediate size 1 */
+        height: 350px;
+    }
+
+    .myThumbnails {
+        width: 350px; /* Match this to the width of .swiper-slide img */
     }
 
     .myThumbnails .swiper-slide img {
-        height: 120px;
-        width: 120px;
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1999px) {
+    .swiper-slide img {
+        width: 400px; /* Intermediate size 2 */
+        height: 400px;
+    }
+
+    .myThumbnails {
+        width: 400px; /* Match this to the width of .swiper-slide img */
+    }
+
+    .myThumbnails .swiper-slide img {
+        height: 100px;
+        width: 100px;
+    }
+
+}
+
+@media (min-width: 2000px) {
+    .swiper-slide img {
+        width: 500px; /* 4K size */
+        height: 500px;
+    }
+
+    .myThumbnails {
+        width: 500px; /* Match this to the width of .swiper-slide img */
+    }
+
+    .myThumbnails .swiper-slide img {
+        height: 130px;
+        width: 130px;
     }
 }

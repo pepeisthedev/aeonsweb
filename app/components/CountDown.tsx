@@ -42,7 +42,7 @@ const Countdown: React.FC<CountdownProps> = ({ initialSeconds, setIsTimeUp }) =>
         <div className="countdown">
             <div className="timer text-white uppercase">
                 <h2 className="next-reveal text-white uppercase">NEXT REVEAL IN</h2>
-                <h1>{formatTime(time)}</h1>
+                <h1 className="timer-value">{formatTime(time)}</h1>
             </div>
         </div>
     );
