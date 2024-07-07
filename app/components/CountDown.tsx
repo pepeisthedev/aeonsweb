@@ -4,9 +4,10 @@ import './Countdown.css';
 interface CountdownProps {
     initialSeconds: number;
     setIsTimeUp: React.Dispatch<React.SetStateAction<boolean>>;
+    swiperSize: { width: number; height: number };
 }
 
-const Countdown: React.FC<CountdownProps> = ({ initialSeconds, setIsTimeUp }) => {
+const Countdown: React.FC<CountdownProps> = ({ initialSeconds, setIsTimeUp, swiperSize }) => {
     const [time, setTime] = useState(Math.round(initialSeconds * 1000)); // Convert seconds to milliseconds
 
     useEffect(() => {
@@ -40,7 +41,12 @@ const Countdown: React.FC<CountdownProps> = ({ initialSeconds, setIsTimeUp }) =>
 
     return (
         <div className="countdown">
-            <div className="timer text-white uppercase">
+            <div
+                style={{
+                    width: `${swiperSize.height * 0.8}px`,
+                }}
+                className="timer text-white uppercase"
+            >
                 <h2 className="next-reveal text-white uppercase">NEXT REVEAL IN</h2>
                 <h1 className="timer-value">{formatTime(time)}</h1>
             </div>

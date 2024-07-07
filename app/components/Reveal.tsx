@@ -16,10 +16,14 @@ import './Reveal.css';
 // import required modules
 import { FreeMode, Keyboard, Thumbs } from 'swiper/modules';
 import Countdown from "@/app/components/CountDown";
+import Image from "next/image";
 
 export default function App() {
+    const swiperRef = useRef(null);
+    const swiperRefThumbs = useRef(null);
+    const [swiperSize, setSwiperSize] = useState({ width: 0, height: 0 });
+    const [swiperThumbSize, setSwiperThumbSize] = useState({ width: 0, height: 0 });
     const [hasRun, setHasRun] = useState(false);
-
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
     const [images, setImages] = useState<ImageData[]>([]);
@@ -31,6 +35,31 @@ export default function App() {
         id: string;
         base64Image: string;
     }
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (swiperRef.current) {
+                const { offsetWidth: width, offsetHeight: height } = swiperRef.current;
+                setSwiperSize({ width, height  });
+            }
+            if (swiperRefThumbs.current) {
+                const { offsetWidth: width, offsetHeight: height } = swiperRefThumbs.current;
+                setSwiperThumbSize({ width, height  });
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+
+
+    useEffect(() => {
+        if (swiperRef.current) {
+            const { offsetWidth: width, offsetHeight: height } = swiperRef.current;
+            setSwiperSize({ width, height });
+        }
+    }, []);
 
     const fetchImages = async () => {
         try {
@@ -69,8 +98,9 @@ export default function App() {
     return (
         <>
             <div className="container">
-            <Countdown key={timeUntilNextReveal} initialSeconds={timeUntilNextReveal} setIsTimeUp={setIsTimeUp} />
+            <Countdown key={timeUntilNextReveal} initialSeconds={timeUntilNextReveal} setIsTimeUp={setIsTimeUp} swiperSize={swiperSize}/>
             <Swiper
+                ref={swiperRef}
                 style={{
                     '--swiper-navigation-color': '#fff',
                     '--swiper-pagination-color': '#fff',
@@ -85,7 +115,7 @@ export default function App() {
                 {images.slice().reverse().map((imageData, index) => (
                         <SwiperSlide key={imageData.id}>
                             <div style={{position: 'relative'}}>
-                                <img src={imageData.url} alt={`Image ${index + 1}`}/>
+                                <Image src={imageData.url} alt={`Image ${index + 1}`} height={swiperSize.height * 0.8} width={swiperSize.height * 0.8}/>
                                 <a href="https://twitter.com/intent/tweet?text=%E2%98%B0xplore%20Art&url="
                                    target="_blank"
                                    rel="noopener noreferrer"
@@ -104,6 +134,10 @@ export default function App() {
                 ))}
             </Swiper>
                 <Swiper
+                    style={{
+                        width: `${swiperSize.height * 0.8}px`,
+                    }}
+                    ref={swiperRefThumbs}
                     onSwiper={setThumbsSwiper}
                     loop={true}
                     spaceBetween={10}
@@ -115,10 +149,11 @@ export default function App() {
                 >
                     {images.slice().reverse().map((image, index) => (
                             <SwiperSlide key={`thumb-${index}`}>
-                                <img src={image.url} alt={`Image ${index + 1}`}/>
+                                <Image src={image.url} alt={`Image ${index + 1}`} height={swiperThumbSize.height * 0.7} width={swiperThumbSize.height * 0.7}/>
                             </SwiperSlide>
                     ))}
                 </Swiper>
+
             </div>
         </>
     );

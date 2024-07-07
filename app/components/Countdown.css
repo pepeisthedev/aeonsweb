@@ -34,7 +34,6 @@
 
 @media (max-width: 768px) {
    .timer{
-    width: 300px; /* Fixed width for large screens */
     height: 70px; /* Fixed height */
 }
     .next-reveal {
@@ -48,7 +47,6 @@
 
 @media (min-width: 769px) and (max-width: 1199px) {
     .timer{
-        width: 350px; /* Fixed width for large screens */
         height: 80px; /* Fixed height */
     }
     .next-reveal {
@@ -62,7 +60,6 @@
 
 @media (min-width: 1200px) and (max-width: 1999px) {
     .timer{
-        width: 400px; /* Fixed width for large screens */
         height: 80px; /* Fixed height */
     }
     .next-reveal {
@@ -77,7 +74,6 @@
 
 @media (min-width: 2000px) {
     .timer{
-        width: 500px; /* Fixed width for large screens */
         height: 80px; /* Fixed height */
     }
     .next-reveal {
