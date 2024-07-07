@@ -59,6 +59,10 @@ export default function App() {
             const { offsetWidth: width, offsetHeight: height } = swiperRef.current;
             setSwiperSize({ width, height });
         }
+        if (swiperRefThumbs.current) {
+            const { offsetWidth: width, offsetHeight: height } = swiperRefThumbs.current;
+            setSwiperThumbSize({ width, height  });
+        }
     }, []);
 
     const fetchImages = async () => {
