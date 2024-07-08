@@ -36,33 +36,25 @@ export default function App() {
         base64Image: string;
     }
 
-    useEffect(() => {
-        const handleResize = () => {
-            if (swiperRef.current) {
-                const { offsetWidth: width, offsetHeight: height } = swiperRef.current;
-                setSwiperSize({ width, height  });
-            }
-            if (swiperRefThumbs.current) {
-                const { offsetWidth: width, offsetHeight: height } = swiperRefThumbs.current;
-                setSwiperThumbSize({ width, height  });
-            }
-        };
-
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-
-
-    useEffect(() => {
+    const handleResize = () => {
         if (swiperRef.current) {
             const { offsetWidth: width, offsetHeight: height } = swiperRef.current;
-            setSwiperSize({ width, height });
+            // Assuming 768px as the breakpoint for mobile vs desktop
+            const multiplier = window.innerWidth >= 768 ? 0.8 : 0.7;
+            setSwiperSize({ width: width * multiplier, height: height * multiplier });
         }
         if (swiperRefThumbs.current) {
             const { offsetWidth: width, offsetHeight: height } = swiperRefThumbs.current;
-            setSwiperThumbSize({ width, height  });
+            // Use the same multiplier logic for thumbs
+            const multiplier = 0.6// window.innerWidth >= 768 ? 0.8 : 0.7;
+            setSwiperThumbSize({ width: width * multiplier, height: height * multiplier });
         }
+    };
+
+    useEffect(() => {
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     const fetchImages = async () => {
@@ -119,7 +111,7 @@ export default function App() {
                 {images.slice().reverse().map((imageData, index) => (
                         <SwiperSlide key={imageData.id}>
                             <div style={{position: 'relative'}}>
-                                <Image src={imageData.url} alt={`Image ${index + 1}`} height={swiperSize.height * 0.7} width={swiperSize.height * 0.7}/>
+                                <Image src={imageData.url} alt={`Image ${index + 1}`} height={swiperSize.height} width={swiperSize.height}/>
                                 <a href="https://twitter.com/intent/tweet?text=%E2%98%B0xplore%20Art&url="
                                    target="_blank"
                                    rel="noopener noreferrer"
@@ -139,7 +131,7 @@ export default function App() {
             </Swiper>
                 <Swiper
                     style={{
-                        width: `${swiperSize.height * 0.7}px`,
+                        width: `${swiperSize.height}px`,
                     }}
                     ref={swiperRefThumbs}
                     onSwiper={setThumbsSwiper}
@@ -153,7 +145,7 @@ export default function App() {
                 >
                     {images.slice().reverse().map((image, index) => (
                             <SwiperSlide key={`thumb-${index}`}>
-                                <Image src={image.url} alt={`Image ${index + 1}`} height={swiperThumbSize.height * 0.6} width={swiperThumbSize.height * 0.6}/>
+                                <Image src={image.url} alt={`Image ${index + 1}`} height={swiperThumbSize.height} width={swiperThumbSize.height}/>
                             </SwiperSlide>
                     ))}
                 </Swiper>
