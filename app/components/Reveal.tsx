@@ -119,7 +119,7 @@ export default function App() {
                 {images.slice().reverse().map((imageData, index) => (
                         <SwiperSlide key={imageData.id}>
                             <div style={{position: 'relative'}}>
-                                <Image src={imageData.url} alt={`Image ${index + 1}`} height={swiperSize.height * 0.8} width={swiperSize.height * 0.8}/>
+                                <Image src={imageData.url} alt={`Image ${index + 1}`} height={swiperSize.height * 0.7} width={swiperSize.height * 0.7}/>
                                 <a href="https://twitter.com/intent/tweet?text=%E2%98%B0xplore%20Art&url="
                                    target="_blank"
                                    rel="noopener noreferrer"
@@ -139,7 +139,7 @@ export default function App() {
             </Swiper>
                 <Swiper
                     style={{
-                        width: `${swiperSize.height * 0.8}px`,
+                        width: `${swiperSize.height * 0.7}px`,
                     }}
                     ref={swiperRefThumbs}
                     onSwiper={setThumbsSwiper}
@@ -153,7 +153,7 @@ export default function App() {
                 >
                     {images.slice().reverse().map((image, index) => (
                             <SwiperSlide key={`thumb-${index}`}>
-                                <Image src={image.url} alt={`Image ${index + 1}`} height={swiperThumbSize.height * 0.7} width={swiperThumbSize.height * 0.7}/>
+                                <Image src={image.url} alt={`Image ${index + 1}`} height={swiperThumbSize.height * 0.6} width={swiperThumbSize.height * 0.6}/>
                             </SwiperSlide>
                     ))}
                 </Swiper>

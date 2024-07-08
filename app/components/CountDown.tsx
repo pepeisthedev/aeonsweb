@@ -43,7 +43,7 @@ const Countdown: React.FC<CountdownProps> = ({ initialSeconds, setIsTimeUp, swip
         <div className="countdown">
             <div
                 style={{
-                    width: `${swiperSize.height * 0.8}px`,
+                    width: `${swiperSize.height * 0.7}px`,
                 }}
                 className="timer text-white uppercase"
             >
