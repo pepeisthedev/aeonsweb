@@ -1,107 +1,169 @@
 {
-
-    "Background": [
-      "Veins",
-      "Blue Canvas",
-      "Beach",
-      "Blue Liana",
-      "Ember Night",
-      "Celestial Night",
-      "Blood Bath",
-      "Plasma Green",
-      "Marble",
-      "Coral"
-    ],
-    "Skin": [
-      "Squiggles",
-      "Cosmos Suit",
-      "Brainpower",
-      "Moms spaghetti",
-      "Intestins",
-      "Halving Block",
-      "Red class",
-      "Fire Bones",
-      "Red Corals",
-      "Fog of War",
-      "Nebula",
-      "Runes",
-      "Graffiti",
-      "Rust"
-    ],
-    "Mouth": [
-      "Joker",
-      "Murmur mouth",
-      "razor sharp",
-      "Scotch Tape",
-      "Chew Screws",
-      "Sweet tooth",
-      "Dripping",
-      "Bony Grin",
-      "Tongue Out",
-      "Bitcoin Bandana",
-      "Dracula Smile",
-      "Crocodile teeth",
-      "Toxic Waste",
-      "Sinister cackle",
-      "Ouch!"
-    ],
-    "Eyes": [
-      "Censored",
-      "Cross eyed squint",
-      "Puppet Peepers",
-      "Murakami Flowers",
-      "Stare down",
-      "Apache",
-      "Lightning",
-      "Bitcoin eyes",
-      "Tribal eyes",
-      "Skittles Eyes",
-      "Laserzzz",
-      "Egg Yolks",
-      "Paperhand tears",
-      "Loco"
-    ],
-    "Head": [
-      "UFO",
-      "HeadBand",
-      "Mohawk",
-      "Crown",
-      "Golden Leafs",
-      "Perseus wings",
-      "Spineosaurus",
-      "Skull",
-      "Diamond Dreams",
-      "To the moon",
-      "Pizza Slice",
-      "Spirit Orbs"
-    ],
-    "Miscellaneous": [
-      "Murica Squiggle",
-      "Infinity Hoodie",
-      "Fragmentation",
-      "Spinal FX",
-      "Christmas squiggle",
-      "Play buttons",
-      "Roman Numerals"
-    ],
-    "Specialty": [
-      "Boom",
-      "Patterned Glow",
-      "Spirit of Basquiat",
-      "Urgency",
-      "American wings",
-      "Stormy day",
-      "Evil Wings",
-      "Lie detector",
-      "Compass",
-      "White presence"
-    ],
-    "1/1s": [
-    "Rocket Saint",
-    "Hell Demon",
-    "Melting eyes",
-    "Star Snake King",
-    "Cyborg"
+  "attributes": [
+    {
+      "traitType": "Background",
+      "traits":
+        [
+          "Beach",
+          "Blood Bath",
+          "Blue Canvas",
+          "Celestial Rain",
+          "Coral",
+          "Ember Night",
+          "Marble",
+          "Plasma Green",
+          "Veins"
+      ]
+    },
+    {
+      "traitType": "Specialty",
+      "traits":
+        [
+          "American Wings",
+          "Boom",
+          "Compass",
+          "Evil Wings",
+          "Kraken",
+          "Lie Detector",
+          "Naturalistic",
+          "Patterned Glow",
+          "Spirit of Basquiat",
+          "Stormy Day"
+      ]
+    },
+    {
+      "traitType": "Skin",
+      "traits":
+        [
+          "Brainpower",
+          "Cosmos Suit",
+          "Fire Bones",
+          "Fog of War",
+          "Graffiti",
+          "Halving Block",
+          "Intestins",
+          "Moms Spaghetti",
+          "Nebula",
+          "Red Class",
+          "Red Corals",
+          "Runes",
+          "Rust",
+          "Squiggles"
+      ]
+    },
+    {
+      "traitType": "TopMiscellaneous",
+      "traits":
+        [
+          "Christmas Squiggle",
+          "Fragmentation",
+          "Infinity Hoodie",
+          "Murica Squiggle",
+          "Play Buttons",
+          "Roman Numerals",
+          "Spinal FX",
+          "Unchained"
+      ]
+    },
+    {
+      "traitType": "Mouth",
+      "traits":
+        [
+          "Balaclava",
+          "Bitcoin Bandana",
+          "Bony Grin",
+          "Chew Screws",
+          "Crocodile Teeth",
+          "Dracula Smile",
+          "Dripping",
+          "Joker",
+          "Murmur Mouth",
+          "Ouch!",
+          "Razor Sharp",
+          "Scotch Tape",
+          "Sinister Cuckle",
+          "Sweet Tooth",
+          "Tongue Out",
+          "Toxic Waste"
+      ]
+    },
+    {
+      "traitType": "Head",
+      "traits":
+        [
+          "Blossom",
+          "Capricorn",
+          "Crown",
+          "Diamond Dreams",
+          "Golden Leaves",
+          "HeadBand",
+          "Mohawk",
+          "Neo Punk",
+          "Perseus Wings",
+          "Pizza Slice",
+          "Skull",
+          "Spineosaurus",
+          "Spirit Orbs",
+          "To the Moon",
+          "UFO"
+      ]
+    },
+    {
+      "traitType": "Eyes",
+      "traits":
+        [
+          "Apache",
+          "Bitcoin Eyes",
+          "Censored",
+          "Cross Eyed Squint",
+          "Egg Yolks",
+          "Fireflies",
+          "Laserzzz",
+          "Lightning",
+          "Loco",
+          "Murakami Flowers",
+          "Paperhand Tears",
+          "Puppet Peepers",
+          "Skittles Eyes",
+          "Stare Down",
+          "Tribal Eyes"
+      ]
+    },
+    {
+      "traitType": "Unique",
+      "traits":
+        [
+          "Abstract Gaze",
+          "Beard Sage",
+          "Bill-E",
+          "Burning Desire",
+          "Chroma Sketch",
+          "Color Pulse",
+          "Ethereal Brilliance",
+          "Explosive Occasion",
+          "Frost Rider",
+          "Honey Man",
+          "Horned Hope",
+          "Improved Vision",
+          "Intestinal Entity",
+          "Lifes Dilemma",
+          "Melting Candy",
+          "Neon Shaman",
+          "Omniscient Explorer",
+          "Optimistic Palette",
+          "Patchwork Face",
+          "Pierce-Full Mind",
+          "Rampant Ronny",
+          "Skeleton Ghost",
+          "Spiky Enigma",
+          "Sundial",
+          "The Keykeeper",
+          "The Maze Burst",
+          "The Original",
+          "The Otherworld Messenger",
+          "The Watcher",
+          "The Yoga Teacher"
+      ]
+    }
   ]
-
 }
