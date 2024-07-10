@@ -3,7 +3,7 @@ import path from 'path';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import csv from 'csv-parser';
 
-const startTime = new Date('2024-07-10T13:45:50Z');
+const startTime = new Date('2024-07-10T22:08:00Z');
 const revealIntervalMinutes = 15; // Change this value to 1, 8, or any other interval
 const imagesToReturn = 3;
 let ids: Map<string, string>;
@@ -52,7 +52,11 @@ function getTimeUntilNextReveal() {
 
 function getImagesList() {
     const imagesDir = path.join(process.cwd(), 'aeons');
-    imagesList = fs.readdirSync(imagesDir).filter(file => path.extname(file) === '.png').sort();
+    imagesList = fs.readdirSync(imagesDir).filter(file => path.extname(file) === '.png').sort((a, b) => {
+        const numA = parseInt(a.split('.')[0], 10);
+        const numB = parseInt(b.split('.')[0], 10);
+        return numA - numB;
+    });
 }
 
 // Function to calculate the images to reveal based on elapsed time
