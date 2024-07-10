@@ -15,7 +15,7 @@ import './Reveal.css';
 
 // import required modules
 import { FreeMode, Keyboard, Thumbs } from 'swiper/modules';
-import Countdown from "@/app/components/CountDown";
+import Countdown from "@/app/components/reveal/CountDown";
 import Image from "next/image";
 
 export default function App() {

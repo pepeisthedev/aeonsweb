@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './Countdown.css';
 
 interface CountdownProps {
@@ -9,27 +9,29 @@ interface CountdownProps {
 
 const Countdown: React.FC<CountdownProps> = ({ initialSeconds, setIsTimeUp, swiperSize }) => {
     const [time, setTime] = useState(Math.round(initialSeconds * 1000)); // Convert seconds to milliseconds
+    const startTimeRef = useRef<number>(performance.now());
+    const requestRef = useRef<number>(0);
 
     useEffect(() => {
-        if (time <= 0) {
-            setIsTimeUp(true);
-            return;
-        }
+        const updateTimer = (currentTime: number) => {
+            const elapsedTime = currentTime - startTimeRef.current;
+            const newTime = Math.round(initialSeconds * 1000 - elapsedTime);
 
-        const interval = setInterval(() => {
-            setTime(prevTime => {
-                const newTime = prevTime - 10;
-                if (newTime <= 0) {
-                    clearInterval(interval);
-                    setIsTimeUp(true);
-                    return 0;
-                }
-                return newTime;
-            });
-        }, 10);
+            if (newTime <= 0) {
+                setTime(0);
+                setIsTimeUp(true);
+                cancelAnimationFrame(requestRef.current);
+            } else {
+                setTime(newTime);
+                requestRef.current = requestAnimationFrame(updateTimer);
+            }
+        };
 
-        return () => clearInterval(interval);
-    }, [time]);
+        startTimeRef.current = performance.now();
+        requestRef.current = requestAnimationFrame(updateTimer);
+
+        return () => cancelAnimationFrame(requestRef.current);
+    }, [initialSeconds, setIsTimeUp]);
 
     const formatTime = (time: number) => {
         const minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));

@@ -3,7 +3,7 @@ import path from 'path';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import csv from 'csv-parser';
 
-const startTime = new Date('2024-07-03T12:00:50Z');
+const startTime = new Date('2024-07-10T13:45:50Z');
 const revealIntervalMinutes = 15; // Change this value to 1, 8, or any other interval
 const imagesToReturn = 3;
 let ids: Map<string, string>;
