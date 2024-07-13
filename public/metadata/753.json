@@ -1,0 +1,46 @@
+{
+  "name": "753",
+  "description": "",
+  "external_url": "",
+  "image": "753.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blood Bath"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Lie Detector"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Red Class"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Murica Squiggle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Dracula Smile"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Capricorn"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Puppet Peepers"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "753.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "1826",
+  "description": "",
+  "external_url": "",
+  "image": "1826.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Coral"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fog of War"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Fragmentation"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Sinister Cuckle"
+    },
+    {
+      "trait_type": "Head",
+      "value": "To the Moon"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Egg Yolks"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1826.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

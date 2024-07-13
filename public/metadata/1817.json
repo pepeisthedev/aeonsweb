@@ -1,0 +1,46 @@
+{
+  "name": "1817",
+  "description": "",
+  "external_url": "",
+  "image": "1817.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blood Bath"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Naturalistic"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Intestins"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Balaclava"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Neo Punk"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Cross Eyed Squint"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1817.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

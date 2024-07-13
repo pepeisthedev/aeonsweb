@@ -1,0 +1,46 @@
+{
+  "name": "2363",
+  "description": "",
+  "external_url": "",
+  "image": "2363.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Marble"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Brainpower"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Crocodile Teeth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Headband"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Skittles"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2363.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "770",
+  "description": "",
+  "external_url": "",
+  "image": "770.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Veins"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Evil Wings"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fog of War"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Fragmentation"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Joker"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Neo Punk"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Censored"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "770.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

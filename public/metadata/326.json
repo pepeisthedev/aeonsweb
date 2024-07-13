@@ -1,0 +1,46 @@
+{
+  "name": "326",
+  "description": "",
+  "external_url": "",
+  "image": "326.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Beach"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Evil Wings"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fog of War"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Infinity Hoodie"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Sweet Tooth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Crown"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Paperhand Tears"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "326.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

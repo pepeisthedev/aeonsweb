@@ -1,0 +1,46 @@
+{
+  "name": "2411",
+  "description": "",
+  "external_url": "",
+  "image": "2411.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Ember Night"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Stormy Day"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Cosmos Suit"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Unchained"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Sweet Tooth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "UFO"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Bitcoin Eyes"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2411.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

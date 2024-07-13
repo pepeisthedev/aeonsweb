@@ -1,0 +1,46 @@
+{
+  "name": "586",
+  "description": "",
+  "external_url": "",
+  "image": "586.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blue Canvas"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Intestins"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Play Buttons"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Tongue Out"
+    },
+    {
+      "trait_type": "Head",
+      "value": "UFO"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Murakami Flowers"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "586.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

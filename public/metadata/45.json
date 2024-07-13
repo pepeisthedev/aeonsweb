@@ -1,7 +1,7 @@
 {
   "name": "45",
   "description": "",
-  "external_url": "1rx5TTpdS7bb4SeLRftLMC0oBjqRRxocQ",
+  "external_url": "",
   "image": "45.webp",
   "attributes": [
     {
@@ -9,28 +9,28 @@
       "value": "Veins"
     },
     {
-      "trait_type": "Eyes",
-      "value": "Lightning"
-    },
-    {
-      "trait_type": "Head",
-      "value": "UFO"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "Sinister cackle"
+      "trait_type": "Specialty",
+      "value": "Empty"
     },
     {
       "trait_type": "Skin",
-      "value": "Fire Bones"
-    },
-    {
-      "trait_type": "Specialty",
-      "value": "Patterned Glow"
+      "value": "Intestins"
     },
     {
       "trait_type": "Miscellaneous",
-      "value": "Murica Squiggle"
+      "value": "Unchained"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Murmur Mouth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Spineosaurus"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Censored"
     }
   ],
   "properties": {
@@ -42,7 +42,5 @@
     ],
     "creators": []
   },
-  "compiler": "Aeons",
-  "rarity": 79,
-  "inscriptionid": "618ffb4e23e19566c7567841187a1c424dfd775e4f8cb633a7a3d4836784835fi0"
+  "compiler": "Aeons"
 }

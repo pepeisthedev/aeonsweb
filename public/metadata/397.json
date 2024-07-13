@@ -1,0 +1,46 @@
+{
+  "name": "397",
+  "description": "",
+  "external_url": "",
+  "image": "397.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Marble"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Evil Wings"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fog of War"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Play Buttons"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Murmur Mouth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Capricorn"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Bitcoin Eyes"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "397.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

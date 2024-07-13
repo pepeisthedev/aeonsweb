@@ -1,0 +1,46 @@
+{
+  "name": "2896",
+  "description": "",
+  "external_url": "",
+  "image": "2896.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Coral"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Stormy Day"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Cosmos Suit"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Roman Numerals"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Sweet Tooth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Perseus Wings"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Apache"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2896.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "396",
+  "description": "",
+  "external_url": "",
+  "image": "396.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Veins"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Red Corals"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Infinity Hoodie"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Dripping"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Pizza Slice"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Lightning"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "396.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

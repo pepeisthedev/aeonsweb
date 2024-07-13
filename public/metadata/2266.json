@@ -1,0 +1,46 @@
+{
+  "name": "2266",
+  "description": "",
+  "external_url": "",
+  "image": "2266.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Veins"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Compass"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Cosmos Suit"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Fragmentation"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Bony Grin"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Crown"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Censored"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2266.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "810",
+  "description": "",
+  "external_url": "",
+  "image": "810.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Celestial Rain"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Nebula"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Fragmentation"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Sweet Tooth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "UFO"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Loco"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "810.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

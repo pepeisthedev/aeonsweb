@@ -1,0 +1,46 @@
+{
+  "name": "2843",
+  "description": "",
+  "external_url": "",
+  "image": "2843.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blue Canvas"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Lie Detector"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Halving Block"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Fragmentation"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Chew Screws"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Tribal Eyes"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2843.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

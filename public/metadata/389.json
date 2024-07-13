@@ -1,0 +1,46 @@
+{
+  "name": "389",
+  "description": "",
+  "external_url": "",
+  "image": "389.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Marble"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Kraken"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Brainpower"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Spinal FX"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Crocodile Teeth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "To the Moon"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Paperhand Tears"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "389.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "1866",
+  "description": "",
+  "external_url": "",
+  "image": "1866.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blood Bath"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Naturalistic"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Intestins"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Bitcoin Bandana"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Spirit Orbs"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Puppet Peepers"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1866.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

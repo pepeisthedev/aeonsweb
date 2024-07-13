@@ -1,0 +1,46 @@
+{
+  "name": "1464",
+  "description": "",
+  "external_url": "",
+  "image": "1464.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blue Canvas"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Stormy Day"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Cosmos Suit"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Dripping"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Pizza Slice"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Stare Down"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1464.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

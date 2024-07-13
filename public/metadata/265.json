@@ -1,0 +1,46 @@
+{
+  "name": "265",
+  "description": "",
+  "external_url": "",
+  "image": "265.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blue Canvas"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Boom"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Runes"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Roman Numerals"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Ouch!"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Golden Leaves"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Murakami Flowers"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "265.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

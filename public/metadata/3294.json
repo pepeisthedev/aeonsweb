@@ -1,0 +1,46 @@
+{
+  "name": "3294",
+  "description": "",
+  "external_url": "",
+  "image": "3294.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blood Bath"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Lie Detector"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Red Class"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Spinal FX"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Crocodile Teeth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Golden Leaves"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Fireflies"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "3294.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

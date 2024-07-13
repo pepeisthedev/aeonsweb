@@ -1,0 +1,46 @@
+{
+  "name": "1165",
+  "description": "",
+  "external_url": "",
+  "image": "1165.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Celestial Rain"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Kraken"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Squiggles"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Murica Squiggle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Balaclava"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Spirit Orbs"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Censored"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1165.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "585",
+  "description": "",
+  "external_url": "",
+  "image": "585.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Beach"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Compass"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Brainpower"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Play Buttons"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Ouch!"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Blossom"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Skittles"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "585.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

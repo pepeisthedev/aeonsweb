@@ -1,0 +1,46 @@
+{
+  "name": "3145",
+  "description": "",
+  "external_url": "",
+  "image": "3145.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blue Canvas"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Boom"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Red Corals"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Sinister Cuckle"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Golden Leaves"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Apache"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "3145.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

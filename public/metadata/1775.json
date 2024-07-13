@@ -1,0 +1,46 @@
+{
+  "name": "1775",
+  "description": "",
+  "external_url": "",
+  "image": "1775.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Coral"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Stormy Day"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Halving Block"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Murica Squiggle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Ouch!"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Blossom"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Fireflies"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1775.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

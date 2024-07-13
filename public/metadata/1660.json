@@ -1,0 +1,46 @@
+{
+  "name": "1660",
+  "description": "",
+  "external_url": "",
+  "image": "1660.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Marble"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Intestins"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Sweet Tooth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Mohawk"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Tribal Eyes"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1660.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

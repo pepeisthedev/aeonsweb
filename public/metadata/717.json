@@ -1,0 +1,46 @@
+{
+  "name": "717",
+  "description": "",
+  "external_url": "",
+  "image": "717.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blood Bath"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Naturalistic"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Red Class"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Christmas Squiggle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Joker"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Crown"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Laserzzz"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "717.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

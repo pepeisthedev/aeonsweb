@@ -1,36 +1,36 @@
 {
   "name": "96",
   "description": "",
-  "external_url": "1mtTiXs5eCAGyY0XKIEZtJji8vEQCI6b8",
+  "external_url": "",
   "image": "96.webp",
   "attributes": [
     {
       "trait_type": "Background",
-      "value": "Coral"
-    },
-    {
-      "trait_type": "Eyes",
-      "value": "Paperhand tears"
-    },
-    {
-      "trait_type": "Head",
-      "value": "Spineosaurus"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "Bony Grin"
-    },
-    {
-      "trait_type": "Skin",
-      "value": "Red class"
+      "value": "Veins"
     },
     {
       "trait_type": "Specialty",
-      "value": "Boom"
+      "value": "Kraken"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Cosmos Suit"
     },
     {
       "trait_type": "Miscellaneous",
-      "value": "Play buttons"
+      "value": "Unchained"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Murmur Mouth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Golden Leaves"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Bitcoin Eyes"
     }
   ],
   "properties": {
@@ -42,7 +42,5 @@
     ],
     "creators": []
   },
-  "compiler": "Aeons",
-  "rarity": 211,
-  "inscriptionid": "618ffb4e23e19566c7567841187a1c424dfd775e4f8cb633a7a3d4836784835fi0"
+  "compiler": "Aeons"
 }

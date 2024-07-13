@@ -1,0 +1,46 @@
+{
+  "name": "592",
+  "description": "",
+  "external_url": "",
+  "image": "592.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Veins"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "American Wings"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fog of War"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Infinity Hoodie"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Sinister Cuckle"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Crown"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Lightning"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "592.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

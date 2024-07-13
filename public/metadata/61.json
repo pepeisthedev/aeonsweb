@@ -1,7 +1,7 @@
 {
   "name": "61",
   "description": "",
-  "external_url": "1Y_3Ah3YUv14_Lyn5VSkZr9E7FLnc7xCP",
+  "external_url": "",
   "image": "61.webp",
   "attributes": [
     {
@@ -9,28 +9,28 @@
       "value": "Marble"
     },
     {
-      "trait_type": "Eyes",
-      "value": "Puppet Peepers"
-    },
-    {
-      "trait_type": "Head",
-      "value": "UFO"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "Dripping"
+      "trait_type": "Specialty",
+      "value": "Empty"
     },
     {
       "trait_type": "Skin",
-      "value": "Intestins"
-    },
-    {
-      "trait_type": "Specialty",
-      "value": "White presence"
+      "value": "Red Class"
     },
     {
       "trait_type": "Miscellaneous",
-      "value": "Spinal FX"
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Sinister Cuckle"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Spirit Orbs"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Laserzzz"
     }
   ],
   "properties": {
@@ -42,7 +42,5 @@
     ],
     "creators": []
   },
-  "compiler": "Aeons",
-  "rarity": 76,
-  "inscriptionid": "618ffb4e23e19566c7567841187a1c424dfd775e4f8cb633a7a3d4836784835fi0"
+  "compiler": "Aeons"
 }

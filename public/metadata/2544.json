@@ -1,0 +1,46 @@
+{
+  "name": "2544",
+  "description": "",
+  "external_url": "",
+  "image": "2544.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Beach"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Evil Wings"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Squiggles"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Roman Numerals"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Murmur Mouth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Crown"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Laserzzz"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2544.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

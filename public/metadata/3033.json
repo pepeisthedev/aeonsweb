@@ -1,0 +1,46 @@
+{
+  "name": "3033",
+  "description": "",
+  "external_url": "",
+  "image": "3033.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blood Bath"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Boom"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fire Bones"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Toxic Waste"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Mohawk"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Apache"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "3033.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

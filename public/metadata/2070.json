@@ -1,0 +1,46 @@
+{
+  "name": "2070",
+  "description": "",
+  "external_url": "",
+  "image": "2070.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blue Canvas"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Evil Wings"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fog of War"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Murica Squiggle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Sinister Cuckle"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Headband"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Censored"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2070.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

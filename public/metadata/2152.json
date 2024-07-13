@@ -1,0 +1,46 @@
+{
+  "name": "2152",
+  "description": "",
+  "external_url": "",
+  "image": "2152.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Marble"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Spirit of Basquiat"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fire Bones"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Infinity Hoodie"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Murmur Mouth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "To the Moon"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Puppet Peepers"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2152.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

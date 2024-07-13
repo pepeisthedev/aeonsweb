@@ -1,0 +1,46 @@
+{
+  "name": "1064",
+  "description": "",
+  "external_url": "",
+  "image": "1064.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Veins"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Compass"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fog of War"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Fragmentation"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Sweet Tooth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Golden Leaves"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Apache"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1064.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

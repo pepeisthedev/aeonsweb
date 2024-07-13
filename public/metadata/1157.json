@@ -1,0 +1,46 @@
+{
+  "name": "1157",
+  "description": "",
+  "external_url": "",
+  "image": "1157.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blood Bath"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Stormy Day"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Red Class"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Spinal FX"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Bony Grin"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Blossom"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Tribal Eyes"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1157.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

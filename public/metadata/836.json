@@ -1,0 +1,46 @@
+{
+  "name": "836",
+  "description": "",
+  "external_url": "",
+  "image": "836.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Plasma Green"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Lie Detector"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fog of War"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Fragmentation"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Toxic Waste"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Headband"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Murakami Flowers"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "836.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

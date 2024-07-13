@@ -1,0 +1,46 @@
+{
+  "name": "1589",
+  "description": "",
+  "external_url": "",
+  "image": "1589.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blue Canvas"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Lie Detector"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Runes"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Murica Squiggle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Murmur Mouth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Puppet Peepers"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1589.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

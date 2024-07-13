@@ -1,0 +1,46 @@
+{
+  "name": "1818",
+  "description": "",
+  "external_url": "",
+  "image": "1818.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Ember Night"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Naturalistic"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Red Corals"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Fragmentation"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Dracula Smile"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Pizza Slice"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Puppet Peepers"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1818.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "3251",
+  "description": "",
+  "external_url": "",
+  "image": "3251.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blue Canvas"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Kraken"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Graffiti"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Unchained"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Balaclava"
+    },
+    {
+      "trait_type": "Head",
+      "value": "UFO"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Puppet Peepers"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "3251.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

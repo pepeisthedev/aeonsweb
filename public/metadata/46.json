@@ -1,7 +1,7 @@
 {
   "name": "46",
   "description": "",
-  "external_url": "1uxjVAPgZahXUgfaif_T1IDCU2ptoJfCH",
+  "external_url": "",
   "image": "46.webp",
   "attributes": [
     {
@@ -9,28 +9,28 @@
       "value": "Blue Canvas"
     },
     {
-      "trait_type": "Eyes",
-      "value": "Cross eyed squint"
-    },
-    {
-      "trait_type": "Head",
-      "value": "Perseus wings"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "Scotch Tape"
+      "trait_type": "Specialty",
+      "value": "Boom"
     },
     {
       "trait_type": "Skin",
-      "value": "Squiggles"
-    },
-    {
-      "trait_type": "Specialty",
-      "value": "Urgency"
+      "value": "Brainpower"
     },
     {
       "trait_type": "Miscellaneous",
       "value": "Spinal FX"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Murmur Mouth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Capricorn"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Tribal Eyes"
     }
   ],
   "properties": {
@@ -42,7 +42,5 @@
     ],
     "creators": []
   },
-  "compiler": "Aeons",
-  "rarity": 231,
-  "inscriptionid": "618ffb4e23e19566c7567841187a1c424dfd775e4f8cb633a7a3d4836784835fi0"
+  "compiler": "Aeons"
 }

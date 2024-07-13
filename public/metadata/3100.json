@@ -1,0 +1,46 @@
+{
+  "name": "3100",
+  "description": "",
+  "external_url": "",
+  "image": "3100.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Ember Night"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Spirit of Basquiat"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Squiggles"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Fragmentation"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Sinister Cuckle"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Neo Punk"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Cross Eyed Squint"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "3100.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

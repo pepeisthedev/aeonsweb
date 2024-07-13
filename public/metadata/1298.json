@@ -1,0 +1,46 @@
+{
+  "name": "1298",
+  "description": "",
+  "external_url": "",
+  "image": "1298.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blue Canvas"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Spirit of Basquiat"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Cosmos Suit"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Spinal FX"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Toxic Waste"
+    },
+    {
+      "trait_type": "Head",
+      "value": "To the Moon"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Egg Yolks"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1298.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

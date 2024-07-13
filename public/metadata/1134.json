@@ -1,0 +1,46 @@
+{
+  "name": "1134",
+  "description": "",
+  "external_url": "",
+  "image": "1134.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blue Canvas"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Naturalistic"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Rust"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Murica Squiggle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Tongue Out"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Headband"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Laserzzz"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1134.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

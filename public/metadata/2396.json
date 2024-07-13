@@ -1,0 +1,46 @@
+{
+  "name": "2396",
+  "description": "",
+  "external_url": "",
+  "image": "2396.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Coral"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Evil Wings"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Halving Block"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Christmas Squiggle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Dripping"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Perseus Wings"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Fireflies"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2396.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

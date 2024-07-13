@@ -1,0 +1,46 @@
+{
+  "name": "294",
+  "description": "",
+  "external_url": "",
+  "image": "294.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Marble"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Evil Wings"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Rust"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Murmur Mouth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Skull"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Empty"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "294.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

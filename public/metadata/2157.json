@@ -1,0 +1,46 @@
+{
+  "name": "2157",
+  "description": "",
+  "external_url": "",
+  "image": "2157.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Veins"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Moms Spaghetti"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Fragmentation"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Bony Grin"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Pizza Slice"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Cross Eyed Squint"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2157.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "2464",
+  "description": "",
+  "external_url": "",
+  "image": "2464.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blood Bath"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Lie Detector"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Nebula"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Infinity Hoodie"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Scotch Tape"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Cross Eyed Squint"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2464.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

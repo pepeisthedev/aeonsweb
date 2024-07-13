@@ -1,0 +1,46 @@
+{
+  "name": "3133",
+  "description": "",
+  "external_url": "",
+  "image": "3133.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Celestial Rain"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Lie Detector"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Halving Block"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Play Buttons"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Dripping"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Headband"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Murakami Flowers"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "3133.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

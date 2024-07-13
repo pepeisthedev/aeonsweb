@@ -1,0 +1,46 @@
+{
+  "name": "511",
+  "description": "",
+  "external_url": "",
+  "image": "511.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Beach"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Kraken"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Intestins"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Spinal FX"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Sweet Tooth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "To the Moon"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Puppet Peepers"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "511.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

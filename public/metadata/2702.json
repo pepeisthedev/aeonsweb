@@ -1,0 +1,46 @@
+{
+  "name": "2702",
+  "description": "",
+  "external_url": "",
+  "image": "2702.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Marble"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Evil Wings"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Rust"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Fragmentation"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Dripping"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Perseus Wings"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Censored"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2702.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

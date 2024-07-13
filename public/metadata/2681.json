@@ -1,0 +1,46 @@
+{
+  "name": "2681",
+  "description": "",
+  "external_url": "",
+  "image": "2681.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blue Canvas"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Kraken"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Moms Spaghetti"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Murica Squiggle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Joker"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Mohawk"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Bitcoin Eyes"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2681.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

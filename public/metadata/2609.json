@@ -1,0 +1,46 @@
+{
+  "name": "2609",
+  "description": "",
+  "external_url": "",
+  "image": "2609.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Marble"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Boom"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Moms Spaghetti"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Play Buttons"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Toxic Waste"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Blossom"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Stare Down"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2609.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

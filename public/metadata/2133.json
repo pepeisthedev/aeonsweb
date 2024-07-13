@@ -1,0 +1,46 @@
+{
+  "name": "2133",
+  "description": "",
+  "external_url": "",
+  "image": "2133.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Beach"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Moms Spaghetti"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Roman Numerals"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Tongue Out"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Egg Yolks"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2133.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

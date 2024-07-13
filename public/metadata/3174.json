@@ -1,0 +1,46 @@
+{
+  "name": "3174",
+  "description": "",
+  "external_url": "",
+  "image": "3174.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Ember Night"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Kraken"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Red Class"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Tongue Out"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Mohawk"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Murakami Flowers"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "3174.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

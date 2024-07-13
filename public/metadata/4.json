@@ -1,36 +1,36 @@
 {
   "name": "4",
   "description": "",
-  "external_url": "1mpUJUCb34VGl6fuNAWut1KgeL_RRRSEN",
+  "external_url": "",
   "image": "4.webp",
   "attributes": [
     {
       "trait_type": "Background",
-      "value": "Plasma Green"
-    },
-    {
-      "trait_type": "Eyes",
-      "value": "Cross eyed squint"
-    },
-    {
-      "trait_type": "Head",
-      "value": "HeadBand"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "razor sharp"
-    },
-    {
-      "trait_type": "Skin",
-      "value": "Red class"
+      "value": "Celestial Rain"
     },
     {
       "trait_type": "Specialty",
-      "value": "White presence"
+      "value": "Spirit of Basquiat"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Red Class"
     },
     {
       "trait_type": "Miscellaneous",
-      "value": "Christmas squiggle"
+      "value": "Murica Squiggle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Dripping"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Spirit Orbs"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Laserzzz"
     }
   ],
   "properties": {
@@ -42,7 +42,5 @@
     ],
     "creators": []
   },
-  "compiler": "Aeons",
-  "rarity": 110,
-  "inscriptionid": "618ffb4e23e19566c7567841187a1c424dfd775e4f8cb633a7a3d4836784835fi0"
+  "compiler": "Aeons"
 }

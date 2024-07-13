@@ -1,4 +1,4 @@
-import React, {ReactNode, MouseEventHandler, useState, useEffect} from 'react';
+import React, {ReactNode, MouseEventHandler, useState, useEffect, useRef} from 'react';
 import { useSwipeable } from 'react-swipeable';
 import './DetailsModal.css';
 
@@ -13,6 +13,7 @@ const DetailsModal: React.FC<ModalProps> = ({ children, onClose, onNext, onPrevi
     const [deltaX, setDeltaX] = useState(0);
     const [finalX, setFinalX] = useState(0);
     const [animate, setAnimate] = useState(false);
+    const modalRef = useRef<HTMLDivElement>(null);
 
     const handleOverlayClick = (e: React.MouseEvent) => {
         if (e.target === e.currentTarget) {
@@ -20,6 +21,19 @@ const DetailsModal: React.FC<ModalProps> = ({ children, onClose, onNext, onPrevi
         }
     };
 
+    useEffect(() => {
+        const handleOutsideClick = (event: MouseEvent) => {
+            if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+                onClose(event as any);
+            }
+        };
+
+        document.addEventListener('mousedown', handleOutsideClick);
+
+        return () => {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        };
+    }, [onClose]);
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -83,6 +97,7 @@ const DetailsModal: React.FC<ModalProps> = ({ children, onClose, onNext, onPrevi
     return (
         <div {...handlers} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 modal-container" onClick={handleOverlayClick}>
             <div
+                ref={modalRef}
                 className={`relative modal-transparent p-6 rounded shadow-lg ${animate ? 'animate' : ''}`}
                 style={{
                     transform: `translateX(${animate ? finalX : deltaX}px)`,

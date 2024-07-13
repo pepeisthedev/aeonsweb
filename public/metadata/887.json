@@ -1,0 +1,46 @@
+{
+  "name": "887",
+  "description": "",
+  "external_url": "",
+  "image": "887.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Ember Night"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Lie Detector"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fire Bones"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Play Buttons"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Dripping"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Capricorn"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Cross Eyed Squint"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "887.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

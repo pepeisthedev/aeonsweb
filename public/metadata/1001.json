@@ -1,0 +1,46 @@
+{
+  "name": "1001",
+  "description": "",
+  "external_url": "",
+  "image": "1001.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Celestial Rain"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fire Bones"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Roman Numerals"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Dripping"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Golden Leaves"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Paperhand Tears"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1001.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

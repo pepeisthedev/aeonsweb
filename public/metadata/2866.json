@@ -1,0 +1,46 @@
+{
+  "name": "2866",
+  "description": "",
+  "external_url": "",
+  "image": "2866.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Ember Night"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Moms Spaghetti"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Play Buttons"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Balaclava"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Mohawk"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Tribal Eyes"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2866.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

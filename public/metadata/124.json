@@ -1,0 +1,46 @@
+{
+  "name": "124",
+  "description": "",
+  "external_url": "",
+  "image": "124.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Veins"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "American Wings"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Cosmos Suit"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Play Buttons"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Bitcoin Bandana"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Capricorn"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Tribal Eyes"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "124.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

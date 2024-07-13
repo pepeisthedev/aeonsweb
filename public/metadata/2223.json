@@ -1,0 +1,46 @@
+{
+  "name": "2223",
+  "description": "",
+  "external_url": "",
+  "image": "2223.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Veins"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Boom"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fire Bones"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Spinal FX"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Sinister Cuckle"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Neo Punk"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Apache"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2223.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "998",
+  "description": "",
+  "external_url": "",
+  "image": "998.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Ember Night"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Naturalistic"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Cosmos Suit"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Tongue Out"
+    },
+    {
+      "trait_type": "Head",
+      "value": "UFO"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Bitcoin Eyes"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "998.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

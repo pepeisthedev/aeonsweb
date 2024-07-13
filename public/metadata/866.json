@@ -1,0 +1,46 @@
+{
+  "name": "866",
+  "description": "",
+  "external_url": "",
+  "image": "866.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Marble"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Evil Wings"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Graffiti"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Roman Numerals"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Razor Sharp"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Pizza Slice"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Paperhand Tears"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "866.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

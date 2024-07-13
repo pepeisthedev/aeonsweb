@@ -1,0 +1,46 @@
+{
+  "name": "2720",
+  "description": "",
+  "external_url": "",
+  "image": "2720.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Plasma Green"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "American Wings"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Cosmos Suit"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Unchained"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Crocodile Teeth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Skull"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Empty"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2720.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

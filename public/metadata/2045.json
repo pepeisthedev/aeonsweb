@@ -1,0 +1,46 @@
+{
+  "name": "2045",
+  "description": "",
+  "external_url": "",
+  "image": "2045.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Coral"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "American Wings"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Nebula"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Murica Squiggle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Tongue Out"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Perseus Wings"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Loco"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2045.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

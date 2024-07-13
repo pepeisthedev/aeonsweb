@@ -1,36 +1,36 @@
 {
   "name": "21",
   "description": "",
-  "external_url": "1IWHK-Dy8vlb8w5xjVN0LpMx074ZEAzZS",
+  "external_url": "",
   "image": "21.webp",
   "attributes": [
     {
       "trait_type": "Background",
-      "value": "Celestial Night"
-    },
-    {
-      "trait_type": "Eyes",
-      "value": "Murakami Flowers"
-    },
-    {
-      "trait_type": "Head",
-      "value": "To the moon"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "Chew Screws"
-    },
-    {
-      "trait_type": "Skin",
-      "value": "Red Corals"
+      "value": "Veins"
     },
     {
       "trait_type": "Specialty",
-      "value": "Evil Wings"
+      "value": "Kraken"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Brainpower"
     },
     {
       "trait_type": "Miscellaneous",
-      "value": "Play buttons"
+      "value": "Christmas Squiggle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Sinister Cuckle"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Bitcoin Eyes"
     }
   ],
   "properties": {
@@ -42,7 +42,5 @@
     ],
     "creators": []
   },
-  "compiler": "Aeons",
-  "rarity": 93,
-  "inscriptionid": "618ffb4e23e19566c7567841187a1c424dfd775e4f8cb633a7a3d4836784835fi0"
+  "compiler": "Aeons"
 }

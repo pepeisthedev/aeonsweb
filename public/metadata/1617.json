@@ -1,0 +1,46 @@
+{
+  "name": "1617",
+  "description": "",
+  "external_url": "",
+  "image": "1617.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Marble"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Red Class"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Roman Numerals"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Dripping"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Neo Punk"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Fireflies"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1617.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "1110",
+  "description": "",
+  "external_url": "",
+  "image": "1110.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Marble"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Kraken"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Red Class"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Joker"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Spineosaurus"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Egg Yolks"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1110.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

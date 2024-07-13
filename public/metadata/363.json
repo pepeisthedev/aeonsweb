@@ -1,0 +1,46 @@
+{
+  "name": "363",
+  "description": "",
+  "external_url": "",
+  "image": "363.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Plasma Green"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Stormy Day"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Brainpower"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Balaclava"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Spirit Orbs"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Skittles"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "363.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

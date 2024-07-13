@@ -1,0 +1,46 @@
+{
+  "name": "595",
+  "description": "",
+  "external_url": "",
+  "image": "595.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Marble"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Patterned Glow"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fog of War"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Razor Sharp"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Skull"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Empty"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "595.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

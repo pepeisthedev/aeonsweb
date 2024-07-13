@@ -1,36 +1,36 @@
 {
   "name": "81",
   "description": "",
-  "external_url": "1bt8egUKmEB0P8WLLvpWj_DKLiepGWtfR",
+  "external_url": "",
   "image": "81.webp",
   "attributes": [
     {
       "trait_type": "Background",
-      "value": "Veins"
-    },
-    {
-      "trait_type": "Eyes",
-      "value": "Cross eyed squint"
-    },
-    {
-      "trait_type": "Head",
-      "value": "Spineosaurus"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "Ouch!"
-    },
-    {
-      "trait_type": "Skin",
-      "value": "Moms spaghetti"
+      "value": "Blue Canvas"
     },
     {
       "trait_type": "Specialty",
-      "value": "Spirit of Basquiat"
+      "value": "Compass"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Red Corals"
     },
     {
       "trait_type": "Miscellaneous",
-      "value": "Christmas squiggle"
+      "value": "Christmas Squiggle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Bitcoin Bandana"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Cross Eyed Squint"
     }
   ],
   "properties": {
@@ -42,7 +42,5 @@
     ],
     "creators": []
   },
-  "compiler": "Aeons",
-  "rarity": 284,
-  "inscriptionid": "618ffb4e23e19566c7567841187a1c424dfd775e4f8cb633a7a3d4836784835fi0"
+  "compiler": "Aeons"
 }

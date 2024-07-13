@@ -1,0 +1,46 @@
+{
+  "name": "2637",
+  "description": "",
+  "external_url": "",
+  "image": "2637.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Marble"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Compass"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fire Bones"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Murica Squiggle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Dripping"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Diamond Dreams"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Skittles"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "2637.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}
