@@ -1,0 +1,46 @@
+{
+  "name": "3268",
+  "description": "",
+  "external_url": "",
+  "image": "3268.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Plasma Green"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Lie Detector"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fire Bones"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Play Buttons"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Razor Sharp"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Skull"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Empty"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "3268.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

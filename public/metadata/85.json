@@ -1,36 +1,36 @@
 {
   "name": "85",
   "description": "",
-  "external_url": "1Twn4kbuirXlmcTA2-aMa74rgSz_qyjnZ",
+  "external_url": "",
   "image": "85.webp",
   "attributes": [
     {
       "trait_type": "Background",
-      "value": "Ember Night"
-    },
-    {
-      "trait_type": "Eyes",
-      "value": "Apache"
-    },
-    {
-      "trait_type": "Head",
-      "value": "Skull"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "Toxic Waste"
-    },
-    {
-      "trait_type": "Skin",
-      "value": "Red class"
+      "value": "Celestial Rain"
     },
     {
       "trait_type": "Specialty",
-      "value": "White presence"
+      "value": "Compass"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fog of War"
     },
     {
       "trait_type": "Miscellaneous",
-      "value": "Murica Squiggle"
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Sweet Tooth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Pizza Slice"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Egg Yolks"
     }
   ],
   "properties": {
@@ -42,7 +42,5 @@
     ],
     "creators": []
   },
-  "compiler": "Aeons",
-  "rarity": 86,
-  "inscriptionid": "618ffb4e23e19566c7567841187a1c424dfd775e4f8cb633a7a3d4836784835fi0"
+  "compiler": "Aeons"
 }

@@ -1,7 +1,7 @@
 {
   "name": "74",
   "description": "",
-  "external_url": "1Z9A3tw9qi8FVNqUQg8Q9qGoSyY2DZNOz",
+  "external_url": "",
   "image": "74.webp",
   "attributes": [
     {
@@ -9,28 +9,28 @@
       "value": "Coral"
     },
     {
-      "trait_type": "Eyes",
-      "value": "Loco"
-    },
-    {
-      "trait_type": "Head",
-      "value": "Golden Leafs"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "Dracula Smile"
+      "trait_type": "Specialty",
+      "value": "Lie Detector"
     },
     {
       "trait_type": "Skin",
-      "value": "Cosmos Suit"
-    },
-    {
-      "trait_type": "Specialty",
-      "value": "Urgency"
+      "value": "Nebula"
     },
     {
       "trait_type": "Miscellaneous",
-      "value": "Play buttons"
+      "value": "Murica Squiggle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Chew Screws"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Golden Leaves"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Loco"
     }
   ],
   "properties": {
@@ -42,7 +42,5 @@
     ],
     "creators": []
   },
-  "compiler": "Aeons",
-  "rarity": 239,
-  "inscriptionid": "618ffb4e23e19566c7567841187a1c424dfd775e4f8cb633a7a3d4836784835fi0"
+  "compiler": "Aeons"
 }

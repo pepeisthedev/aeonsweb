@@ -1,7 +1,7 @@
 {
   "name": "66",
   "description": "",
-  "external_url": "1yBXzx0_97cXhsOmBKLy9LGx9VuGTYyrQ",
+  "external_url": "",
   "image": "66.webp",
   "attributes": [
     {
@@ -9,28 +9,28 @@
       "value": "Veins"
     },
     {
-      "trait_type": "Eyes",
-      "value": "Bitcoin eyes"
-    },
-    {
-      "trait_type": "Head",
-      "value": "Spirit Orbs"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "Sinister cackle"
+      "trait_type": "Specialty",
+      "value": "Evil Wings"
     },
     {
       "trait_type": "Skin",
-      "value": "Red Corals"
-    },
-    {
-      "trait_type": "Specialty",
-      "value": "Urgency"
+      "value": "Moms Spaghetti"
     },
     {
       "trait_type": "Miscellaneous",
       "value": "Roman Numerals"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Joker"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Golden Leaves"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Egg Yolks"
     }
   ],
   "properties": {
@@ -42,7 +42,5 @@
     ],
     "creators": []
   },
-  "compiler": "Aeons",
-  "rarity": 64,
-  "inscriptionid": "618ffb4e23e19566c7567841187a1c424dfd775e4f8cb633a7a3d4836784835fi0"
+  "compiler": "Aeons"
 }

@@ -81,7 +81,7 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                                             </div>
                                         </div>
                                         <div className="trait-value ml-6">
-                                            {attr.value}
+                                            {attr.value === "Empty" ? "-" : attr.value}
                                         </div>
                                     </li>
                                 ))}
@@ -97,7 +97,7 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                                             </div>
                                         </div>
                                         <div className="trait-value ml-6">
-                                            {attr.value}
+                                            {attr.value === "Empty" ? "-" : attr.value}
                                         </div>
                                     </li>
                                 ))}

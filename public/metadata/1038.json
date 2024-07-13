@@ -1,0 +1,46 @@
+{
+  "name": "1038",
+  "description": "",
+  "external_url": "",
+  "image": "1038.webp",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blood Bath"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "American Wings"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Nebula"
+    },
+    {
+      "trait_type": "Miscellaneous",
+      "value": "Christmas Squiggle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Murmur Mouth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Diamond Dreams"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Loco"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "1038.webp",
+        "type": "image/webp"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

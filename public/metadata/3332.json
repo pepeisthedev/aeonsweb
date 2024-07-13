@@ -1,0 +1,22 @@
+{
+  "name": "3332",
+  "description": "",
+  "external_url": "",
+  "image": "3332.jpeg",
+  "attributes": [
+    {
+      "trait_type": "Unique",
+      "value": "Abstract Gaze"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "3332.jpeg",
+        "type": "image/jpeg"
+      }
+    ],
+    "creators": []
+  },
+  "compiler": "Aeons"
+}

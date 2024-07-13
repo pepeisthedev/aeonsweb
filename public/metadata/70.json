@@ -1,7 +1,7 @@
 {
   "name": "70",
   "description": "",
-  "external_url": "1gZhl7Vo-diMbGFXxwNMUzvtb1yW0UxPC",
+  "external_url": "",
   "image": "70.webp",
   "attributes": [
     {
@@ -9,28 +9,28 @@
       "value": "Beach"
     },
     {
-      "trait_type": "Eyes",
-      "value": "Puppet Peepers"
-    },
-    {
-      "trait_type": "Head",
-      "value": "Skull"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "Scotch Tape"
+      "trait_type": "Specialty",
+      "value": "Stormy Day"
     },
     {
       "trait_type": "Skin",
-      "value": "Runes"
-    },
-    {
-      "trait_type": "Specialty",
-      "value": "American wings"
+      "value": "Red Class"
     },
     {
       "trait_type": "Miscellaneous",
-      "value": "Christmas squiggle"
+      "value": "Fragmentation"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Murmur Mouth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Crown"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Murakami Flowers"
     }
   ],
   "properties": {
@@ -42,7 +42,5 @@
     ],
     "creators": []
   },
-  "compiler": "Aeons",
-  "rarity": 264,
-  "inscriptionid": "618ffb4e23e19566c7567841187a1c424dfd775e4f8cb633a7a3d4836784835fi0"
+  "compiler": "Aeons"
 }

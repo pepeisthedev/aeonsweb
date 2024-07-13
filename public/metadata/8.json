@@ -1,36 +1,36 @@
 {
   "name": "8",
   "description": "",
-  "external_url": "1Qr57PORY3bI6RPDSe02CXC2dizOXGbua",
+  "external_url": "",
   "image": "8.webp",
   "attributes": [
     {
       "trait_type": "Background",
-      "value": "Ember Night"
-    },
-    {
-      "trait_type": "Eyes",
-      "value": "Murakami Flowers"
-    },
-    {
-      "trait_type": "Head",
-      "value": "Skull"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "Chew Screws"
-    },
-    {
-      "trait_type": "Skin",
-      "value": "Intestins"
+      "value": "Blue Canvas"
     },
     {
       "trait_type": "Specialty",
-      "value": "American wings"
+      "value": "Stormy Day"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Fog of War"
     },
     {
       "trait_type": "Miscellaneous",
-      "value": "Murica Squiggle"
+      "value": "Unchained"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Murmur Mouth"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Spineosaurus"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Bitcoin Eyes"
     }
   ],
   "properties": {
@@ -42,7 +42,5 @@
     ],
     "creators": []
   },
-  "compiler": "Aeons",
-  "rarity": 133,
-  "inscriptionid": "618ffb4e23e19566c7567841187a1c424dfd775e4f8cb633a7a3d4836784835fi0"
+  "compiler": "Aeons"
 }

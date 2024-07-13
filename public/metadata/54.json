@@ -1,7 +1,7 @@
 {
   "name": "54",
   "description": "",
-  "external_url": "1WMVSMHaUzLu9-9wZZDX-cZpUwduXUEQ4",
+  "external_url": "",
   "image": "54.webp",
   "attributes": [
     {
@@ -9,28 +9,28 @@
       "value": "Plasma Green"
     },
     {
-      "trait_type": "Eyes",
-      "value": "Egg Yolks"
-    },
-    {
-      "trait_type": "Head",
-      "value": "Skull"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "razor sharp"
+      "trait_type": "Specialty",
+      "value": "Naturalistic"
     },
     {
       "trait_type": "Skin",
-      "value": "Red Corals"
-    },
-    {
-      "trait_type": "Specialty",
-      "value": "Spirit of Basquiat"
+      "value": "Moms Spaghetti"
     },
     {
       "trait_type": "Miscellaneous",
-      "value": "Murica Squiggle"
+      "value": "Empty"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Chew Screws"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Pizza Slice"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Censored"
     }
   ],
   "properties": {
@@ -42,7 +42,5 @@
     ],
     "creators": []
   },
-  "compiler": "Aeons",
-  "rarity": 287,
-  "inscriptionid": "618ffb4e23e19566c7567841187a1c424dfd775e4f8cb633a7a3d4836784835fi0"
+  "compiler": "Aeons"
 }
