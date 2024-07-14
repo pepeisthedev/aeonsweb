@@ -12,6 +12,10 @@
     position: relative;
 }
 
+.modal-transparent::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
 @media screen and (max-width: 768px) {
     .modal-transparent::after {
         content: '';
