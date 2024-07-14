@@ -1,4 +1,3 @@
-
 .details-modal-image-container {
     width: 100%;
     height: auto;
@@ -21,21 +20,6 @@
     align-items: center;
 }
 
-
-@media screen and (max-width: 768px) {
-    .rarity-image {
-        width: 45%;
-        height: auto;
-    }
-
-    .rarity {
-        flex-direction: column;
-        align-items: flex-end;
-    }
-}
-
-
-
 .details-modal-header {
     display: flex;
     justify-content: space-between;
@@ -47,12 +31,6 @@
     white-space: nowrap;
     font-weight: bold;
     font-family: 'Helvetica', sans-serif;
-}
-
-@media screen and (min-width: 1024px) {
-    .details-modal-header {
-        font-size: 20px;
-    }
 }
 
 .metadata-content {
@@ -69,12 +47,6 @@
     width: 105px; /* Fixed width on mobile */
 }
 
-@media screen and (min-width: 768px) {
-    .trait-column {
-        width: 200px; /* Fixed width on desktop */
-    }
-}
-
 .attributes-header {
     grid-column: 1;
     color: black;
@@ -84,29 +56,6 @@
     text-align: left;
     font-family: 'Helvetica', sans-serif;
 }
-
-@media screen and (min-width: 1024px) {
-    .attributes-header {
-        font-size: 35px;
-    }
-}
-@media screen and (min-width: 768px) {
-    .attributes-header {
-        padding-left: 20px; /*Same as trait-column padding-left*/
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .trait-column:nth-of-type(1) {
-        padding-left: 20px;
-    }
-
-    .trait-column:nth-of-type(2) {
-        padding-right: 100px;
-    }
-}
-
-
 
 .trait-item {
     display: flex;
@@ -126,13 +75,6 @@
     margin-right: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    .trait-icon {
-        width: 12px;
-        height: 12px;
-    }
-}
-
 .image-metadata-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -144,42 +86,16 @@
     overflow-x: hidden;
 }
 
-
-
-@media (max-width: 768px) {
-    .image-metadata-container {
-        grid-template-columns: 1fr; /* Creates one column on smaller screens */
-    }
-}
-
 .trait-name {
     font-size: 12px;
     font-weight: bold;
     font-family: 'Helvetica', sans-serif;
 }
 
-@media screen and (min-width: 1024px) {
-    .trait-name {
-        font-size: 20px;
-    }
-}
-
 .trait-value {
     font-size: 12px;
     font-family: 'Helvetica', sans-serif;
     white-space: nowrap;
-}
-
-@media screen and (min-width: 1024px) {
-    .trait-value {
-        font-size: 18px;
-    }
-}
-
-@media screen and (min-width: 800px) {
-    .trait-value {
-        white-space: nowrap;
-    }
 }
 
 .center-container2 {
@@ -197,16 +113,103 @@
     font-family: 'Helvetica', sans-serif;
 }
 
-@media screen and (min-width: 1024px) {
-    .detail-buttons {
-        font-size: 18px;
-    }
-}
-
 .image-details-button-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding-bottom: 8px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .rarity-image {
+        width: 45%;
+        height: auto;
+    }
+
+    .rarity {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .trait-icon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .image-metadata-container {
+        grid-template-columns: 1fr; /* Creates one column on smaller screens */
+    }
+
+    .image-in-details {
+        width: 100%;
+        height: auto;
+    }
+
+    .details-modal-header {
+        width: 100%;
+    }
+
+    .rarity {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .trait-column {
+        width: 200px; /* Fixed width on desktop */
+    }
+
+    .attributes-header {
+        padding-left: 20px; /*Same as trait-column padding-left*/
+    }
+
+    .trait-column:nth-of-type(1) {
+        padding-left: 20px;
+    }
+
+    .trait-column:nth-of-type(2) {
+        padding-right: 100px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .details-modal-header {
+        font-size: 20px;
+    }
+
+    .attributes-header {
+        font-size: 35px;
+    }
+
+    .trait-name {
+        font-size: 20px;
+    }
+
+    .trait-value {
+        font-size: 18px;
+    }
+
+    .detail-buttons {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .trait-value {
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 369px){
+    .image-in-details { /* Image goes out of screen on small mobiles */
+        width: 95%;
+        height: auto;
+    }
+
+    .details-modal-header {
+        width: 95%;
+    }
 }

@@ -48,7 +48,7 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                         alt={selectedMeta.name}
                         width={400}
                         height={400}
-                        className="border-8 border-black rounded "
+                        className="border-8 border-black rounded image-in-details"
                     />
                     <div className="details-modal-header">
                         <h2 className="pl-1">PIECE {selectedMeta.name}/3333</h2>
