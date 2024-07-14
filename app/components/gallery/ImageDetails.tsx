@@ -57,9 +57,9 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                             <Image
                                 src={getRankingImage(selectedMeta.rarity)}
                                 alt="ranking"
-                                width={150}
-                                height={150}
-                                className="pr-1 rarity-image"
+                                width={80}
+                                height={80}
+                                className="pr-1 pb-1 rarity-image"
                             />
                         </div>
                     </div>
