@@ -5,7 +5,7 @@ import path from 'path';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     try {
 
-        const traitsFilePath = path.join(process.cwd(), 'public', 'availableTraits.json');
+        const traitsFilePath = path.join(process.cwd(), 'public', 'Aeons_AvailableTraits.json');
 
         fs.readFile(traitsFilePath, 'utf-8', (err, data) => {
             if (err) {

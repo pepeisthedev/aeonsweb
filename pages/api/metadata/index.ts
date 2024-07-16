@@ -5,28 +5,17 @@ import path from 'path';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     try {
 
-        const metadataDir = path.join(process.cwd(), 'public', 'metadata');
+        const traitsFilePath = path.join(process.cwd(), 'public', 'Aeons_Metadata.json');
 
-        fs.readdir(metadataDir, (err, files) => {
+        fs.readFile(traitsFilePath, 'utf-8', (err, data) => {
             if (err) {
-                return res.status(500).json({error: 'Unable to read metadata directory'});
+                res.status(500).json({error: 'Unable to read combined metadata file'});
+                return;
             }
 
-            const metadataObj: Record<string, any> = {};
-            files
-                .filter(file => path.extname(file) === '.json')
-                .forEach((file) => {
-                    const filePath = path.join(metadataDir, file);
-                    const content = fs.readFileSync(filePath, 'utf-8');
-                    const jsonContent = JSON.parse(content);
-                    metadataObj[jsonContent.name] = jsonContent;
-                });
-
-            res.status(200).json(metadataObj);
-
-
+            res.status(200).json(JSON.parse(data));
         });
     } catch (e) {
-        res.status(500).json({error: 'Unable to read metadata'});
+        res.status(500).json({error: 'Unable to read traits'});
     }
 }

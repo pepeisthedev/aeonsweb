@@ -61,7 +61,7 @@ const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, 
             ))}
 
             <button
-                className="ml-3 clear-filter mt-4 aeons-white"
+                className="ml-3 clear-filter mt-4 mb-2 aeons-white"
                 onClick={() => setFilters({})}
             >
                 Clear Filters ({totalActiveFilters})

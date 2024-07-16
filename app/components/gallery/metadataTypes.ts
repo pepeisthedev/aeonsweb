@@ -1,16 +1,15 @@
 
 export interface MetaData {
-    name: string;
-    description: string;
-    external_url: string;
-    image: string;
-    attributes: Array<{
-        trait_type: string;
-        value: string;
-    }>;
-    compiler: string;
+    id: string;
     rarity: number;
-    inscriptionid: string;
+    external_url: number;
+    meta: {
+        name: string;
+        attributes: Array<{
+            trait_type: string;
+            value: string;
+        }>;
+    };
 }
 
 export interface TraitsData {

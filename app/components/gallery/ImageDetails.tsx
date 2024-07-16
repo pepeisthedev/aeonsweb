@@ -36,7 +36,7 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
 
     const isDesktop = typeof window !== 'undefined' && window.innerWidth > 768;
 
-    const placeholdersNeeded = isDesktop ? 4 - Math.min(selectedMeta.attributes.length, 4) : 0;
+    const placeholdersNeeded = isDesktop ? 4 - Math.min(selectedMeta.meta.attributes.length, 4) : 0;
 
     return (
 
@@ -45,15 +45,15 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                 <div>
                     <Image
                         src={imageUrl}
-                        alt={selectedMeta.name}
+                        alt={selectedMeta.meta.name}
                         width={400}
                         height={400}
                         className="border-8 border-black rounded image-in-details"
                     />
                     <div className="details-modal-header">
-                        <h2 className="pl-1">PIECE {selectedMeta.name}/3333</h2>
+                        <h2 className="pl-1">PIECE {parseInt(selectedMeta.meta.name) + 1}/3333</h2>
                         <div className="rarity">
-                            <h2 className="pr-1">RARITY {selectedMeta.rarity}</h2>
+                        <h2 className="pr-1">RARITY {selectedMeta.rarity}</h2>
                             <Image
                                 src={getRankingImage(selectedMeta.rarity)}
                                 alt="ranking"
@@ -72,7 +72,7 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                         <h2 className="attributes-header">ATTRIBUTES</h2>
                         <div className="metadata-content">
                             <div className="trait-column">
-                                {selectedMeta.attributes.slice(0, 4).map(attr => (
+                                {selectedMeta.meta.attributes.slice(0, 4).map(attr => (
                                     <li key={attr.trait_type} className="trait-item">
                                         <div className="trait-icon-name">
                                             <img src="/1_triangle_aeons.png" alt="icon" className="trait-icon"/>
@@ -88,7 +88,7 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                                 {Array(placeholdersNeeded).fill(<PlaceholderMetadataItem />)}
                             </div>
                             <div className="trait-column">
-                                {selectedMeta.attributes.slice(4).map(attr => (
+                                {selectedMeta.meta.attributes.slice(4).map(attr => (
                                     <li key={attr.trait_type} className="trait-item">
                                         <div className="trait-icon-name">
                                             <img src="/1_triangle_aeons.png" alt="icon" className="trait-icon"/>
@@ -105,7 +105,7 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                         </div>
                     </div>
                     <div className="image-details-button-container">
-                        <a href={`https://www.ord.io/${selectedMeta.inscriptionid}`} target="_blank"
+                        <a href={`https://www.ord.io/${selectedMeta.id}`} target="_blank"
                            rel="noopener noreferrer">
                             <button className="mt-2 detail-buttons">Open on Ord.io</button>
                         </a>

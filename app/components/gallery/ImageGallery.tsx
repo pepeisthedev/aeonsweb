@@ -119,7 +119,7 @@ const ImageGallery: React.FC = () => {
 
                 return Object.entries(filters).every(([traitType, values]) => {
                     if (values.length === 0) return true;
-                    const attribute = meta.attributes.find(attr => attr.trait_type === traitType);
+                    const attribute = meta.meta.attributes.find(attr => attr.trait_type === traitType);
                     return attribute && values.includes(attribute.value);
                 });
             });
