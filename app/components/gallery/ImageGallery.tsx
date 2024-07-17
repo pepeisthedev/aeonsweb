@@ -7,6 +7,7 @@ import Filter from './Filter';
 import SortFilterButtons from './SortFilterButtons';
 import ImageDetails from './ImageDetails';
 import Image from 'next/image';
+import imageDetails from "./ImageDetails";
 
 const useWindowSize = () => {
     const [size, setSize] = useState({width: 0, height: 0});
@@ -28,7 +29,6 @@ const useWindowSize = () => {
 };
 
 const ImageGallery: React.FC = () => {
-    const [images, setImages] = useState<string[]>([]);
     const { size: { width, height }, isLoaded } = useWindowSize();
     const [metadata, setMetadata] = useState<Record<string, MetaData>>({});
     const [selectedMeta, setSelectedMeta] = useState<MetaData | null>(null);
@@ -41,24 +41,15 @@ const ImageGallery: React.FC = () => {
     type SortOrder = 'asc' | 'desc';
     const [sort, setSort] = useState<{ criterion: SortCriterion; order: SortOrder }>({ criterion: 'number', order: 'asc' });
 
+    const TOTAL_IMAGES = 3303;
     const MOBILE_THRESH_HOLD = 768;
+    const imageList = Array.from({ length: TOTAL_IMAGES }, (_, index) => `/gallery/${index}.webp`);
 
     useEffect(() => {
-        const fetchImages = async () => {
-            const imagesResponse = await fetch('/api/images');
-            if (!imagesResponse.ok) {
-                throw new Error('Network response was not ok');
-            }
-            const images: string[] = await imagesResponse.json();
-            setImages(images);
-        };
 
         const fetchAllTraits = async () => {
             try {
-                const response = await fetch('/api/traits');
-                if (!response.ok) {
-                    console.error('Error fetching metadata: Status:', response.status, response.statusText);
-                }
+                const response = await fetch('/Aeons_AvailableTraits.json');
                 const data = await response.json();
                 setTraits(data);
             } catch (error) {
@@ -68,10 +59,7 @@ const ImageGallery: React.FC = () => {
 
         const fetchMetadata = async () => {
             try {
-                const response = await fetch('/api/metadata');
-                if (!response.ok) {
-                    console.error('Error fetching metadata: Status:', response.status, response.statusText);
-                }
+                const response = await fetch('/Aeons_Metadata.json');
                 const data = await response.json();
                 setMetadata(data);
             } catch (error) {
@@ -81,7 +69,6 @@ const ImageGallery: React.FC = () => {
 
         const fetchData = async () => {
             try {
-                await fetchImages();
                 await fetchMetadata();
                 await fetchAllTraits();
             } catch (error) {
@@ -109,20 +96,18 @@ const ImageGallery: React.FC = () => {
         });
     };
 
-
     const getFilteredImages = () => {
-        let filtered = images
-            .filter(image => {
-                const imageName = image.split('/').pop()?.split('.')[0];
-                const meta = metadata[imageName || ''];
-                if (!meta) return false;
+        let filtered = imageList.filter(image => {
+            const imageName = image.split('/').pop()?.split('.')[0];
+            const meta = metadata[imageName || ''];
+            if (!meta) return false;
 
-                return Object.entries(filters).every(([traitType, values]) => {
-                    if (values.length === 0) return true;
-                    const attribute = meta.meta.attributes.find(attr => attr.trait_type === traitType);
-                    return attribute && values.includes(attribute.value);
-                });
+            return Object.entries(filters).every(([traitType, values]) => {
+                if (values.length === 0) return true;
+                const attribute = meta.meta.attributes.find(attr => attr.trait_type === traitType);
+                return attribute && values.includes(attribute.value);
             });
+        });
 
         filtered = filtered.sort((a, b) => {
             const nameA = a.split('/').pop()?.split('.')[0] || '';
@@ -141,6 +126,7 @@ const ImageGallery: React.FC = () => {
 
         return filtered;
     };
+
 
     const increaseColumnCount = () => {
         setColumnCount(prevCount => prevCount < 10 ? prevCount + 1 : prevCount);
