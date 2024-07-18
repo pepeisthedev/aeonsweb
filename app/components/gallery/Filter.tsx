@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './Filter.css';
 import Image from "next/image";
-import * as sea from "node:sea";
 
 interface FilterProps {
     traits: Record<string, string[]>;
@@ -26,7 +25,7 @@ const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, 
     };
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchValue( event.target.value );
+        setSearchValue(event.target.value);
     };
 
     const toggleCategory = (category: string) => {
@@ -39,28 +38,37 @@ const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, 
     return (
         <div className="filter-container">
             <h2 className="filter-header">
-                <span className="aeons-white">SEAR</span><span className="aeons-yellow">CH</span>
-            </h2>
-            <input
-                    className="search-input ml-6"
-                    placeholder="Number / Inscription ID"
-                    onChange={handleInputChange}
-                    value={searchValue}
-                >
-            </input>
-            <h2 className="filter-header">
                 <span className="aeons-white">ATTRIBUT</span><span className="aeons-yellow">ES</span>
             </h2>
+
+            <div className="label-area" >
+                <div className="filter-label" onClick={() => toggleCategory('search')}>
+                    <div className="label-content">
+                        <div className={`rotate-icon ${expandedCategories['search'] ? 'expanded' : ''}`}>
+                            <Image src='/1_triangle_aeons.png' alt="expand-icon" width={13} height={13}/>
+                        </div>
+                        Search
+                    </div>
+                </div>
+
+            {expandedCategories['search'] && (
+                <div className=" ml-3 mt-2">
+                    <input
+                        className="search-input search-input-font"
+                        placeholder="Number / Inscription ID"
+                        onChange={handleInputChange}
+                        value={searchValue}
+                    />
+                </div>
+            )}
+            </div>
+            {/* Existing Traits Mapping */}
             {Object.entries(traits).map(([traitType, options]) => (
                 <div key={traitType} className="label-area">
                     <div className="filter-label" onClick={() => toggleCategory(traitType)}>
                         <div className="label-content">
                             <div className={`rotate-icon ${expandedCategories[traitType] ? 'expanded' : ''}`}>
-                                <Image src='/1_triangle_aeons.png'
-                                       alt="expand-icon"
-                                       width={13}
-                                       height={13}
-                                />
+                                <Image src='/1_triangle_aeons.png' alt="expand-icon" width={13} height={13}/>
                             </div>
                             {traitType}
                         </div>
@@ -78,7 +86,6 @@ const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, 
                             ))}
                         </div>
                     )}
-
                 </div>
             ))}
 
