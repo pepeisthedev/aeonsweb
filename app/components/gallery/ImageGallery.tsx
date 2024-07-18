@@ -7,7 +7,9 @@ import Filter from './Filter';
 import SortFilterButtons from './SortFilterButtons';
 import ImageDetails from './ImageDetails';
 import Image from 'next/image';
-import imageDetails from "./ImageDetails";
+import * as sea from "node:sea";
+
+type Filters = Record<string, string[]>;
 
 const useWindowSize = () => {
     const [size, setSize] = useState({width: 0, height: 0});
@@ -36,6 +38,7 @@ const ImageGallery: React.FC = () => {
     const [traits, setTraits] = useState<TraitsData>({});
     const [filters, setFilters] = useState<Record<string, string[]>>({});
     const [isFilterVisible, setIsFilterVisible] = useState(false);
+    const [searchValue, setSearchValue] = useState("");
     const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
     type SortCriterion = 'rarity' | 'number';
     type SortOrder = 'asc' | 'desc';
@@ -97,6 +100,26 @@ const ImageGallery: React.FC = () => {
     };
 
     const getFilteredImages = () => {
+        // If there's a search term, prioritize filtering by it
+        if (searchValue) {
+            const filteredByIdOrName = imageList.filter(image => {
+                const imageName = image.split('/').pop()?.split('.')[0];
+                const meta = metadata[imageName || ''];
+                if (!meta) return false;
+
+                // Check if the searchTerm matches the id or the name (which is a number)
+                return meta.id === searchValue || meta.meta.name === searchValue;
+            });
+
+            // If no images match the searchTerm, return an empty array
+            if (filteredByIdOrName.length === 0) {
+                return [];
+            }
+
+            return filteredByIdOrName;
+        }
+
+        // Existing filter logic
         let filtered = imageList.filter(image => {
             const imageName = image.split('/').pop()?.split('.')[0];
             const meta = metadata[imageName || ''];
@@ -109,6 +132,7 @@ const ImageGallery: React.FC = () => {
             });
         });
 
+        // Existing sorting logic
         filtered = filtered.sort((a, b) => {
             const nameA = a.split('/').pop()?.split('.')[0] || '';
             const nameB = b.split('/').pop()?.split('.')[0] || '';
@@ -219,6 +243,8 @@ const ImageGallery: React.FC = () => {
                                 activeFilters={filters}
                                 onFilterChange={handleFilterChange}
                                 setFilters={setFilters}
+                                setSearchValue={setSearchValue}
+                                searchValue={searchValue}
                             />
                         </div>
                     ) : null}

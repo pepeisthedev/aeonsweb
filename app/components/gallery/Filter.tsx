@@ -1,20 +1,32 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './Filter.css';
 import Image from "next/image";
+import * as sea from "node:sea";
 
 interface FilterProps {
     traits: Record<string, string[]>;
     activeFilters: Record<string, string[]>;
     onFilterChange: (traitType: string, value: string) => void;
     setFilters: (filters: Record<string, string[]>) => void;
+    setSearchValue: (searchTerm: string) => void;
+    searchValue: string;
 }
 
-const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, setFilters }) => {
+const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, setFilters, setSearchValue, searchValue }) => {
     const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});
-    const totalActiveFilters = Object.values(activeFilters).reduce((total, filters) => total + filters.length, 0);
+    const [totalActiveFilters, setTotalActiveFilters] = useState(0);
+
+    useEffect(() => {
+        const total = Object.values(activeFilters).reduce((total, filters) => total + filters.length, 0) + (searchValue.length > 0 ? 1 : 0);
+        setTotalActiveFilters(total);
+    }, [activeFilters, searchValue]);
 
     const handleChange = (traitType: string, value: string) => {
         onFilterChange(traitType, value);
+    };
+
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchValue( event.target.value );
     };
 
     const toggleCategory = (category: string) => {
@@ -26,6 +38,16 @@ const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, 
 
     return (
         <div className="filter-container">
+            <h2 className="filter-header">
+                <span className="aeons-white">SEAR</span><span className="aeons-yellow">CH</span>
+            </h2>
+            <input
+                    className="search-input ml-6"
+                    placeholder="Number / Inscription ID"
+                    onChange={handleInputChange}
+                    value={searchValue}
+                >
+            </input>
             <h2 className="filter-header">
                 <span className="aeons-white">ATTRIBUT</span><span className="aeons-yellow">ES</span>
             </h2>
@@ -62,7 +84,10 @@ const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, 
 
             <button
                 className="ml-3 clear-filter mt-4 mb-2 aeons-white"
-                onClick={() => setFilters({})}
+                onClick={() => {
+                    setFilters({});
+                    setSearchValue('');
+                }}
             >
                 Clear Filters ({totalActiveFilters})
             </button>
