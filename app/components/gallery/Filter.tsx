@@ -38,7 +38,7 @@ const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, 
     return (
         <div className="filter-container">
             <h2 className="filter-header">
-                <span className="aeons-white">ATTRIBUT</span><span className="aeons-yellow">ES</span>
+                <span className="aeons-white">FILT</span><span className="aeons-yellow">ER</span>
             </h2>
 
             <div className="label-area" >
