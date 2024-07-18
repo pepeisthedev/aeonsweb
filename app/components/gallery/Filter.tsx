@@ -55,7 +55,7 @@ const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, 
                 <div className=" ml-3 mt-2">
                     <input
                         className="search-input search-input-font"
-                        placeholder="Number / Inscription ID"
+                        placeholder="Aeon Number / Inscription ID"
                         onChange={handleInputChange}
                         value={searchValue}
                     />
