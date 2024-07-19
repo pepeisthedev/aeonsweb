@@ -42,17 +42,16 @@ const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, 
             </h2>
 
             <div className="label-area" >
-                <div className="filter-label" onClick={() => toggleCategory('search')}>
+                <div className="filter-label non-clickable-label">
                     <div className="label-content">
-                        <div className={`rotate-icon ${expandedCategories['search'] ? 'expanded' : ''}`}>
+                        <div className="rotate-icon expanded">
                             <Image src='/1_triangle_aeons.png' alt="expand-icon" width={13} height={13}/>
                         </div>
                         Search
                     </div>
                 </div>
 
-            {expandedCategories['search'] && (
-                <div className=" ml-3 mt-2">
+                <div className="ml-3 mt-2">
                     <input
                         className="search-input search-input-font"
                         placeholder="Aeon Number / Inscription ID"
@@ -60,7 +59,6 @@ const Filter: React.FC<FilterProps> = ({ traits, activeFilters, onFilterChange, 
                         value={searchValue}
                     />
                 </div>
-            )}
             </div>
             {/* Existing Traits Mapping */}
             {Object.entries(traits).map(([traitType, options]) => (
