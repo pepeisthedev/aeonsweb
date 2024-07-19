@@ -44,7 +44,7 @@ const ImageGallery: React.FC = () => {
     type SortOrder = 'asc' | 'desc';
     const [sort, setSort] = useState<{ criterion: SortCriterion; order: SortOrder }>({ criterion: 'number', order: 'asc' });
 
-    const TOTAL_IMAGES = 3303;
+    const TOTAL_IMAGES = 3333;
     const MOBILE_THRESH_HOLD = 768;
     const imageList = Array.from({ length: TOTAL_IMAGES }, (_, index) => `/gallery/${index}.webp`);
 
