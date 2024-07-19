@@ -2,7 +2,7 @@
 export interface MetaData {
     id: string;
     rarity: number;
-    external_url: number;
+    google_drive_id: string;
     meta: {
         name: string;
         attributes: Array<{

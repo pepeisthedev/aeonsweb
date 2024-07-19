@@ -109,7 +109,7 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                            rel="noopener noreferrer">
                             <button className="mt-2 detail-buttons">Open on Ord.io</button>
                         </a>
-                        <a href={`https://drive.google.com/uc?export=download&id=${selectedMeta.external_url}`}
+                        <a href={`https://drive.google.com/uc?export=download&id=${selectedMeta.google_drive_id}`}
                            download>
                             <button className="mt-4 detail-buttons">Download High Resolution Image
                                 Image
