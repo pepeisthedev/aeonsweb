@@ -223,3 +223,7 @@
         width: 95%;
     }
 }
+
+.invisible-element {
+    visibility: hidden;
+}

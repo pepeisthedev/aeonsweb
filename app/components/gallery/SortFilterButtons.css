@@ -20,8 +20,6 @@
 }
 
 
-
-
 .sorting-options {
     display: flex;
     /* other styles */
@@ -31,4 +29,8 @@
     .sorting-options.hide-on-mobile {
         display: none;
     }
+}
+
+.hidden-element {
+    display: none;
 }

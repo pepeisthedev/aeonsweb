@@ -59,7 +59,7 @@ const SortFilterButtons: React.FC<SortFilterButtonsProps> = ({
                 </div>
             </div>
             <div>
-                <div className="flex mr-3 md:mr-7 mt-1">
+                <div className="flex mr-3 md:mr-7 mt-1 hidden-element">
                     <span className="options-text">RARITY</span>
                     <button className="options-text" onClick={() => setSort({criterion: 'rarity', order: 'asc'})}>△</button>
                     <button className="options-text" onClick={() => setSort({criterion: 'rarity', order: 'desc'})}>▽</button>

@@ -52,16 +52,16 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                     />
                     <div className="details-modal-header">
                         <h2 className="pl-1">AEON {selectedMeta.meta.name}</h2>
-                        <div className="rarity">
-                        <h2 className="pr-1">RARITY {selectedMeta.rarity}</h2>
-                            <Image
-                                src={getRankingImage(selectedMeta.rarity)}
-                                alt="ranking"
-                                width={80}
-                                height={80}
-                                className="pr-1 pb-1 rarity-image"
-                            />
-                        </div>
+                        <div className="rarity invisible-element">
+                            <h2 className="pr-1">RARITY {selectedMeta.rarity}</h2>
+                                <Image
+                                    src={getRankingImage(selectedMeta.rarity)}
+                                    alt="ranking"
+                                    width={80}
+                                    height={80}
+                                    className="pr-1 pb-1 rarity-image"
+                                />
+                            </div>
                     </div>
                 </div>
             </div>
