@@ -111,9 +111,7 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                         </a>
                         <a href={`https://drive.google.com/uc?export=download&id=${selectedMeta.google_drive_id}`}
                            download>
-                            <button className="mt-4 detail-buttons">Download High Resolution Image
-                                Image
-                            </button>
+                            <button className="mt-4 detail-buttons">Download High Resolution Image</button>
                         </a>
                     </div>
                 </div>
