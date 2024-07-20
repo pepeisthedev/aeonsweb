@@ -26,6 +26,12 @@ export const metadata: Metadata = {
     icons: {
         icon: '/favicon.ico'
     },
+    authors: [
+        {
+            name: 'ei0haro',
+            url: 'https://x.com/ei0haro'
+        }
+    ],
     openGraph: {
         title: 'Aeons',
         description: 'Aeons are vibrant, chaotic, and rebellious beings, brought to life in a neo-expressionist style. Embodying a pursuit of exploration and a dream to bring art to the eternal chain, Aeons merge the worlds of fine art and PFPs, introducing a fresh and unique style to ordinals.',
@@ -50,10 +56,14 @@ export default function RootLayout({
         <html lang="en">
 
         <body className={`${edo.variable} ${inter.className} ${league_gothic.className}`}>
-        <main className="main flex min-h-screen flex-col items-center justify-center bg-cover bg-[url('/blackaeonsbg.png')]">
+        <main
+            className="main flex min-h-screen flex-col items-center justify-center bg-cover bg-[url('/blackaeonsbg.png')]">
             <Nav/>
             {children}
         </main>
+        <div className="hidden-element">
+            Created by https://x.com/ei0haro
+        </div>
         </body>
         </html>
     );
