@@ -9,11 +9,15 @@ interface ImageDetailsProps {
 }
 
 const getRankingImage = (rarity: number) => {
-    if (rarity === 1) return "/ranking_5.png";
-    if (rarity >= 2 && rarity <= 50) return "/ranking_4.5.png";
-    if (rarity >= 51 && rarity <= 100) return "/ranking_4.png";
-    if (rarity >= 101 && rarity <= 150) return "/ranking_3.png";
-    if (rarity >= 151 && rarity <= 200) return "/ranking_2.png";
+    if (rarity == 1) return "/ranking_5.png";
+    if (rarity > 0.976) return "/ranking_4.5.png";
+    if (rarity > 0.971 && rarity <= 0.976) return "/ranking_4.png";
+    if (rarity > 0.9645 && rarity <= 0.971) return "/ranking_3.5.png";
+    if (rarity > 0.957 && rarity <= 0.9645) return "/ranking_3.png";
+    if (rarity > 0.947 && rarity <= 0.957) return "/ranking_2.5.png";
+    if (rarity > 0.93 && rarity <= 0.947) return "/ranking_2.png";
+    if (rarity > 0.884 && rarity <= 0.93) return "/ranking_1.5.png";
+    if (rarity > 0 && rarity <= 0.884) return "/ranking_1.png";
     else return "/ranking_1.png";
 }
 
@@ -52,8 +56,8 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ selectedMeta, selectedImage
                     />
                     <div className="details-modal-header">
                         <h2 className="pl-1">AEON {selectedMeta.meta.name}</h2>
-                        <div className="rarity invisible-element">
-                            <h2 className="pr-1">RARITY {selectedMeta.rarity}</h2>
+                        <div className="rarity">
+                            <h2 className="pr-1">RARITY</h2>
                                 <Image
                                     src={getRankingImage(selectedMeta.rarity)}
                                     alt="ranking"
