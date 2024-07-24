@@ -10,14 +10,14 @@ interface ImageDetailsProps {
 
 const getRankingImage = (rarity: number) => {
     if (rarity == 1) return "/ranking_5.png";
-    if (rarity > 0.937) return "/ranking_4.5.png";
-    if (rarity > 0.923 && rarity <= 0.937) return "/ranking_4.png";
-    if (rarity > 0.909 && rarity <= 0.923) return "/ranking_3.5.png";
-    if (rarity > 0.893 && rarity <= 0.909) return "/ranking_3.png";
-    if (rarity > 0.872 && rarity <= 0.893) return "/ranking_2.5.png";
-    if (rarity > 0.85 && rarity <= 0.872) return "/ranking_2.png";
-    if (rarity > 0.805 && rarity <= 0.85) return "/ranking_1.5.png";
-    if (rarity > 0 && rarity <= 0.805) return "/ranking_1.png";
+    if (rarity > 0.5) return "/ranking_4.5.png";
+    if (rarity > 0.34 && rarity <= 0.5) return "/ranking_4.png";
+    if (rarity > 0.306 && rarity <= 0.34) return "/ranking_3.5.png";
+    if (rarity > 0.285 && rarity <= 0.306) return "/ranking_3.png";
+    if (rarity > 0.2 && rarity <= 0.285) return "/ranking_2.5.png";
+    if (rarity > 0.09 && rarity <= 0.2) return "/ranking_2.png";
+    if (rarity > 0.071 && rarity <= 0.09) return "/ranking_1.5.png";
+    if (rarity > 0 && rarity <= 0.071) return "/ranking_1.png";
     else return "/ranking_1.png";
 }
 
