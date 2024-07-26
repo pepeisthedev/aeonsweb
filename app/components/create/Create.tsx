@@ -3,6 +3,7 @@ import './Create.css';
 import { TraitsData } from "@/app/components/gallery/metadataTypes";
 import Traits from "@/app/components/create/Traits";
 import LayeredImage from "@/app/components/create/LayeredImage";
+import FilterButtonBar from "@/app/components/create/FilterButtonBar";
 
 const useWindowSize = () => {
     const [size, setSize] = useState({ width: 0, height: 0 });
@@ -81,8 +82,10 @@ const Create: React.FC = () => {
     };
 
     return (
-        <div className="fill-all-space" style={{ marginTop: navHeight }}>
-            <div className="flex flex-row reduce-some-space shadow-container">
+        <div className="fill-all-space shadow-container" style={{ marginTop: navHeight }}>
+            <FilterButtonBar showFilter={width <= MOBILE_THRESH_HOLD} isFilterVisible={isFilterVisible} setIsFilterVisible={setIsFilterVisible}   />
+            <div className="flex flex-row reduce-some-space ">
+
                 {isFilterVisible || width >= MOBILE_THRESH_HOLD ? (
                     <div className={`${width < MOBILE_THRESH_HOLD ? 'w-full' : 'w-1/4'}`}>
                         <Traits
