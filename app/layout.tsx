@@ -61,9 +61,6 @@ export default function RootLayout({
             <Nav/>
             {children}
         </main>
-        <div className="hidden-element">
-            Created by https://x.com/ei0haro
-        </div>
         </body>
         </html>
     );

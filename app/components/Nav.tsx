@@ -26,7 +26,7 @@ const NavBar = () => {
     }
 
     return (
-        <nav className="nav p-4 w-full text-gray-300 flex flex-row justify-between items-center bg-opacity-50">
+        <nav className="nav p-4 w-full text-gray-300 flex flex-row justify-between items-center bg-opacity-50" id="nav" >
             <div>
                 <Link href="/">
                     <Image
