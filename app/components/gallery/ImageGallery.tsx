@@ -53,8 +53,11 @@ const ImageGallery: React.FC = () => {
         const fetchAllTraits = async () => {
             try {
                 const response = await fetch('/Aeons_AvailableTraits.json');
-                const data = await response.json();
-                setTraits(data);
+                const data: TraitsData = await response.json();
+                const filteredData: TraitsData = Object.fromEntries(
+                    Object.entries(data).filter(([key]) => key !== 'Custom')
+                ) as TraitsData;
+                setTraits(filteredData);
             } catch (error) {
                 console.error('Error fetching metadata:', error);
             }

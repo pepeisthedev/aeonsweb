@@ -22,6 +22,7 @@ const LayeredImage: React.FC<LayeredImageProps> = ({ selectedTraits }) => {
         'Top Layer',
         'Head',
         'Eyes',
+        'Custom',
     ];
 
     useEffect(() => {
@@ -44,13 +45,15 @@ const LayeredImage: React.FC<LayeredImageProps> = ({ selectedTraits }) => {
             for (const traitType of traitOrder) {
                 const traits = selectedTraits[traitType];
                 if (traits && traits.length > 0) {
-                    const trait = traits[0]; // Since we only allow one selection per category
-                    const imagePath = `/layers/${traitType}/${trait}.webp`;
-                    try {
-                        const img = await loadImage(imagePath);
-                        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-                    } catch (error) {
-                        console.error(`Failed to load image at path: ${imagePath}`, error);
+                    for (const trait of traits) {
+                      //  const trait = traits[0]; // Since we only allow one selection per category
+                        const imagePath = `/layers/${traitType}/${trait}.webp`;
+                        try {
+                            const img = await loadImage(imagePath);
+                            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                        } catch (error) {
+                            console.error(`Failed to load image at path: ${imagePath}`, error);
+                        }
                     }
                 }
             }

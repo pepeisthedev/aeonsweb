@@ -67,16 +67,35 @@ const Create: React.FC = () => {
     const handleSetTraits = (traitType: string, value: string) => {
         setSelectedTraits(prevFilters => {
             const currentValues = prevFilters[traitType] || [];
-            if (currentValues.includes(value)) {
-                return {
-                    ...prevFilters,
-                    [traitType]: [],
-                };
+
+            if (traitType === 'Custom') {
+                // Allow multiple selections for 'Custom' category
+                if (currentValues.includes(value)) {
+                    // Remove the value if it's already selected
+                    return {
+                        ...prevFilters,
+                        [traitType]: currentValues.filter(item => item !== value),
+                    };
+                } else {
+                    // Add the value if it's not already selected
+                    return {
+                        ...prevFilters,
+                        [traitType]: [...currentValues, value],
+                    };
+                }
             } else {
-                return {
-                    ...prevFilters,
-                    [traitType]: [value],
-                };
+                // Only allow one selection for other categories
+                if (currentValues.includes(value)) {
+                    return {
+                        ...prevFilters,
+                        [traitType]: [],
+                    };
+                } else {
+                    return {
+                        ...prevFilters,
+                        [traitType]: [value],
+                    };
+                }
             }
         });
     };
