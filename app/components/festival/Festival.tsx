@@ -14,22 +14,11 @@ const Festival: React.FC = () => {
                                 <span className="aeons-white">WELCO</span>
                                 <span className="aeons-yellow">ME </span>
                                 <span className="aeons-white">TO T</span>
-                                <span className="aeons-white">HE </span>
+                                <span className="aeons-yellow">HE</span>
+                                <br></br>
                                 <span className="aeons-white">AEO</span><span className="aeons-yellow">NS </span>
                                 <span className="aeons-white">FESTIV</span><span className="aeons-yellow">AL</span>
                             </h1>
-                            <h1 className="text-6xl mb-4">
-                                <span className="aeons-white">Stage 1: </span>
-                                <span className="aeons-white">Aeons Exploratory </span><span
-                                className="aeons-yellow">𖡎 </span>
-                            </h1>
-                            <Image
-                                className=''
-                                src='/festival.jpg'
-                                alt='Festival'
-                                width={600}
-                                height={600}
-                            />
                         </div>
                     </Slide>
                 </section>
