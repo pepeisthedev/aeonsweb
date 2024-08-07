@@ -1,0 +1,81 @@
+.competition-scroll-container {
+    height: calc(100vh - 150px);
+    overflow-y: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.competition-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    margin-top: -10px;
+}
+
+.text-header-content {
+    font-size: 4.5em;
+}
+
+.text-content {
+    font-size: 1.2rem;
+    max-width: 700px;
+    color: #888888;
+}
+
+.link-content {
+    display: inline-block;
+    background-color: #66cf92;
+    color: #131615;
+    padding: 0.6rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 1.5rem;
+}
+
+.aeons-yellow {
+    color: #e6a40e;
+}
+
+.shadow-container {
+    padding: 40px;
+    box-shadow: 0 0 10px 5px rgba(128, 128, 128, 0.4);
+    background: rgba(27, 25, 25, 0.4);
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-style {
+    font-size: 22px; /* Increase the font size */
+    padding: 2px 12px; /* Add padding to increase the size of the button */
+    position: relative;
+    background-color: rgb(59, 56, 56);
+    border-radius: 6px;
+    font-family: 'Helvetica', sans-serif;
+    height: 45px;
+    border: 3px solid #e6a40e;
+    animation: border-color-change 2s linear infinite;
+}
+
+.default-list {
+    list-style-type: disc;
+    padding-left: 20px; /* Add padding to ensure the bullets are visible */
+}

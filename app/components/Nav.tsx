@@ -84,9 +84,9 @@ const NavBar = () => {
                             </li>
 
                                 <li className={`border-b border-gray-400 my-8 uppercase link-z-index  ${isAnimating ? 'glowing' : ''}`}>
-                                    <Link href="/reveal" className="text-4xl font-bold text-center uppercase mx-2 "
+                                    <Link href="/festival" className="text-4xl font-bold text-center uppercase mx-2 "
                                           onClick={handleBothClicks}>
-                                        <span>Reve<span className='text-[#e6a40e]'>al</span></span>
+                                        <span>Festiv<span className='text-[#e6a40e]'>al</span></span>
                                     </Link>
                                 </li>
                                 <li className="border-b border-gray-400 my-8 uppercase link-z-index">
@@ -122,9 +122,9 @@ const NavBar = () => {
                         </Link>
                     </li>
                     <li className={`mr-2  ${isAnimating ? 'glowing' : ''}`}>
-                        <Link onClick={handleRevealClick} href="/reveal"
+                        <Link onClick={handleRevealClick} href="/festival"
                               className="text-4xl font-bold text-center uppercase mx-2">
-                            <span>Reve<span className='text-[#e6a40e]'>al</span></span>
+                            <span>Festiv<span className='text-[#e6a40e]'>al</span></span>
                         </Link>
                     </li>
                     <li className=''>
