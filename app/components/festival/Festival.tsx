@@ -49,7 +49,7 @@ const Festival: React.FC = () => {
                                 <span className="aeons-white">:</span>
                             </h1>
                             <h3 className="text-3xl mb-4">
-                                <span className="aeons-white">The "Colossus of Chaos" in collaboration with GAMMA</span>
+                                <span className="aeons-white">The &quot;Colossus of Chaos&quot; in collaboration with GAMMA</span>
                             </h3>
                             <div className="">
                                 <p className="text-3xl">
