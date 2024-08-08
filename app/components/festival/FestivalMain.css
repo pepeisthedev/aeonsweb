@@ -61,6 +61,13 @@
     align-items: center;
 }
 
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .button-style {
     font-size: 22px; /* Increase the font size */
     padding: 2px 12px; /* Add padding to increase the size of the button */
@@ -135,4 +142,9 @@
     .forms-grid-view {
         gap: 10px;
     }
+}
+
+.image-responsive {
+    width: 50%;
+    height: auto; /* Maintain aspect ratio */
 }
