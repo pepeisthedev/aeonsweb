@@ -56,7 +56,6 @@
     box-shadow: 0 0 10px 5px rgba(128, 128, 128, 0.4);
     background: rgba(27, 25, 25, 0.4);
     border-radius: 8px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,4 +77,59 @@
 .default-list {
     list-style-type: disc;
     padding-left: 20px; /* Add padding to ensure the bullets are visible */
+}
+
+.forms-input {
+    background-color: #fff;
+    color: black;
+    width: 15vw;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 17px;
+    font-family: 'Helvetica', sans-serif;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    padding: 10px; /* Adds padding to match the input field's style */
+    height: 25px;
+}
+
+.forms-text {
+    font-size: 20px;
+}
+
+.forms-grid-view {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.forms-button-style {
+    font-size: 16px;
+    position: relative;
+    background-color: rgb(59, 56, 56);
+    border-radius: 6px;
+    font-family: 'Helvetica', sans-serif;
+    height: 35px;
+    width: 8vw;
+    border: 3px solid #e6a40e;
+    animation: border-color-change 2s linear infinite;
+}
+
+.forms-button-style:hover {
+    border: 3px solid rgba(27, 25, 25, 0.5);
+    cursor: pointer;
+}
+
+.confirmation-message {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    .forms-input {
+        width: 25vw;
+    }
+    .forms-button-style {
+        width: 18vw;
+    }
 }
