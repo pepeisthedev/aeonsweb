@@ -40,6 +40,7 @@ const Festival: React.FC = () => {
 
     return (
         <div className="competition-scroll-container">
+
                 <section className="section-content" id="section1">
                     <Slide>
                         <div className="shadow-container">

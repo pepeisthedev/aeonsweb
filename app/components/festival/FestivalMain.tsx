@@ -1,61 +1,144 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import "./FestivalMain.css";
 import Slide from "@/app/components/festival/Slide";
+import { Swiper as SwiperType } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+import {Swiper, SwiperSlide} from "swiper/react";
+import {FreeMode, Keyboard, Thumbs} from "swiper/modules";
 import Image from "next/image";
+import {useRouter} from "next/navigation";
+
 
 const FestivalMain: React.FC = () => {
-    const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
+    const swiperRef = useRef(null);
+    const swiperRefThumbs = useRef(null);
+    const [swiperSize, setSwiperSize] = useState({ width: 0, height: 0 });
+    const [swiperThumbSize, setSwiperThumbSize] = useState({ width: 0, height: 0 });
+    const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+    const router = useRouter();
 
-        const form = event.currentTarget;
-        const formData = new FormData(form);
-
-        const aeonsHolders = formData.get('entry.1556176449') as string;
-        const nonHolders = formData.get('entry.1220626453') as string;
-
-        if (!aeonsHolders && !nonHolders) {
-            alert('Please fill out one ordinal address .');
-            return;
+    const handleResize = () => {
+        if (swiperRef.current) {
+            const { offsetWidth: width, offsetHeight: height } = swiperRef.current;
+            // Assuming 768px as the breakpoint for mobile vs desktop
+            const multiplier = window.innerWidth >= 768 ? 0.5 : 0.5;
+            setSwiperSize({ width: width * multiplier, height: height * multiplier });
         }
+        if (swiperRefThumbs.current) {
+            const { offsetWidth: width, offsetHeight: height } = swiperRefThumbs.current;
+            // Use the same multiplier logic for thumbs
+            const multiplier = 0.6// window.innerWidth >= 768 ? 0.8 : 0.7;
+            setSwiperThumbSize({ width: width * multiplier, height: height * multiplier });
+        }
+    };
 
-        try {
-            const response = await fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                mode: 'no-cors' // This mode allows the request to succeed without getting blocked by CORS policy
-            });
+    useEffect(() => {
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
-            if (response.ok || response.status === 0) { // status 0 for no-cors
-                setIsSubmitted(true);
-                form.reset();
-            } else {
-                alert('An error occurred while submitting the form. Please try again.');
-            }
-        } catch (error) {
-            alert('An error occurred while submitting the form. Please try again.');
+    const handleClick = (id: string) => {
+        if (id === '1') {
+            router.push(`/festivalstage${id}`);
         }
     };
 
     return (
         <div className="competition-scroll-container">
 
+            <section className="section-content" id="section1">
+                <Slide>
+                    <div className="shadow-container">
+                        <h1 className="text-5xl lg:text-8xl">
+                            <span className="aeons-white">Ar</span>
+                            <span className="aeons-yellow">t </span>
+                            <span className="aeons-white">& creativi</span>
+                            <span className="aeons-yellow">ty </span>
+                            <span className="aeons-white">festiv</span>
+                            <span className="aeons-yellow">al</span>
+                            <br></br>
+                        </h1>
+                        <h3 className="text-2xl lg:text-3xl mt-4 content-info-text">
+                            <span className="aeons-white">Join us in an exciting 4-stage celebration! Explore Aeons, participate in festivities, and connect with our community.</span>
+                            <br></br>
+                            <span className="aeons-white">With amazing prizes and engaging challenges at every stage, there&apos;s something for everyone.</span>
+                            <br></br>
+                            <span className="aeons-white">Let&apos;s explore, create, and celebrate art!</span>
+                        </h3>
+                        <a className="link-content" href="#section2">Join the
+                            Festival</a>
+                    </div>
+                </Slide>
+            </section>
+
             <section className="section-content" id="section2">
                 <Slide>
-                    <div className="centered-container">
-                        <h1 className="text-6xl mb-4">
-                            <span className="aeons-white">Stage 1: </span>
-                            <span className="aeons-white">Aeons Exploratory </span><span
-                            className="aeons-yellow">𖡎 </span>
-                        </h1>
-                        <Image
-                            className='image-responsive'
-                            src='/festival.jpg'
-                            alt='Festival'
-                            width={600}
-                            height={600}
-                        />
+                    <div className="container">
+                        <Swiper
+                            ref={swiperRef}
+                            style={{
+                                '--swiper-navigation-color': '#fff',
+                                '--swiper-pagination-color': '#fff',
+                            } as React.CSSProperties}
+                            loop={true}
+                            spaceBetween={10}
+                            keyboard={true}
+                            thumbs={{swiper: thumbsSwiper}}
+                            modules={[FreeMode, Keyboard, Thumbs]}
+                            className="mySwiper2"
+                        >
+                            <SwiperSlide key="1">
+                                <div style={{position: 'relative'}} className="shadow-container clickable"
+                                     onClick={() => handleClick('1')}>
+                                    <h1 className="text-4xl lg:text-6xl mb-4">
+                                        <span className="aeons-white">Stage 1</span>
+                                    </h1>
+                                    <Image src="/gallery/0.webp" alt={`Image ${1 + 1}`} height={swiperSize.height}
+                                           width={swiperSize.height}/>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide key="2">
+                                <div style={{position: 'relative'}} className="shadow-container greyed-out"
+                                     onClick={() => handleClick('2')}>
+                                    <h1 className="text-4xl lg:text-6xlmb-4">
+                                        <span className="aeons-white">Stage 2</span>
+                                    </h1>
+                                    <Image src="/gallery/2.webp" alt={`Image ${2 + 1}`} height={swiperSize.height}
+                                           width={swiperSize.height}/>
+                                    <div className="to-be-revealed">To be revealed</div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide key="3">
+                                <div style={{position: 'relative'}} className="shadow-container greyed-out"
+                                     onClick={() => handleClick('3')}>
+                                    <h1 className="text-4xl lg:text-6xlmb-4">
+                                        <span className="aeons-white">Stage 3</span>
+                                    </h1>
+                                    <Image src="/gallery/3.webp" alt={`Image ${3 + 1}`} height={swiperSize.height}
+                                           width={swiperSize.height}/>
+                                    <div className="to-be-revealed">To be revealed</div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide key="4">
+                                <div style={{position: 'relative'}} className="shadow-container greyed-out"
+                                     onClick={() => handleClick('4')}>
+                                    <h1 className="text-4xl lg:text-6xlmb-4">
+                                        <span className="aeons-white">Stage 4</span>
+                                    </h1>
+                                    <Image src="/gallery/4.webp" alt={`Image ${4 + 1}`} height={swiperSize.height}
+                                           width={swiperSize.height}/>
+                                    <div className="to-be-revealed">To be revealed</div>
+                                </div>
+                            </SwiperSlide>
+
+                        </Swiper>
+
+
                     </div>
                 </Slide>
             </section>
@@ -64,3 +147,4 @@ const FestivalMain: React.FC = () => {
 };
 
 export default FestivalMain;
+

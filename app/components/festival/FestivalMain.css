@@ -5,6 +5,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;
+}
+
+.competition-scroll-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
 }
 
 .competition-container {
@@ -38,12 +44,14 @@
 
 .link-content {
     display: inline-block;
-    background-color: #66cf92;
+    background-color: #e6a40e;
     color: #131615;
+    border-radius: 8px;
     padding: 0.6rem 2rem;
     text-align: center;
     text-decoration: none;
     margin-top: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .aeons-yellow {
@@ -72,6 +80,7 @@
     font-size: 22px; /* Increase the font size */
     padding: 2px 12px; /* Add padding to increase the size of the button */
     position: relative;
+
     background-color: rgb(59, 56, 56);
     border-radius: 6px;
     font-family: 'Helvetica', sans-serif;
@@ -112,12 +121,13 @@
 .forms-button-style {
     font-size: 16px;
     position: relative;
-    background-color: rgb(59, 56, 56);
+    background-color: #e6a40e;
     border-radius: 6px;
+    color: black;
     font-family: 'Helvetica', sans-serif;
-    height: 35px;
-    width: 8vw;
+    width: 18vw;
     border: 3px solid #e6a40e;
+    font-weight: bold;
     animation: border-color-change 2s linear infinite;
 }
 
@@ -147,4 +157,130 @@
 .image-responsive {
     width: 50%;
     height: auto; /* Maintain aspect ratio */
+}
+
+.content-info-text {
+
+    white-space: normal; /* Allow text to wrap */
+
+}
+
+#app {
+    height: 100%;
+}
+html,
+body {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.swiper {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 70px); /* Adjusted height to remove some space for the Nav */
+
+}
+
+.swiper-wrapper {
+    padding-top: 1px;
+}
+
+.mySwiper2 {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.myThumbnails {
+    height: 20%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.myThumbnails .swiper-slide {
+    width: auto;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.myThumbnails .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.swiper-slide img {
+    display: block;
+
+    object-fit: cover;
+    margin: auto;
+    border: 6px solid black;
+}
+
+.swiper {
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.myThumbnails .swiper-slide img {
+
+    object-fit: cover;
+    margin: auto;
+    border: 2px solid black;
+}
+
+
+
+.greyed-out {
+    filter: grayscale(100%);
+    cursor: pointer;
+    position: relative;
+}
+
+.clickable{
+
+    cursor: pointer;
+
+}
+
+.to-be-revealed {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
 }

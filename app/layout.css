@@ -6,3 +6,9 @@
 html {
     scroll-behavior: smooth;
 }
+
+
+
+.transition-all {
+    transition: all 0.5s ease-in-out;
+}

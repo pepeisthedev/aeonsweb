@@ -1,12 +1,25 @@
-'use client'
-import React from 'react'
-
-import Festival from "@/app/components/festival/Festival";
+'use client';
+import React, { useEffect, useState } from 'react';
+import FestivalMain from "@/app/components/festival/FestivalMain";
+import { resetBackgroundImage, setBackgroundImage } from '@/app/utils/setBackgroundImage';
 
 const CreatePage = () => {
-    return (
-        <Festival/>
-    )
-}
+    const [showFestivalMain, setShowFestivalMain] = useState(true);
 
-export default CreatePage
+    useEffect(() => {
+        setBackgroundImage('/festival.jpg');
+        return () => {
+            resetBackgroundImage();
+        };
+    }, []);
+
+    return (
+
+
+                <FestivalMain/>
+
+
+    );
+};
+
+export default CreatePage;
