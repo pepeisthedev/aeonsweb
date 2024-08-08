@@ -5,9 +5,10 @@ import { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import 'swiper/css/thumbs';
 import {Swiper, SwiperSlide} from "swiper/react";
-import {FreeMode, Keyboard, Thumbs} from "swiper/modules";
+import {FreeMode, Keyboard, Pagination, Thumbs} from "swiper/modules";
 import Image from "next/image";
 import {useRouter} from "next/navigation";
 
@@ -89,7 +90,8 @@ const FestivalMain: React.FC = () => {
                             spaceBetween={10}
                             keyboard={true}
                             thumbs={{swiper: thumbsSwiper}}
-                            modules={[FreeMode, Keyboard, Thumbs]}
+                            modules={[ Keyboard, Pagination]} // Add Pagination module
+                            pagination={{ clickable: true }} // Enable pagination
                             className="mySwiper2"
                         >
                             <SwiperSlide key="1">
@@ -105,7 +107,7 @@ const FestivalMain: React.FC = () => {
                             <SwiperSlide key="2">
                                 <div style={{position: 'relative'}} className="shadow-container greyed-out"
                                      onClick={() => handleClick('2')}>
-                                    <h1 className="text-4xl lg:text-6xlmb-4">
+                                    <h1 className="text-4xl lg:text-6xl mb-4">
                                         <span className="aeons-white">Stage 2</span>
                                     </h1>
                                     <Image src="/gallery/2.webp" alt={`Image ${2 + 1}`} height={swiperSize.height}
@@ -116,7 +118,7 @@ const FestivalMain: React.FC = () => {
                             <SwiperSlide key="3">
                                 <div style={{position: 'relative'}} className="shadow-container greyed-out"
                                      onClick={() => handleClick('3')}>
-                                    <h1 className="text-4xl lg:text-6xlmb-4">
+                                    <h1 className="text-4xl lg:text-6xl mb-4">
                                         <span className="aeons-white">Stage 3</span>
                                     </h1>
                                     <Image src="/gallery/3.webp" alt={`Image ${3 + 1}`} height={swiperSize.height}
@@ -127,7 +129,7 @@ const FestivalMain: React.FC = () => {
                             <SwiperSlide key="4">
                                 <div style={{position: 'relative'}} className="shadow-container greyed-out"
                                      onClick={() => handleClick('4')}>
-                                    <h1 className="text-4xl lg:text-6xlmb-4">
+                                    <h1 className="text-4xl lg:text-6xl mb-4">
                                         <span className="aeons-white">Stage 4</span>
                                     </h1>
                                     <Image src="/gallery/4.webp" alt={`Image ${4 + 1}`} height={swiperSize.height}
