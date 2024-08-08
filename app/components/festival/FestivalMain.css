@@ -58,6 +58,10 @@
     color: #e6a40e;
 }
 
+.aeons-white {
+    color: #fff;
+}
+
 .shadow-container {
     padding: 40px;
     box-shadow: 0 0 10px 5px rgba(128, 128, 128, 0.4);
