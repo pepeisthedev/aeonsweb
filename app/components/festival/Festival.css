@@ -127,9 +127,13 @@
 
 @media screen and (max-width: 800px) {
     .forms-input {
-        width: 25vw;
+        width: 30vw;
     }
     .forms-button-style {
         width: 18vw;
+    }
+
+    .forms-grid-view {
+        gap: 10px;
     }
 }
