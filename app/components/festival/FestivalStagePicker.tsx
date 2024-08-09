@@ -3,11 +3,10 @@ import "./FestivalStagePicker.css";
 import { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/thumbs';
 import {Swiper, SwiperSlide} from "swiper/react";
-import {EffectCoverflow, FreeMode, Keyboard, Pagination, Thumbs} from "swiper/modules";
+import {EffectCoverflow, FreeMode, Keyboard, Thumbs} from "swiper/modules";
 import Image from "next/image";
 import {useRouter} from "next/navigation";
 
@@ -73,8 +72,7 @@ const FestivalStagePicker: React.FC = () => {
                             spaceBetween={1}
                             keyboard={true}
                             thumbs={{swiper: thumbsSwiper}}
-                            modules={[ Keyboard, Pagination, FreeMode, Thumbs, EffectCoverflow]} // Add Pagination module
-                            pagination={{ clickable: true }} // Enable pagination
+                            modules={[ Keyboard, FreeMode, Thumbs, EffectCoverflow]} // Add Pagination module
                             className="mySwiper2"
                             slidesPerView={2}
 
@@ -90,14 +88,16 @@ const FestivalStagePicker: React.FC = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide key="2">
-                                <div style={{position: 'relative'}} className="swipe-container"
+                                <div className="swipe-container"
                                      onClick={() => handleClick('2')}>
                                     <h1 className="text-4xl lg:text-6xl mb-4">
                                         <span className="aeons-white">Stage 2</span>
                                     </h1>
-                                    <Image className="greyed-out" src="/festival.jpg" alt={`Image ${2 + 1}`} height={swiperSize.height}
-                                           width={swiperSize.height}/>
-                                    <div className="to-be-revealed">Coming soon</div>
+                                    <div className="image-container">
+                                        <Image className="greyed-out" src="/festival.jpg" alt={`Image ${2 + 1}`} height={swiperSize.height}
+                                               width={swiperSize.height}></Image>
+                                        <div className="to-be-revealed">Coming soon</div>
+                                    </div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide key="3">
@@ -106,9 +106,12 @@ const FestivalStagePicker: React.FC = () => {
                                     <h1 className="text-4xl lg:text-6xl mb-4">
                                         <span className="aeons-white">Stage 3</span>
                                     </h1>
-                                    <Image className="greyed-out" src="/festival.jpg" alt={`Image ${3 + 1}`} height={swiperSize.height}
-                                           width={swiperSize.height}/>
-                                    <div className="to-be-revealed">Coming soon</div>
+                                    <div className="image-container">
+                                        <Image className="greyed-out" src="/festival.jpg" alt={`Image ${3 + 1}`}
+                                               height={swiperSize.height}
+                                               width={swiperSize.height}/>
+                                        <div className="to-be-revealed">Coming soon</div>
+                                    </div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide key="4">
@@ -117,9 +120,12 @@ const FestivalStagePicker: React.FC = () => {
                                     <h1 className="text-4xl lg:text-6xl mb-4">
                                         <span className="aeons-white">Stage 4</span>
                                     </h1>
-                                    <Image className="greyed-out" src="/festival.jpg" alt={`Image ${4 + 1}`} height={swiperSize.height}
-                                           width={swiperSize.height}/>
-                                    <div className="to-be-revealed">Coming soon</div>
+                                    <div className="image-container">
+                                        <Image className="greyed-out" src="/festival.jpg" alt={`Image ${4 + 1}`}
+                                               height={swiperSize.height}
+                                               width={swiperSize.height}/>
+                                        <div className="to-be-revealed">Coming soon</div>
+                                    </div>
                                 </div>
                             </SwiperSlide>
 

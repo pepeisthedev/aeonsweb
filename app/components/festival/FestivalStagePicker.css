@@ -21,6 +21,7 @@ body {
 }
 
 .swiper-slide {
+
     text-align: center;
     font-size: 18px;
     background: transparent;
@@ -98,7 +99,7 @@ body {
 .greyed-out {
     filter: grayscale(100%);
     cursor: pointer;
-    position: relative;
+
 }
 
 .clickable{
@@ -117,6 +118,13 @@ body {
 
     padding: 10px;
     border-radius: 5px;
+
+
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
 }
 
 .shadow-container-swiper {
