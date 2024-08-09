@@ -1,5 +1,5 @@
 .competition-scroll-container {
-    height: calc(100vh - 150px);
+    height: calc(100vh );
     overflow-y: auto;
     width: 100%;
     display: flex;
