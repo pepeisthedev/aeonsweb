@@ -112,7 +112,7 @@ const FestivalMain: React.FC = () => {
                                     </h1>
                                     <Image src="/gallery/2.webp" alt={`Image ${2 + 1}`} height={swiperSize.height}
                                            width={swiperSize.height}/>
-                                    <div className="to-be-revealed">To be revealed</div>
+                                    <div className="to-be-revealed">Coming soon</div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide key="3">
@@ -123,7 +123,7 @@ const FestivalMain: React.FC = () => {
                                     </h1>
                                     <Image src="/gallery/3.webp" alt={`Image ${3 + 1}`} height={swiperSize.height}
                                            width={swiperSize.height}/>
-                                    <div className="to-be-revealed">To be revealed</div>
+                                    <div className="to-be-revealed">Coming soon</div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide key="4">
