@@ -15,13 +15,13 @@ const CreatePage = () => {
     }, []);
 
     return (
-        <div className={`page-container`}>
+        <>
             {showFestivalMain ? (
                 <FestivalMain onButtonClick={() => setShowFestivalMain(false)} />
             ) : (
                 <FestivalStagePicker />
             )}
-        </div>
+        </>
     );
 };
 
