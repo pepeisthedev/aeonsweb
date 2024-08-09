@@ -134,7 +134,7 @@ const FestivalMain: React.FC = () => {
                                     </h1>
                                     <Image src="/gallery/4.webp" alt={`Image ${4 + 1}`} height={swiperSize.height}
                                            width={swiperSize.height}/>
-                                    <div className="to-be-revealed">To be revealed</div>
+                                    <div className="to-be-revealed">Coming soon</div>
                                 </div>
                             </SwiperSlide>
 
