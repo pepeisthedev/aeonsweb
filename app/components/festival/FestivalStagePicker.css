@@ -139,7 +139,7 @@ body {
 }
 
 .swipe-container {
-    padding: 40px;
+    padding: 30px;
     box-shadow: 0 0 10px 5px rgba(128, 128, 128, 0.4);
     background: rgba(27, 25, 25, 0.4);
     border-radius: 8px;
@@ -151,5 +151,8 @@ body {
     .container  {
         padding-top: 60px;
         height: calc(100vh - 200px);
+    }
+    .swipe-container {
+        padding: 10px;
     }
 }

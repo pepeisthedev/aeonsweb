@@ -14,25 +14,17 @@ import {useRouter} from "next/navigation";
 const FestivalStagePicker: React.FC = () => {
 
     const swiperRef = useRef(null);
-    const swiperRefThumbs = useRef(null);
     const [swiperSize, setSwiperSize] = useState({ width: 0, height: 0 });
-    const [swiperThumbSize, setSwiperThumbSize] = useState({ width: 0, height: 0 });
-    const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
     const router = useRouter();
 
     const handleResize = () => {
         if (swiperRef.current) {
             const { offsetWidth: width, offsetHeight: height } = swiperRef.current;
             // Assuming 768px as the breakpoint for mobile vs desktop
-            const multiplier = window.innerWidth >= 768 ? 0.5 : 0.5;
+            const multiplier = window.innerWidth >= 768 ? 0.6 : 0.5;
             setSwiperSize({ width: width * multiplier, height: height * multiplier });
         }
-        if (swiperRefThumbs.current) {
-            const { offsetWidth: width, offsetHeight: height } = swiperRefThumbs.current;
-            // Use the same multiplier logic for thumbs
-            const multiplier = 0.6// window.innerWidth >= 768 ? 0.8 : 0.7;
-            setSwiperThumbSize({ width: width * multiplier, height: height * multiplier });
-        }
+
     };
 
     useEffect(() => {
@@ -71,7 +63,7 @@ const FestivalStagePicker: React.FC = () => {
                             loop={false}
                             spaceBetween={1}
                             keyboard={true}
-                            thumbs={{swiper: thumbsSwiper}}
+
                             modules={[ Keyboard, FreeMode, Thumbs, EffectCoverflow]} // Add Pagination module
                             className="mySwiper2"
                             slidesPerView={2}
