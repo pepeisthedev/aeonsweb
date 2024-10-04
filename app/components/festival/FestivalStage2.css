@@ -1,0 +1,5 @@
+.stage1-image {
+    width: 60%;
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 5px;
+}

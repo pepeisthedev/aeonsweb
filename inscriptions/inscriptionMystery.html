@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aeons Mystery</title>
+    <style>
+        @font-face {
+            font-family: 'Alagard';
+            src: url('https://ordinals.com/content/74eed71c46430c38e056ef1bc69ad2c521293a8941d2177b52e7d447b42d5522i0') format('woff2');
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            font-family: 'Alagard', Arial, sans-serif;
+        }
+
+        #root {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .app {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border: 2px solid black;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .header {
+            font-size: 4vw;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .instructions {
+            font-size: 3vw;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .triangle-button {
+            width: 6vw;
+            height: 6vw;
+            background-color: black;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            margin: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .decrypted-message {
+            font-size: 2vw;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                font-size: 6vw;
+            }
+
+            .instructions {
+                font-size: 5vw;
+            }
+
+            .triangle-button {
+                width: 9vw;
+                height: 9vw;
+            }
+
+        }
+
+        .triangle-button.down {
+            transform: rotate(180deg);
+        }
+
+        .app.correct {
+            animation: pulse 1s infinite;
+            border-color: #ff8e01;
+        }
+
+        .app.incorrect {
+            border-color: red;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 5px #ff8e01;
+            }
+            50% {
+                box-shadow: 0 0 20px #ff8e01;
+            }
+            100% {
+                box-shadow: 0 0 5px #ff8e01;
+            }
+        }
+
+        .hidden-credit {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<div id="root"></div>
+<script src="https://ordinals.com/content/66979aec90e592bc5be7fddcef23daeff982662b7225e7804c1b271f1b0d267ai0"></script>
+<script type="module">
+    /// ordengine-react
+    import 'https://ordinals.com/content/faa7b9b0b7884360f6c2b34693855a0d60df5f344727c72e3691a80f84ec6a81i0'
+
+    const TriangleButton = ({ index, isClicked, onClick }) => {
+        return html`
+            <div
+                    class="triangle-button ${index % 2 === 1 ? 'down' : ''}"
+                    style=${{ backgroundColor: isClicked ? '#ff8e01' : 'black' }}
+                    onClick=${() => onClick(index)}
+            ></div>
+        `;
+    };
+
+    const DecryptorComponent = () => {
+        const [clickOrder, setClickOrder] = useState('');
+        const [clickedButtons, setClickedButtons] = useState(Array(7).fill(false));
+        const [decryptedMessage, setDecryptedMessage] = useState(null);
+        const [decryptionStatus, setDecryptionStatus] = useState('');
+
+        const encryptedMessage = 'U2FsdGVkX1/PJGJ9m2FWnxKowQ7ET1ffYForjTV3CFMtheUUw01REl03WHBgidaSfuyf5uqHgJ31KZYsjGxNLv6H7TAzSmduO31K3VnXw+jlrYqniEpembtNeYLvc6ud';
+
+        const handleButtonClick = useCallback((index) => {
+            if (!clickedButtons[index]) {
+                const newClickedButtons = [...clickedButtons];
+                newClickedButtons[index] = true;
+                setClickedButtons(newClickedButtons);
+
+                const newOrder = clickOrder + (index + 1).toString();
+                setClickOrder(newOrder);
+
+                if (newOrder.length === 7) {
+                    try {
+                        const decrypted = CryptoJS.AES.decrypt(encryptedMessage, newOrder).toString(CryptoJS.enc.Utf8);
+                        if (decrypted) {
+                            setDecryptedMessage("Aeons is the KEY: " + decrypted);
+                            setDecryptionStatus('correct');
+                        } else {
+                            setDecryptedMessage('You sure you played it right? Try again!');
+                            setDecryptionStatus('incorrect');
+                        }
+                    } catch (e) {
+                        setDecryptedMessage('You sure you played it right? Try again!');
+                        setDecryptionStatus('incorrect');
+                    }
+                }
+            }
+        }, [clickOrder, clickedButtons]);
+
+        return html`
+        <div class="app ${decryptionStatus}">
+            ${decryptedMessage ? html`
+                <div class="decrypted-message">${decryptedMessage}</div>
+            ` : html`
+                <div>
+                    <div class="header">SOLVE THE AEONS MYSTERY</div>
+                    <div class="instructions">Play the buttons to reveal the secret.</div>
+                    <div style=${{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
+                        ${[...Array(7)].map((_, i) =>
+            html`<${TriangleButton} key=${i} index=${i} isClicked=${clickedButtons[i]} onClick=${handleButtonClick} />`
+        )}
+                    </div>
+                </div>
+            `}
+        </div>
+        <div class="hidden-credit">Made by @ei0haro</div>
+        `;
+    };
+
+    const App = function() {
+        return html`
+            <div>
+                <${DecryptorComponent} />
+            </div>
+        `;
+    };
+
+    ReactDOM.render(html`<${App} />`, document.getElementById('root'))
+</script>
+</body>
+
+</html>

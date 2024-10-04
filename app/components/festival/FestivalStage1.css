@@ -1,0 +1,350 @@
+.competition-scroll-container {
+    height: calc(100vh - 140px);
+    overflow-y: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;
+    box-shadow: 0 -10px 10px -10px rgba(0, 0, 0, 0.5); /* Top shadow */
+}
+
+.competition-scroll-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.competition-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-height: 1000px) {
+    .section-content {
+        width: 50%;
+    }
+}
+
+.section-spacing {
+    margin-top: 16rem
+}
+
+.aeons-yellow {
+    color: #e6a40e;
+}
+
+.aeons-white {
+    color: #fff;
+}
+
+.shadow-container-stage1 {
+    padding: 40px;
+    box-shadow: 0 0 10px 5px rgba(128, 128, 128, 0.4);
+    background: rgba(27, 25, 25, 0.65);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.exploratory-text-image {
+    width: 40%;
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 5px;
+}
+
+.stage1-image {
+    width: 40%;
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 5px;
+}
+
+.button-style {
+    font-size: 22px; /* Increase the font size */
+    padding: 2px 12px; /* Add padding to increase the size of the button */
+    position: relative;
+    background-color: rgb(59, 56, 56);
+    border-radius: 6px;
+    font-family: Inter, sans-serif;
+    height: 45px;
+    border: 3px solid #e6a40e;
+    color: white;
+    animation: border-color-change 2s linear infinite;
+}
+
+.default-list {
+    list-style-type: disc;
+    padding-left: 20px; /* Add padding to ensure the bullets are visible */
+}
+
+.forms-input {
+    background-color: rgba(109, 101, 101, 0.8);
+    color: white;
+    width: 15vw;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 17px;
+    font-family: Inter, sans-serif;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    padding: 10px; /* Adds padding to match the input field's style */
+    height: 25px;
+    border: 3px solid #ff6633;
+    animation: border-color-change 2s linear infinite;
+}
+
+@keyframes border-color-change {
+    0%, 100% {
+        border-color: #ff6633;
+    }
+    50% {
+        border-color: #e6a40e;
+    }
+}
+
+.forms-text {
+    font-size: 25px;
+    color: white;
+
+}
+
+.forms-grid-view {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.forms-button-style {
+    font-size: 16px;
+    position: relative;
+    background-color: rgba(109, 101, 101, 0.8);
+    border-radius: 6px;
+    font-family: Inter, sans-serif;
+    height: 35px;
+    width: 8vw;
+    color: white;
+    border: 3px solid #ff6633;
+    animation: border-color-change 2s linear infinite;
+}
+
+.forms-button-style:hover {
+    box-shadow: 0 0 10px 2px rgba(255, 191, 0, 0.7); /* Add a yellow glow */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.confirmation-message {
+    margin-top: 15px;
+}
+
+.success-color {
+    color: white;
+}
+
+.error-color {
+    color: red;
+}
+
+.section-paragraph-header {
+    font-family: Inter, sans-serif;
+    font-size: 2.25rem/* 36px */;
+    line-height: 2.5rem/* 40px */;
+    font-weight: bold;
+}
+
+.section-paragraph-text {
+    font-family: Inter, sans-serif;
+    font-size: 1.5rem/* 24px */;
+    line-height: 2rem;
+    align-self: center;
+}
+
+.align-text-center {
+    text-align: center;
+    align-self: center;
+}
+
+.section-form-text {
+    font-family: Inter, sans-serif;
+    font-size: 1.25rem/* 20px */;
+    line-height: 1.75rem/* 28px */;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .section-form-text {
+        font-family: Inter, sans-serif;
+        font-size: 1.0rem;
+        line-height: 1.3rem;
+    }
+
+    .section-paragraph-text {
+        font-size: 1.25rem/* 20px */;
+        line-height: 1.75rem
+    }
+
+    .section-paragraph-header {
+        font-size: 1.875rem/* 30px */;
+        line-height: 2.25rem/* 36px */;
+    }
+}
+
+.image-example {
+    width: 50%;
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 800px) {
+
+    .section-content {
+        width: 100%;
+    }
+
+    .forms-input {
+        width: 30vw;
+    }
+    .forms-text {
+        font-size: 20px;
+    }
+    .forms-button-style {
+        width: 18vw;
+    }
+
+    .forms-grid-view {
+        gap: 10px;
+    }
+
+    .exploratory-text-image {
+        width: 85%;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .stage1-image {
+        width: 85%;
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 5px;
+    }
+
+    .section-spacing {
+        margin-top: 6rem
+    }
+
+    .image-example {
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+    .image-example {
+        width: 70%;
+    }
+}
+
+.external-link {
+    text-decoration: underline; /* Underline the link */
+    cursor: pointer; /* Change mouse cursor to hand pointer */
+    color: #e6a40e; /* Optional: Change link color */
+    margin-left: 15px;
+}
+
+.gamma-claim {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.external-link:hover {
+    color: #fff; /* Optional: Change link color on hover */
+}
+.scroll-down-indicator {
+    position: fixed; /* Fixed position to stay at the bottom center */
+    bottom: 1px; /* Adjust distance from the bottom */
+    transform: translateX(-50%);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: bounce 2s infinite;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.scroll-text {
+    font-size: 1.5rem;
+    color: #fff; /* Initial color */
+    font-family: Inter, sans-serif;
+    animation: colorChange 3s infinite, bounce 2s infinite; /* Same animations as arrow */
+    text-align: center; /* Center text */
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 24px solid transparent;
+    border-right: 24px solid transparent;
+    border-top: 24px solid;
+    color: #fff;
+    animation: arrowBounce 1.5s infinite; /* Color and bounce animations */
+}
+
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.image-example-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Adjust the gap between images as needed */
+}
+
+.image-example-grid img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Center the image within the grid cell */
+}
+
+/* Add this to your CSS file */
+
+@media screen and (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .mobile-only {
+        display: none;
+    }
+}

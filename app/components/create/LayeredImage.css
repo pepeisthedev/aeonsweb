@@ -1,0 +1,15 @@
+.layeredImageContainer {
+    height: 100%;
+    margin: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.layeredImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}

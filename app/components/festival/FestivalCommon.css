@@ -1,0 +1,11 @@
+.mobile-line-break {
+    display: none; /* Hide by default */
+}
+
+@media screen and (max-width: 800px), screen and (max-height: 1000px) {
+    .mobile-line-break {
+        display: block; /* Show only on mobile */
+        width: 100%; /* Ensure it takes up the full width */
+        height: 0; /* Prevent extra space */
+    }
+}

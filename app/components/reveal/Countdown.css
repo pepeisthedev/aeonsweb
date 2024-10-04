@@ -1,0 +1,90 @@
+/*
+.countdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer {
+    background: rgba(51, 51, 51, 0.95);
+    display: flex; !* Flexbox to center content *!
+    flex-direction: column; !* Stack content vertically *!
+    justify-content: center; !* Center horizontally *!
+    align-items: center; !* Center vertically *!
+    box-sizing: border-box; !* Include padding in the width ca *!
+    text-align: center;
+    box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.5); !* Add an inner shadow *!
+    font-family: 'Helvetica', sans-serif;
+    color: #ffffff;
+}
+
+
+
+.next-reveal {
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    !* Add any other styles as needed *!
+}
+
+.timer-value {
+    margin: 0; !* Remove default margin *!
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+}
+
+@media (max-width: 768px) {
+   .timer{
+    height: 70px; !* Fixed height *!
+}
+    .next-reveal {
+        font-size: 1.2rem;
+    }
+
+    .timer-value {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+    .timer{
+        height: 80px; !* Fixed height *!
+    }
+    .next-reveal {
+        font-size: 1.3rem;
+    }
+
+    .timer-value {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1999px) {
+    .timer{
+        height: 80px; !* Fixed height *!
+    }
+    .next-reveal {
+        font-size: 1.3rem;
+    }
+
+    .timer-value {
+        font-size: 1.4rem;
+    }
+
+}
+
+@media (min-width: 2000px) {
+    .timer{
+        height: 80px; !* Fixed height *!
+    }
+    .next-reveal {
+        font-size: 1.3rem;
+    }
+
+    .timer-value {
+        font-size: 1.4rem;
+    }
+}
+
+
+*/

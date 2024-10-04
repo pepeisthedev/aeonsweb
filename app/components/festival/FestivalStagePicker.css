@@ -1,0 +1,161 @@
+
+#app {
+    height: 100%;
+}
+html,
+body {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.swiper {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide {
+
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.stage-text-image {
+    width: 40%;
+    height: auto;
+    padding-bottom: 5px;
+}
+
+.swiper-wrapper {
+    padding-top: 1px;
+}
+
+.mySwiper2 {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.myThumbnails {
+    height: 20%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.myThumbnails .swiper-slide {
+    width: auto;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.myThumbnails .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.swiper-slide-img {
+    display: block;
+    object-fit: cover;
+    margin: auto;
+    border: 6px solid black;
+}
+
+.swiper {
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.greyed-out {
+    filter: grayscale(100%);
+
+
+}
+
+.clickable{
+
+    cursor: pointer;
+    pointer-events: auto;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.clickable:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Add a more prominent shadow on hover */
+    border: 2px solid rgba(255, 255, 255, 0.8); /* Add a border to make the highlight more visible */
+}
+
+.to-be-revealed {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem;
+
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+.shadow-container-swiper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.swipe-container {
+    padding: 20px;
+    box-shadow: 0 0 10px 5px rgba(128, 128, 128, 0.4);
+    background: rgba(27, 25, 25, 0.65);
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+
+    .swipe-container {
+        padding: 10px;
+    }
+
+    .stage-text-image {
+        width: 65%;
+        height: auto;
+    }
+
+    .to-be-revealed {
+        font-size: 2.5rem;
+
+    }
+}
+

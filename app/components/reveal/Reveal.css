@@ -1,0 +1,103 @@
+/*
+#app {
+    height: 100%;
+}
+html,
+body {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+
+.swiper {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 70px); !* Adjusted height to remove some space for the Nav *!
+
+}
+
+.swiper-wrapper {
+    padding-top: 1px;
+}
+
+.mySwiper2 {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.myThumbnails {
+    height: 20%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.myThumbnails .swiper-slide {
+    width: auto;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.myThumbnails .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.swiper-slide img {
+    display: block;
+
+    object-fit: cover;
+    margin: auto;
+    border: 6px solid black;
+}
+
+body {
+    background: #000;
+    color: #000;
+}
+
+.swiper {
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.myThumbnails .swiper-slide img {
+
+    object-fit: cover;
+    margin: auto;
+    border: 2px solid black;
+}
+
+*/

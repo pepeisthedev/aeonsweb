@@ -1,0 +1,10 @@
+
+
+.swiper-pagination-bullet-active {
+    background: #000000;
+}
+
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+}

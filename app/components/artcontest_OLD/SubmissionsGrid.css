@@ -1,0 +1,48 @@
+
+.submission-grid-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.submission-grid {
+  border: 1px solid #ddd;
+}
+
+.submission-grid div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.submission-grid a {
+  color: #1d72b8;
+  text-decoration: none;
+}
+
+.submission-grid a:hover {
+  text-decoration: underline;
+}
+
+
+  /* SubmissionsGrid.css */
+.vote-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.vote-button:hover {
+  background-color: #45a049;
+}
+
+.vote-message {
+  color: #28a745;
+  font-size: 0.9rem;
+}

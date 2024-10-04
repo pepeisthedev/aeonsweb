@@ -1,0 +1,14 @@
+.fill-all-space {
+    height: 85%;
+    width: 100%;
+}
+
+.reduce-some-space {
+    height: calc(100vh - 150px);
+}
+
+.shadow-container {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.9);
+    background: linear-gradient(to right, rgba(27, 25, 25, 0.8), rgba(128, 128, 128, 0.7));
+    border-radius: 8px;
+}

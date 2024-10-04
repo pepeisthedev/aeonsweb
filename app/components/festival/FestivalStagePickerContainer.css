@@ -1,0 +1,22 @@
+.container {
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 100px); /* Adjusted height to remove some space for the Nav */
+}
+
+@media only screen and (max-height: 1000px) {
+    .container {
+        padding-top: 45px;
+        height: calc(100vh - 50px);
+    }
+}
+
+/* Common mobile resolutions (e.g., 375x667, 414x736) */
+@media only screen and (max-width: 800px) {
+    .container {
+        padding-top: 100px;
+        height: calc(100vh - 200px);
+    }
+}

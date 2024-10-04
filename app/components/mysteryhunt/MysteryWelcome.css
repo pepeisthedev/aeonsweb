@@ -1,0 +1,62 @@
+
+
+.aeons-yellow {
+    color: #e6a40e;
+}
+
+.shadow-textbox {
+
+    font-family: Inter, sans-serif;
+    background-color: rgb(36, 1, 1, 0.5); /* Add a slightly grey transparent background */
+    text-align: center;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.text-font {
+    font-size: 25px;
+
+}
+
+
+.modal {
+    position: fixed;
+    top: 30%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    z-index: 1000;
+
+    box-sizing: border-box;
+
+}
+
+.modal-content {
+    font-size: clamp(0.1rem, 2.5vw, 1.2rem); /* Font size scales with viewport width */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .modal {
+        top: 24%; /* Center vertically */
+        padding: 15px; /* Adjust padding to fit content */
+    }
+
+    .modal-content {
+        font-size: clamp(0.6rem, 1vw, 1rem); /* Further scaling for very small screens */
+    }
+}
+
+.clickablePlay{
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+

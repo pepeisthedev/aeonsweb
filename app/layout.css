@@ -1,0 +1,17 @@
+.main {
+    height: 100vh;
+    overflow: hidden;
+    background-position: center top; /* Center the background image */
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+.transition-all {
+    transition: all 0.5s ease-in-out;
+}

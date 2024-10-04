@@ -1,0 +1,88 @@
+.button-style {
+    font-size: 22px; /* Increase the font size */
+    padding: 2px 12px; /* Add padding to increase the size of the button */
+    position: relative;
+    background-color: rgb(59, 56, 56);
+    border-radius: 6px;
+    font-family: 'Helvetica', sans-serif;
+    height: 45px;
+    border: 3px solid #ff6633;
+    animation: border-color-change 2s linear infinite;
+}
+
+@keyframes border-color-change {
+    0%, 100% {
+        border-color: #ff6633;
+    }
+    50% {
+        border-color: #e6a40e;
+    }
+}
+
+.input-wallet {
+    background-color: #fff;
+    color: black;
+    width: 70vw;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+
+@media screen and (max-width: 600px) {
+    .input-wallet {
+        width: 90vw;
+    }
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack the input field and the button vertically on smaller screens */
+    align-items: center; /* Stack the input field and the button horizontally on larger screens */
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+
+.align-center {
+    text-align: center;
+}
+
+.font-style {
+    font-family: 'Helvetica', sans-serif; /* Change the font to Roboto */
+}
+
+.input-style {
+    border-radius: 4px;
+}
+
+
+.aeons-yellow {
+    color: #e6a40e;
+}
+
+.congrats {
+    font-size: 25px;
+    background-color: rgba(128, 128, 128, 0.9); /* Add a slightly grey transparent background */
+    font-family: 'Helvetica', sans-serif;
+    text-align: center;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+
+.to-bad {
+    font-size: 20px;
+    background-color: rgba(128, 128, 128, 0.9); /* Add a slightly grey transparent background */
+    font-family: 'Helvetica', sans-serif; /* Change the font to Helvetica */
+    text-align: center; /* Center the text */
+}
+
+.aeons-orange {
+    color: #ff6633;
+}
+
+.aeons-white {
+    color: #fff;
+}
