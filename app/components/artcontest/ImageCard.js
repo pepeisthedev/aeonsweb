@@ -25,6 +25,8 @@ export const ImageCard = ({ submission, onVoteChange, onSubmissionClick, userDat
         if (!isMobileOrTablet) setIsFlipped(false);
     };
 
+    const isVideo = submission.media_url.split('?')[0].match(/\.(mp4|webm|ogg)$/i);
+
     return (
         <div
             className="relative w-full aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group"
@@ -35,8 +37,16 @@ export const ImageCard = ({ submission, onVoteChange, onSubmissionClick, userDat
             <div className="w-full h-full transition-all duration-500 ease-in-out">
                 {/* Front of the card (Image) */}
                 <div className={`absolute w-full h-full transition-opacity duration-500 ${isFlipped && !isMobileOrTablet ? "opacity-0" : "opacity-100"}`}>
-                    <img src={submission.imageUrl} alt={submission.title} className="w-full h-full object-cover" />
-
+                    {isVideo ? (
+                        <video
+                            src={submission.media_url}
+                            className="w-full h-full object-contain"
+                            muted
+                        />
+                    ) : (
+                        <img src={submission.media_url} alt={submission.title}
+                             className="w-full h-full object-contain"/>
+                    )}
                     {/* Compact vote button and count for mobile and tablet */}
                     {isMobileOrTablet && (
                         <div className="absolute bottom-2 right-2">

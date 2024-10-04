@@ -5,6 +5,7 @@ export interface Submission {
   description: string;
   author: string;
   twitter_url: string;
+  media_url: string;
   votes: number;
   content_type: string;
   team_members: string[];

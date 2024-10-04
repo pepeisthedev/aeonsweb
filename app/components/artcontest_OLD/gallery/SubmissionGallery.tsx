@@ -14,8 +14,6 @@ function getTweetId(url: string) {
     return match ? match[1] : ""
 }
 
-
-
 export default function SubmissionGallery() {
 
     const [submissions, setSubmissions] = useState<Submission[]>([]);

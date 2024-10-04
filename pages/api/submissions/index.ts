@@ -50,6 +50,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         content_type,
         team_members,
         discord_id: user.id,
+        media_url: ""
       };
      const insertStatus = await SubmissionsDatabase.insertSubmission(newSubmission);
      switch (insertStatus) {

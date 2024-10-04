@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronUp, Search, UserPlus, ExternalLink, ChevronDown } from 'lucide-react';
 
 
+
 // Custom X Icon Component
 const XIcon = ({ size = 24, color = 'currentColor' }) => (
 <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -9,7 +10,11 @@ const XIcon = ({ size = 24, color = 'currentColor' }) => (
 </svg>
 );
 const LeaderboardRow = ({ entry, position, isExpanded, toggleExpand, isFirst, isLast }) => {
-return (
+
+    const isVideo = entry.media_url.split('?')[0].match(/\.(mp4|webm|ogg)$/i);
+
+
+    return (
     <div 
     className={`bg-white bg-opacity-70 overflow-hidden transition-all duration-700 ease-in-out cursor-pointer
                 border-b-2 border-gray-300 last:border-b-0
@@ -28,15 +33,26 @@ return (
                     paddingBottom: isExpanded ? '25%' : '4rem',
                     flexShrink: 0,
                 }}>
-            <img 
-                src={entry.imageUrl} 
-                alt={entry.title} 
-                className="absolute top-0 left-0 w-full h-full object-cover rounded-lg transition-all duration-700 ease-in-out"
-            />
+
+                {isVideo ? (
+                    <video
+                        src={entry.media_url}
+                        className="absolute top-0 left-0 w-full h-full object-cover rounded-lg transition-all duration-700 ease-in-out"
+                        muted
+                    />
+                ) : (
+                    <img
+                        src={entry.media_url}
+                        alt={entry.title}
+                        className="absolute top-0 left-0 w-full h-full object-cover rounded-lg transition-all duration-700 ease-in-out"
+                    />
+                )}
+
+
             </div>
             <div className="flex-grow ml-4">
-            <h3 className="font-semibold text-gray-800 text-base">{entry.title}</h3>
-            <p className="text-sm text-gray-600">Team: {entry.team_members.join(', ')}</p>
+                <h3 className="font-semibold text-gray-800 text-base">{entry.title}</h3>
+                <p className="text-sm text-gray-600">Team: {entry.team_members.join(', ')}</p>
             <div className="mt-2 flex items-center justify-between">
                 <span className="text-gray-600">Votes: {entry.votes}</span>
                 <ChevronDown 
