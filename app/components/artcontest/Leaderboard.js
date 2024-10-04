@@ -10,10 +10,24 @@ const XIcon = ({ size = 24, color = 'currentColor' }) => (
 </svg>
 );
 const LeaderboardRow = ({ entry, position, isExpanded, toggleExpand, isFirst, isLast }) => {
-
+    const videoRef = useRef(null)
+    const [isLoaded, setIsLoaded] = useState(false)
     const isVideo = entry.media_url.split('?')[0].match(/\.(mp4|webm|ogg)$/i);
 
-
+    useEffect(() => {
+        const video = videoRef.current
+        if (video) {
+            video.addEventListener('loadedmetadata', () => {
+                video.currentTime = 0.01 // Set to a small value to show the first frame
+                setIsLoaded(true)
+            })
+        }
+        return () => {
+            if (video) {
+                video.removeEventListener('loadedmetadata', () => setIsLoaded(true))
+            }
+        }
+    }, [])
     return (
     <div 
     className={`bg-white bg-opacity-70 overflow-hidden transition-all duration-700 ease-in-out cursor-pointer
@@ -36,9 +50,14 @@ const LeaderboardRow = ({ entry, position, isExpanded, toggleExpand, isFirst, is
 
                 {isVideo ? (
                     <video
+                        ref={videoRef}
                         src={entry.media_url}
-                        className="absolute top-0 left-0 w-full h-full object-cover rounded-lg transition-all duration-700 ease-in-out"
+                        className={`absolute top-0 left-0 w-full h-full object-cover rounded-lg transition-all duration-700 ease-in-out ${
+                            isLoaded ? 'opacity-100' : 'opacity-0'
+                        }`}
                         muted
+                        playsInline
+                        preload="metadata"
                     />
                 ) : (
                     <img

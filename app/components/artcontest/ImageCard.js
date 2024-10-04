@@ -1,9 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useRef, useState} from "react";
 import { VoteButton } from "@/app/components/artcontest/VoteButton";
 
 export const ImageCard = ({ submission, onVoteChange, onSubmissionClick, userData }) => {
     const [isFlipped, setIsFlipped] = useState(false);
     const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
+    const videoRef = useRef(null)
+    const [isLoaded, setIsLoaded] = useState(false)
+
+    useEffect(() => {
+        const video = videoRef.current
+        if (video) {
+            video.addEventListener('loadedmetadata', () => {
+                video.currentTime = 0.01 // Set to a small value to show the first frame
+                setIsLoaded(true)
+            })
+        }
+        return () => {
+            if (video) {
+                video.removeEventListener('loadedmetadata', () => setIsLoaded(true))
+            }
+        }
+    }, [])
 
     useEffect(() => {
         const checkDevice = () => {
@@ -38,10 +55,16 @@ export const ImageCard = ({ submission, onVoteChange, onSubmissionClick, userDat
                 {/* Front of the card (Image) */}
                 <div className={`absolute w-full h-full transition-opacity duration-500 ${isFlipped && !isMobileOrTablet ? "opacity-0" : "opacity-100"}`}>
                     {isVideo ? (
+
                         <video
+                            ref={videoRef}
                             src={submission.media_url}
-                            className="w-full h-full object-contain"
+                            className={`w-full h-full object-contain ${
+                                isLoaded ? 'opacity-100' : 'opacity-0'
+                            }`}
                             muted
+                            playsInline
+                            preload="metadata"
                         />
                     ) : (
                         <img src={submission.media_url} alt={submission.title}
