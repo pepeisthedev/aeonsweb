@@ -9,7 +9,7 @@ interface Submission {
   name: string;
   description: string;
   artist_name: string;
-  content_url: string;
+  twitter_url: string;
   votes: number;
   content_type: string;
 }
@@ -72,7 +72,7 @@ const SubmissionsGrid: React.FC<SubmissionsGridProps> = ({ userData, onVoteChang
         case 3:
           return (
             <div style={style}>
-              <a href={submission.content_url} target="_blank" rel="noopener noreferrer">
+              <a href={submission.twitter_url} target="_blank" rel="noopener noreferrer">
                 View Content
               </a>
             </div>

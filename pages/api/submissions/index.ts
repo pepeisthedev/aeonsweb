@@ -34,9 +34,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(401).json({ isAuthenticated: false, message: 'Unauthorized access. Invalid or missing token.' });
     }
 
-    const { title, description, content_url, content_type, team_members } = req.body;
+    const { title, description, twitter_url, content_type, team_members } = req.body;
 
-    if (!title || !description || !content_url || !content_type || !team_members) {
+    if (!title || !description || !twitter_url || !content_type || !team_members) {
       return res.status(400).json({ message: 'Missing required fields' });
     }
 
@@ -45,7 +45,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         title,
         description,
         author: user.username, // Set the author to the authenticated user's username
-        content_url,
+        twitter_url,
         votes: 0, // New submissions start with 0 votes
         content_type,
         team_members,
@@ -66,7 +66,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         title,
         description,
         author: user.username,
-        content_url,
+        twitter_url,
         content_type,
         team_members
       };

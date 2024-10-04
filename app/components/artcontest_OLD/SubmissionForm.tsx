@@ -45,7 +45,7 @@ export function SubmissionForm({ isLoggedIn }: SubmissionFormProps) {
             name: submission.name,
             description: submission.description,
             artist: submission.artist_name,
-            contentUrl: submission.content_url,
+            contentUrl: submission.twitter_url,
             contentType: submission.content_type,
           })
         }
@@ -92,7 +92,7 @@ export function SubmissionForm({ isLoggedIn }: SubmissionFormProps) {
         body: JSON.stringify({      
           name: formData.name,
           description: formData.description,
-          content_url: formData.contentUrl,
+          twitter_url: formData.contentUrl,
           content_type: formData.contentType,
           artist_name: formData.artist,
         }),

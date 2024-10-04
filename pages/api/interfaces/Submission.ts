@@ -4,7 +4,7 @@ export interface Submission {
   title: string;
   description: string;
   author: string;
-  content_url: string;
+  twitter_url: string;
   votes: number;
   content_type: string;
   team_members: string[];

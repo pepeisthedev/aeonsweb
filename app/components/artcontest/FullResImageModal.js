@@ -61,7 +61,7 @@ export const FullResImageModal = ({ submissions, currentSubmissionId, onClose, o
                             </div>
                         ) : (
                             <img
-                                src={currentSubmission.content_url}
+                                src={currentSubmission.twitter_url}
                                 alt={currentSubmission.title}
                                 className={`w-full h-full ${isLandscape ? 'object-contain' : 'object-cover'}`}
                             />

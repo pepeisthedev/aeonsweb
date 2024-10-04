@@ -67,7 +67,7 @@ const MySubmission = ({ userData, onSubmit, setActiveSection }) => {
           setTitle(submission.title);
           setDescription(submission.description);
           setTeamMembers(submission.team_members);
-          setXLink(submission.content_url);
+          setXLink(submission.twitter_url);
           setShouldShowEditDeleteOverlay(true);
         }
       }
@@ -108,7 +108,7 @@ const MySubmission = ({ userData, onSubmit, setActiveSection }) => {
     const formData = {
       title: title,
       description: description,
-      content_url: xLink,
+      twitter_url: xLink,
       content_type: 'image', // Assuming content_type is 'image' or other type (modify if needed)
       team_members:  teamMembers
     };

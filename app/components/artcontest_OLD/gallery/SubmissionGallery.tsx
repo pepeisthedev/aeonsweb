@@ -5,7 +5,7 @@ interface Submission {
     name: string
     description: string
     artist: string
-    content_url: string
+    twitter_url: string
     content_type: string
 }
 
@@ -53,7 +53,7 @@ export default function SubmissionGallery() {
                         <div className="p-4 bg-gray-50">
 
                                 <TwitterTweetEmbed
-                                    tweetId={getTweetId(submission.content_url)}
+                                    tweetId={getTweetId(submission.twitter_url)}
                                     options={{ height: 400 }}
                                 />
 

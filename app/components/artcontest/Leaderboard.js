@@ -54,7 +54,7 @@ return (
                 </div>
                 <div className="flex justify-start items-center">
                 <a 
-                    href={entry.content_url}
+                    href={entry.twitter_url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-colors duration-300"
