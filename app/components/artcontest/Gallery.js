@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Search, UserPlus, ChevronUp, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Search } from 'lucide-react';
 import Leaderboard from './Leaderboard';
 import Navigation from './Navigation';
 import MySubmission from './MySubmission';
@@ -97,10 +97,7 @@ const Gallery = () => {
     setVisibleImages(prev => Math.min(prev + 20, submissions.length));
   };
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    console.log('Searching for:', searchQuery);
-  };
+
 
   const handleFilterChange = (value) => {
     setFilter(value);
@@ -125,7 +122,6 @@ const Gallery = () => {
               <h1 className="text-3xl sm:text-4xl font-bold text-white">Stage 2</h1>
             </div>
             <div className="flex-none">
-              {/* Conditionally render based on whether userData is set */}
               {userData ? (
                   <UserStatus userData={userData}/>
               ) : (
@@ -133,7 +129,6 @@ const Gallery = () => {
               )}
             </div>
           </div>
-
 
           <Navigation
               activeSection={activeSection}
@@ -144,7 +139,7 @@ const Gallery = () => {
           {activeSection === 'Gallery' && (
               <div
                   className="mb-8 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <form onSubmit={handleSearch} className="w-full sm:w-auto sm:flex-grow max-w-2xl">
+                <div className="w-full sm:w-auto sm:flex-grow max-w-2xl">
                   <div className="relative">
                     <input
                         type="text"
@@ -153,14 +148,9 @@ const Gallery = () => {
                         onChange={(e) => setSearchQuery(e.target.value)}
                         className="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[rgb(230,164,14)]"
                     />
-                    <button
-                        type="submit"
-                        className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white"
-                    >
-                      <Search size={20}/>
-                    </button>
+                      <Search  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white" size={20}/>
                   </div>
-                </form>
+                </div>
                 <FilterDropdown onValueChange={handleFilterChange}/>
               </div>
           )}
@@ -180,15 +170,25 @@ const Gallery = () => {
               <Section title="">
                 <div className="w-5/6 mx-auto">
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {submissions.slice(0, visibleImages).map(submission => (
-                        <ImageCard
-                            key={submission.id}
-                            submission={submission}
-                            onVoteChange={refreshData}
-                            userData={userData}
-                            onSubmissionClick={handleSubmissionClick}
-                        />
-                    ))}
+                    {submissions
+                        .filter(submission => {
+                          const query = searchQuery.toLowerCase();
+                          return (
+                              submission.title.toLowerCase().includes(query) ||
+                              submission.description.toLowerCase().includes(query) ||
+                              submission.team_members.some(member => member.toLowerCase().includes(query))
+                          );
+                        })
+                        .slice(0, visibleImages)
+                        .map(submission => (
+                            <ImageCard
+                                key={submission.id}
+                                submission={submission}
+                                onVoteChange={refreshData}
+                                userData={userData}
+                                onSubmissionClick={handleSubmissionClick}
+                            />
+                        ))}
                   </div>
                   {visibleImages < submissions.length && (
                       <div className="text-center my-6">

@@ -118,7 +118,10 @@ const Leaderboard = ({ submissions }) => {
     return (
         <div className="w-full flex justify-center">
             <div className="w-full sm:w-2/3 bg-white bg-opacity-50 backdrop-blur-sm overflow-hidden rounded-lg">
-                {submissions.map((entry, index) => (
+                {submissions
+                    .slice() // Create a shallow copy to avoid mutating the original array
+                    .sort((a, b) => b.votes - a.votes) // Sort in descending order based on votes
+                    .map((entry, index) => (
                     <LeaderboardRow
                         key={entry.id}
                         entry={entry}
