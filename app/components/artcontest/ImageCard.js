@@ -1,5 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
 import { VoteButton } from "@/app/components/artcontest/VoteButton";
+import {XIcon} from "@/app/components/artcontest/Icons";
 
 export const ImageCard = ({ submission, onVoteChange, onSubmissionClick, userData }) => {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -85,8 +86,24 @@ export const ImageCard = ({ submission, onVoteChange, onSubmissionClick, userDat
                             <p className="text-sm mb-2">{submission.description}</p>
                             <p className="text-sm mb-2">Team: {submission.team_members.join(", ")}</p>
                         </div>
-                        <div className="flex justify-end" onClick={(e) => e.stopPropagation() /* Stop modal from opening when voting */}>
-                            <VoteButton onVoteChange={onVoteChange} votes={submission.votes} submissionId={submission.id} userData={userData} isMobileView={false} />
+                        <div className="flex justify-between flex-row items-end">
+                                <a
+                                    href={submission.twitter_url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-colors duration-300"
+                                    onClick={(e) => e.stopPropagation()}
+                                >
+                                    <XIcon size={15} color="white"/>
+                                    <span>View on X</span>
+                                </a>
+
+
+                        <div className="flex justify-end"
+                             onClick={(e) => e.stopPropagation() /* Stop modal from opening when voting */}>
+                            <VoteButton onVoteChange={onVoteChange} votes={submission.votes}
+                                        submissionId={submission.id} userData={userData} isMobileView={false}/>
+                        </div>
                         </div>
                     </div>
                 )}

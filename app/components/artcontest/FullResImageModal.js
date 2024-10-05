@@ -82,7 +82,6 @@ export const FullResImageModal = ({
                                     playsInline
                                     controls={isPlaying}
                                     onPlay={() => setIsPlaying(true)}
-
                                 />
                                 {!isPlaying && (
                                     <button
@@ -119,7 +118,7 @@ export const FullResImageModal = ({
 
                     <div className="bg-white p-4 md:w-1/3 flex items-center justify-center">
                         <div className="w-full">
-                            <div className="mb-4 flex justify-between items-center">
+                            <div className="mb-4 flex justify-between items-end">
                                 <h3 className="text-xl font-semibold text-gray-800">{currentSubmission.title}</h3>
                                 <VoteButton
                                     onVoteChange={onVoteChange}
