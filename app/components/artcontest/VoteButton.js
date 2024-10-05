@@ -27,7 +27,7 @@ export const VoteButton = ({ votes, onVoteChange, isMobileView = false, submissi
                 const data = await response.json();
 
                 if (response.ok) {
-                    setMessage(hasVoted ? "Vote revoked successfully!" : "Vote submitted successfully!");
+                 //   setMessage(hasVoted ? "Vote revoked successfully!" : "Vote submitted successfully!");
                     onVoteChange(); // Notify parent component of vote change
                 } else {
                     setMessage(`Error: ${data.message || "Failed to process request."}`);
