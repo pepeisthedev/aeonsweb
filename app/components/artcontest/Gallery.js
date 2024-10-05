@@ -79,19 +79,20 @@ const Gallery = () => {
 
   const handlePrevImage = () => {
     setSelectedImageId(prevId => {
-      const currentIndex = submissions.findIndex(img => img.id === prevId);
-      const newIndex = (currentIndex - 1 + submissions.length) % submissions.length;
-      return submissions[newIndex].id;
+      const currentIndex = filteredAndSortedSubmissions.findIndex(img => img.id === prevId);
+      const newIndex = (currentIndex - 1 + filteredAndSortedSubmissions.length) % filteredAndSortedSubmissions.length;
+      return filteredAndSortedSubmissions[newIndex].id;
     });
   };
 
   const handleNextImage = () => {
     setSelectedImageId(prevId => {
-      const currentIndex = submissions.findIndex(img => img.id === prevId);
-      const newIndex = (currentIndex + 1) % submissions.length;
-      return submissions[newIndex].id;
+      const currentIndex = filteredAndSortedSubmissions.findIndex(img => img.id === prevId);
+      const newIndex = (currentIndex + 1) % filteredAndSortedSubmissions.length;
+      return filteredAndSortedSubmissions[newIndex].id;
     });
   };
+
 
   const loadMore = () => {
     setVisibleImages(prev => Math.min(prev + 20, submissions.length));
@@ -100,6 +101,34 @@ const Gallery = () => {
   const handleFilterChange = (value) => {
     setSortingSortingFilter(value);
   };
+
+  const filterAndSortSubmissions = (submissions, searchQuery, sortingFilter) => {
+    return submissions
+        .filter(submission => {
+          const query = searchQuery.toLowerCase();
+          return (
+              submission.title.toLowerCase().includes(query) ||
+              submission.description.toLowerCase().includes(query) ||
+              submission.team_members.some(member => member.toLowerCase().includes(query))
+          );
+        })
+        .sort((a, b) => {
+          switch (sortingFilter) {
+            case 'Newest':
+              return new Date(b.created_at) - new Date(a.created_at);
+            case 'Oldest':
+              return new Date(a.created_at) - new Date(b.created_at);
+            case 'Most votes':
+              return b.votes - a.votes;
+            case 'Least votes':
+              return a.votes - b.votes;
+            default:
+              return 0;
+          }
+        });
+  };
+
+  const filteredAndSortedSubmissions = filterAndSortSubmissions(submissions, searchQuery, sortingFilter);
 
   return (
       <div
@@ -167,30 +196,7 @@ const Gallery = () => {
               <Section title="">
                 <div className="w-5/6 mx-auto">
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {submissions
-                        .filter(submission => {
-                          const query = searchQuery.toLowerCase();
-                          return (
-                              submission.title.toLowerCase().includes(query) ||
-                              submission.description.toLowerCase().includes(query) ||
-                              submission.team_members.some(member => member.toLowerCase().includes(query))
-                          );
-                        })
-                        .sort((a, b) => {
-                          // Apply sorting logic based on `sortingFilter`
-                          switch (sortingFilter) {
-                            case 'Newest':
-                              return new Date(b.created_at) - new Date(a.created_at);
-                            case 'Oldest':
-                              return new Date(a.created_at) - new Date(b.created_at);
-                            case 'Most votes':
-                              return b.votes - a.votes;
-                            case 'Least votes':
-                              return a.votes - b.votes;
-                            default:
-                              return 0; // No sorting applied
-                          }
-                        })
+                    {filteredAndSortedSubmissions
                         .slice(0, visibleImages)
                         .map(submission => (
                             <ImageCard
@@ -223,7 +229,7 @@ const Gallery = () => {
 
         {selectedImageId && (
             <FullResImageModal
-                submissions={submissions}
+                submissions={filteredAndSortedSubmissions}
                 currentSubmissionId={selectedImageId}
                 onClose={closeFullResImage}
                 onPrev={handlePrevImage}

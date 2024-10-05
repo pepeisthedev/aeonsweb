@@ -20,7 +20,7 @@ export const FilterDropdown = ({ onValueChange }) => {
                 <span className="ml-2">{isOpen ? '▲' : '▼'}</span>
             </button>
             {isOpen && (
-                <div className="absolute z-10 bg-white bg-opacity-80 rounded-lg shadow-lg mt-1 w-full">
+                <div className="absolute z-10 bg-gray-600 bg-opacity-80 rounded-lg shadow-lg mt-1 w-full">
                     {['Newest', 'Oldest', 'Most votes', 'Least votes'].map((filter) => (
                         <div
                             key={filter}
