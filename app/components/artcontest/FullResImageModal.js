@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import { VoteButton } from "@/app/components/artcontest/VoteButton";
+import {XIcon} from "@/app/components/artcontest/Icons";
 
 export const FullResImageModal = ({
                                       submissions,
@@ -71,7 +72,7 @@ export const FullResImageModal = ({
                     <X size={20} />
                 </button>
 
-                <div className="flex flex-col md:flex-row h-full">
+                <div className="flex flex-col md:flex-row h-full items-center">
                     <div className="relative w-full md:w-2/3 h-[50vh] md:h-[80vh] flex-shrink-0">
                         {isVideo ? (
                             <div className="relative w-full h-full">
@@ -116,23 +117,35 @@ export const FullResImageModal = ({
                         </button>
                     </div>
 
-                    <div className="bg-white p-4 md:w-1/3 flex items-center justify-center">
-                        <div className="w-full">
-                            <div className="mb-4 flex justify-between items-end">
+                    <div className="flex flex-col w-full ">
+                        <div className="bg-white w-full p-4 flex items-center justify-center">
+                            <div className="w-full">
                                 <h3 className="text-xl font-semibold text-gray-800">{currentSubmission.title}</h3>
-                                <VoteButton
-                                    onVoteChange={onVoteChange}
-                                    votes={currentSubmission.votes}
-                                    submissionId={currentSubmission.id}
-                                    userData={userData}
-                                />
+                                <p className="text-sm text-gray-600 mb-4">{currentSubmission.description}</p>
+                                <p className="text-sm text-gray-500">Team: {currentSubmission.team_members.join(', ')}</p>
                             </div>
-                            <p className="text-sm text-gray-600 mb-4">{currentSubmission.description}</p>
-                            <p className="text-sm text-gray-500">Team: {currentSubmission.team_members.join(', ')}</p>
+                        </div>
+                        <div className="flex flex-row  items-end justify-between p-2">
+                            <a
+                                href={currentSubmission.twitter_url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center space-x-2 bg-black text-white px-3 rounded-full hover:bg-gray-800 transition-colors duration-300"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <XIcon size={15} color="white"/>
+                                <span>View on X</span>
+                            </a>
+                            <VoteButton
+                                onVoteChange={onVoteChange}
+                                votes={currentSubmission.votes}
+                                submissionId={currentSubmission.id}
+                                userData={userData}
+                            />
+                        </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    )
-}
+            )
+            }

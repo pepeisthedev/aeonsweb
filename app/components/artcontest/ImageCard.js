@@ -91,7 +91,7 @@ export const ImageCard = ({ submission, onVoteChange, onSubmissionClick, userDat
                                     href={submission.twitter_url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-colors duration-300"
+                                    className="flex items-center space-x-2 bg-black text-white px-3 rounded-full hover:bg-gray-800 transition-colors duration-300"
                                     onClick={(e) => e.stopPropagation()}
                                 >
                                     <XIcon size={15} color="white"/>
