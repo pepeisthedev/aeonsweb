@@ -21,10 +21,10 @@ export const FilterDropdown = ({ onValueChange }) => {
             </button>
             {isOpen && (
                 <div className="absolute z-10 bg-white bg-opacity-80 rounded-lg shadow-lg mt-1 w-full">
-                    {['All', 'Recent', 'Popular', 'Trending'].map((filter) => (
+                    {['Newest', 'Oldest', 'Most votes', 'Least votes'].map((filter) => (
                         <div
                             key={filter}
-                            onClick={() => handleSelection(filter.toLowerCase())}
+                            onClick={() => handleSelection(filter)}
                             className="cursor-pointer hover:bg-[rgb(230,164,14)] hover:text-white p-2"
                         >
                             {filter}

@@ -55,7 +55,6 @@ export const ImageCard = ({ submission, onVoteChange, onSubmissionClick, userDat
                 {/* Front of the card (Image) */}
                 <div className={`absolute w-full h-full transition-opacity duration-500 ${isFlipped && !isMobileOrTablet ? "opacity-0" : "opacity-100"}`}>
                     {isVideo ? (
-
                         <video
                             ref={videoRef}
                             src={submission.media_url}

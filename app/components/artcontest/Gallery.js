@@ -29,7 +29,7 @@ const Gallery = () => {
   const [visibleImages, setVisibleImages] = useState(20);
   const [activeSection, setActiveSection] = useState('Leaderboard');
   const [searchQuery, setSearchQuery] = useState('');
-  const [filter, setFilter] = useState('all');
+  const [sortingFilter, setSortingSortingFilter] = useState('Newest');
   const [selectedImageId, setSelectedImageId] = useState(null);
   const [submissions, setSubmissions] = useState([]);
   const [error, setError] = useState('');
@@ -97,11 +97,8 @@ const Gallery = () => {
     setVisibleImages(prev => Math.min(prev + 20, submissions.length));
   };
 
-
-
   const handleFilterChange = (value) => {
-    setFilter(value);
-    console.log('Filtering by:', value);
+    setSortingSortingFilter(value);
   };
 
   return (
@@ -178,6 +175,21 @@ const Gallery = () => {
                               submission.description.toLowerCase().includes(query) ||
                               submission.team_members.some(member => member.toLowerCase().includes(query))
                           );
+                        })
+                        .sort((a, b) => {
+                          // Apply sorting logic based on `sortingFilter`
+                          switch (sortingFilter) {
+                            case 'Newest':
+                              return new Date(b.created_at) - new Date(a.created_at);
+                            case 'Oldest':
+                              return new Date(a.created_at) - new Date(b.created_at);
+                            case 'Most votes':
+                              return b.votes - a.votes;
+                            case 'Least votes':
+                              return a.votes - b.votes;
+                            default:
+                              return 0; // No sorting applied
+                          }
                         })
                         .slice(0, visibleImages)
                         .map(submission => (
