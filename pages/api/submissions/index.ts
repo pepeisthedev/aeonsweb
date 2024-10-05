@@ -50,7 +50,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         content_type,
         team_members,
         discord_id: user.id,
-        media_url: ""
+        media_url: "https://pbs.twimg.com/media/GY-bTwOXEAAr1Pa?format=jpg&name=900x900"
       };
      const insertStatus = await SubmissionsDatabase.insertSubmission(newSubmission);
      switch (insertStatus) {
