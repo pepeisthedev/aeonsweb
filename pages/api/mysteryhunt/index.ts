@@ -15,11 +15,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (providedSecret.toLowerCase() === secretPhrase.toLowerCase()) {
         const encryptedTwitterProfile = encrypt(twitterProfile);
         let twitterLink =
-            "https://twitter.com/intent/tweet?text=I%20completed%20the%20Aeons%20x%20Experiment9%20Mystery%20hunt%20%40AeonsBTC%20%40AGoodDoctorBTC%0A%0A%23AeonsxExp9Mystery%0A%0Aproof%20%0A" +
+            "https://twitter.com/intent/tweet?text=I%20completed%20the%20Aeons%20x%20Experiment9%20Mystery%20hunt%20%40AeonsBTC%20%40AGoodDoctorBTC%0A%0A%23AeonsxExp9Mystery%0A%0AEncrypted%20message%20%0A"  +
             encryptedTwitterProfile
         res.status(200).json({ postLink: twitterLink});
     } else {
-        res.status(404).json({ error: 'Mystery word incorrect' });
+        res.status(400).json({ error: 'Mystery word incorrect' });
     }
 }
 
