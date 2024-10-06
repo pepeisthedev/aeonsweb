@@ -175,11 +175,11 @@ const MysteryHunt: React.FC = () => {
                             <>
                                 <div className="space-y-4 md:space-y-6">
                                     <p className="text-center text-gray-700">
-                                        Welcome, aspiring explorer! You've stumbled upon a mystery that has puzzled the greatest minds.
+                                        Welcome, aspiring explorer! You&apos;ve stumbled upon a mystery that has puzzled the greatest minds.
                                         Are you ready to test your wit and uncover the truth hidden in plain sight?
                                     </p>
                                     <p className="text-center text-gray-700">
-                                        Your journey begins with this cryptic message. Decipher it, and you'll be one step closer to unraveling the grand mystery.
+                                        Your journey begins with this cryptic message. Decipher it, and you&apos;ll be one step closer to unraveling the grand mystery.
                                         Remember, in the world of enigmas, <span style={{ color: mainColor, fontWeight: 'bold' }}>every detail matters</span>. Look closely, think creatively, and trust your instincts.
                                     </p>
                                     <div className="p-4 md:p-8 bg-white bg-opacity-90 rounded-lg shadow-inner border-2" style={{ borderColor: mainColor }}>
@@ -193,8 +193,8 @@ const MysteryHunt: React.FC = () => {
                             <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                                 <div className="space-y-4 md:space-y-6">
                                     <p className="text-center text-gray-700">
-                                        Excellent work, explorer! You've taken the first step towards unraveling this enigma.
-                                        Now, let's see if your decryption skills are up to the challenge.
+                                        Excellent work, explorer! You&apos;ve taken the first step towards unraveling this enigma.
+                                        Now, let&apos;s see if your decryption skills are up to the challenge.
                                     </p>
                                     <div>
                                         <label htmlFor="answer" className="block text-lg md:text-xl font-medium mb-2" style={{ color: mainColor }}>Your Deciphered Answer</label>
