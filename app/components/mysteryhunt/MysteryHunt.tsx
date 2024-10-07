@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 const MysteryHunt: React.FC = () => {
@@ -20,7 +19,7 @@ const MysteryHunt: React.FC = () => {
     const darkWhiteColor = '#ffffff';
 
     const initialMessage = "51c18098f8f0a51cb8728d16e83f130d91b9a4f5324527dce5c7a2bef2df7dd3i0";
-    const successMessage = "Congrats Explorer, you solved the Mystery!";
+    const successMessage = "Congrats Explorer, AGoodDoctor approves!";
     const errorMessage = "You didn't solve the Mystery, try again!";
 
     useEffect(() => {
@@ -75,6 +74,21 @@ const MysteryHunt: React.FC = () => {
             setError(null);
             setResponseStatus(null);
             setResponse(null);
+        }
+    };
+
+
+
+    const getImageTransform = () => {
+        if (showFullImage) return 'translateY(0)';
+
+        switch (deviceType) {
+            case 'mobile':
+                return 'translateY(65%)';
+            case 'tablet':
+                return 'translateY(80%)';
+            default:
+                return isImageHovered ? 'translateY(75%)' : 'translateY(80%)';
         }
     };
 
@@ -157,8 +171,8 @@ const MysteryHunt: React.FC = () => {
     };
 
     return (
-        <div className="relative min-h-screen">
-            <div className="flex justify-center items-center min-h-screen p-4">
+        <div className="relative min-h-screen pt-16 sm:pt-20 md:pt-24">
+            <div className="flex justify-center items-center min-h-[calc(100vh-64px)] sm:min-h-[calc(100vh-80px)] md:min-h-[calc(100vh-96px)] p-4">
                 <div className="w-full max-w-[1000px] bg-white bg-opacity-90 rounded-lg shadow-lg p-4 sm:p-6 md:p-10">
                     <div className="text-center mb-6 md:mb-8">
                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 md:mb-3">
@@ -179,12 +193,12 @@ const MysteryHunt: React.FC = () => {
                                         Are you ready to test your wit and uncover the truth hidden in plain sight?
                                     </p>
                                     <p className="text-center text-gray-700">
-                                        Your journey begins with this cryptic message. Decipher it, and you&apos;ll be one step closer to unraveling the grand mystery.
-                                        Remember, in the world of enigmas, <span style={{ color: mainColor, fontWeight: 'bold' }}>every detail matters</span>. Look closely, think creatively, and trust your instincts.
+                                        Your journey continues with this cryptic message. Find the <span style={{ color: mainColor, fontWeight: 'bold' }}>KEY</span> and <span style={{ color: mainColor, fontWeight: 'bold' }}>DECIPHER</span> it, and you&apos;ll be one step closer to unraveling the grand mystery.
+                                        Remember, in the world of enigmas, <span style={{ color: mainColor, fontWeight: 'bold' }}>EVERY DETAIL MATTERS</span>. Look closely, think creatively, and trust your instincts.
                                     </p>
                                     <div className="p-4 md:p-8 bg-white bg-opacity-90 rounded-lg shadow-inner border-2" style={{ borderColor: mainColor }}>
                                         <p className="text-xl md:text-3xl font-mono text-center tracking-wide" style={{ color: mainColor }}>
-                                            Cpzru lfno smu lfww es CZfqoOsemft
+                                            Cszyw uhzu jwd dswe hf CUzzhFhqkqf
                                         </p>
                                     </div>
                                 </div>
@@ -193,7 +207,7 @@ const MysteryHunt: React.FC = () => {
                             <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                                 <div className="space-y-4 md:space-y-6">
                                     <p className="text-center text-gray-700">
-                                        Excellent work, explorer! You&apos;ve taken the first step towards unraveling this enigma.
+                                        Excellent work, explorer! You&apos;ve almost unraveled the Experiment.
                                         Now, let&apos;s see if your decryption skills are up to the challenge.
                                     </p>
                                     <div>
@@ -281,7 +295,7 @@ const MysteryHunt: React.FC = () => {
                     style={getMessagePosition()}
                 >
                     <div className="bg-black bg-opacity-70 p-3 rounded-lg mx-auto" style={{ maxWidth: '400px', width: 'fit-content' }}>
-                        <p className="text-white font-mono text-sm sm:text-base md:text-lg leading-tight break-all">
+                        <p className="text-white font-mono text-sm sm:text-base md:text-lg leading-tight break-words">
                             {displayedMessage}
                             {isTyping && <span className="animate-pulse">|</span>}
                         </p>
@@ -302,7 +316,7 @@ const MysteryHunt: React.FC = () => {
                                         e.currentTarget.style.color = mainColor;
                                     }}
                                 >
-                                    Claim Your Reward
+                                    Post on X
                                 </a>
                             </div>
                         )}
@@ -330,7 +344,7 @@ const MysteryHunt: React.FC = () => {
                         alt={responseStatus === 200 ? "Success image" : "Mystery image"}
                         className="w-full h-full object-cover object-top absolute bottom-0 left-0"
                         style={{
-                            transform: showFullImage ? 'translateY(0)' : `translateY(${isImageHovered ? '70%' : '80%'})`,
+                            transform: getImageTransform(),
                             transition: 'transform 300ms ease-in-out',
                         }}
                     />
